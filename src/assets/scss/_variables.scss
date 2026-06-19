@@ -1,0 +1,145 @@
+// 中文字體
+$font-family-zh:
+  "Noto Sans TC",
+  -apple-system,
+  "Segoe UI",
+  sans-serif;
+// 英文、數字字體
+$font-family-en:
+  "Montserrat",
+  -apple-system,
+  "Segoe UI",
+  sans-serif;
+// 裝飾標題字體（襯線）
+$font-family-serif-zh: "Noto Serif SC", "Noto Sans TC", serif;
+
+// 字體
+$font-family-base: $font-family-zh;
+$headings-font-family: $font-family-zh;
+$headings-font-weight: 600;
+
+// 色彩系統
+$gray-90: #292929;
+$gray-70: #575757;
+$gray-50: #a6a6a6;
+$gray-30: #d6d6d6;
+$gray-20: #ebebeb;
+$gray-10: #f7f7f7;
+
+$white-100: #ffffff;
+$white-70: rgba(#ffffff, 0.7);
+$white-50: rgba(#ffffff, 0.5);
+$white-30: rgba(#ffffff, 0.3);
+$white-20: rgba(#ffffff, 0.2);
+$white-10: rgba(#ffffff, 0.1);
+
+$green-900: #154528;
+$green-700: #25673f;
+$green-500: #3a8959;
+$green-300: #6fcd94;
+$green-100: #c8e5d3;
+$green-50: #e2f1e8;
+
+$red-50: #e50013;
+
+// 色彩語意
+$font-primary: $gray-90;
+$font-secondary: $gray-70;
+$font-tertiary: $gray-50;
+$font-brand: $green-500;
+$font-white: $white-100;
+
+// 框架顏色設定
+$primary: $green-500;
+$secondary: $gray-70;
+$dark: $gray-90;
+$danger: $red-50;
+
+// 中文標題字體大小(Desktop)
+$h1-font-size: 3rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 2rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1.125rem;
+
+// 中文標題字體大小(Mobile)
+$h1-font-size-sm: 2.25rem;
+$h2-font-size-sm: 2rem;
+$h3-font-size-sm: 1.75rem;
+$h4-font-size-sm: 1.375rem;
+
+// 中文標題行高(Desktop)
+$h1-line-height-zh: 1.5;
+$h2-line-height-zh: 1.5;
+$h3-line-height-zh: 1.5;
+$h4-line-height-zh: 1.8;
+$h5-line-height-zh: 1.8;
+$h6-line-height-zh: 1.8;
+
+// 中文標題行高(Mobile)
+$h1-line-height-sm: 1.5;
+$h2-line-height-sm: 1.5;
+$h3-line-height-sm: 1.5;
+$h4-line-height-sm: 1.6;
+
+// 英文標題行高(Desktop)
+$h1-line-height-en: 1.4;
+$h2-line-height-en: 1.4;
+$h3-line-height-en: 1.4;
+$h4-line-height-en: 1.4;
+$h5-line-height-en: 1.5;
+$h6-line-height-en: 1.5;
+
+// 英文標題行高(Mobile)
+$h1-line-height-en-sm: 1.3;
+$h2-line-height-en-sm: 1.3;
+$h3-line-height-en-sm: 1.3;
+$h4-line-height-en-sm: 1.5;
+
+// 標題 letter-spacing
+$headings-letter-spacing: 0;
+$h1-letter-spacing-zh: 2px;
+$h2-letter-spacing-zh: 2px;
+$h3-letter-spacing-zh: 1px;
+$h4-letter-spacing-zh: 1px;
+
+// Form
+$input-border-color: $gray-30;
+$input-border-radius: 0.75rem;
+$input-focus-border-color: #{$green-500};
+$input-focus-box-shadow: none;
+$form-select-focus-box-shadow: $input-focus-box-shadow;
+$form-select-indicator-color: $gray-50;
+$input-padding-y: 0.9375rem;
+$input-padding-x: 1.25rem;
+$input-disabled-bg: #f4f5f6;
+$input-disabled-border-color: #d9d9d9;
+
+// Button
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+$btn-line-height: 1.4;
+$btn-font-weight: 500;
+
+$btn-padding-y-lg: 1rem;
+$btn-padding-x-lg: 2rem;
+$btn-font-size-lg: 1.25rem;
+
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/utilities/api";
+
+// Base
+:root {
+  --bs-font-family-base: #{$font-family-base};
+  --bs-body-color: #{$gray-90};
+}

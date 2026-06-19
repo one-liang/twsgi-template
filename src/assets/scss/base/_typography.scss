@@ -1,0 +1,74 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  letter-spacing: $headings-letter-spacing;
+}
+
+h1,
+.h1 {
+  line-height: $h1-line-height-zh;
+  letter-spacing: $h1-letter-spacing-zh;
+
+  @include media-breakpoint-down(lg) {
+    font-size: $h1-font-size-sm;
+    line-height: $h1-line-height-sm;
+    letter-spacing: 0;
+  }
+}
+
+h2,
+.h2 {
+  line-height: $h2-line-height-zh;
+  letter-spacing: $h2-letter-spacing-zh;
+
+  @include media-breakpoint-down(lg) {
+    font-size: $h2-font-size-sm;
+    line-height: $h2-line-height-sm;
+    letter-spacing: 0;
+  }
+}
+
+h3,
+.h3 {
+  line-height: $h3-line-height-zh;
+  letter-spacing: $h3-letter-spacing-zh;
+
+  @include media-breakpoint-down(lg) {
+    font-size: $h3-font-size-sm;
+    line-height: $h3-line-height-sm;
+    letter-spacing: 0;
+  }
+}
+
+h4,
+.h4 {
+  line-height: $h4-line-height-zh;
+  letter-spacing: $h4-letter-spacing-zh;
+
+  @include media-breakpoint-down(lg) {
+    font-size: $h4-font-size-sm;
+    line-height: $h4-line-height-sm;
+    letter-spacing: 0;
+  }
+}
+
+h5,
+.h5 {
+  line-height: $h5-line-height-zh;
+  letter-spacing: 0;
+}
+
+h6,
+.h6 {
+  line-height: $h6-line-height-zh;
+  letter-spacing: 0;
+}

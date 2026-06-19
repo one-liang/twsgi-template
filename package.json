@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-vue-layout-builder",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host localhost --port 3000",
+    "build": "node scripts/build.js",
+    "test:serve": "node scripts/test-server.mjs start",
+    "test:stop": "node scripts/test-server.mjs stop"
+  },
+  "dependencies": {
+    "@vue/server-renderer": "3.5.25",
+    "bootstrap": "^5.3.8",
+    "vue": "3.5.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "6.0.3",
+    "fs-extra": "11.3.2",
+    "sass": "1.96.0",
+    "vite": "^8.0.16"
+  }
+}
