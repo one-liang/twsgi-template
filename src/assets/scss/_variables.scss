@@ -36,27 +36,27 @@ $white-30: rgba(#ffffff, 0.3);
 $white-20: rgba(#ffffff, 0.2);
 $white-10: rgba(#ffffff, 0.1);
 
-$green-900: #154528;
-$green-700: #25673f;
-$green-500: #3a8959;
-$green-300: #6fcd94;
-$green-100: #c8e5d3;
-$green-50: #e2f1e8;
+$brown-90: #ad8400;
+$brown-70: #c59600;
+$brown-50: #e0ac09;
+$brown-30: #f2be1a;
+$brown-10: #f9e8b8;
+$brown-5: #fdf7e6;
 
-$red-50: #e50013;
+$blue-90: #1760be;
+$blue-70: #5a95e1;
 
 // 色彩語意
 $font-primary: $gray-90;
 $font-secondary: $gray-70;
 $font-tertiary: $gray-50;
-$font-brand: $green-500;
+$font-brand: $brown-70;
 $font-white: $white-100;
 
 // 框架顏色設定
-$primary: $green-500;
+$primary: $brown-70;
 $secondary: $gray-70;
 $dark: $gray-90;
-$danger: $red-50;
 
 // 中文標題字體大小(Desktop)
 $h1-font-size: 3rem;
@@ -130,31 +130,54 @@ $h6-letter-spacing-zh: 0;
 // 內文行高
 $line-height-base: 1.6;
 
+// Radius
+$border-radius-sm: 0.75rem;
+$border-radius: 1.5rem;
+$border-radius-lg: 3rem;
+$radius-s-mobile: 0.5rem;
+$radius-m-mobile: 1rem;
+$radius-xl-mobile: 2rem;
+
 // Form
-$input-border-color: $gray-30;
-$input-border-radius: 0.75rem;
-$input-focus-border-color: #{$green-500};
-$input-focus-box-shadow: none;
-$form-select-focus-box-shadow: $input-focus-box-shadow;
-$form-select-indicator-color: $gray-50;
-$input-padding-y: 0.9375rem;
-$input-padding-x: 1.25rem;
-$input-disabled-bg: #f4f5f6;
-$input-disabled-border-color: #d9d9d9;
+$input-focus-border-color: #{$brown-70};
 
 // Button
-$btn-border-radius: 0;
-$btn-border-radius-sm: 0;
-$btn-border-radius-lg: 0;
 $btn-line-height: 1.4;
-$btn-font-weight: 500;
-
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-font-size: 1.125rem;
 $btn-padding-y-lg: 1rem;
 $btn-padding-x-lg: 2rem;
 $btn-font-size-lg: 1.25rem;
+$btn-padding-y-sm: 0.5625rem;
+$btn-padding-x-sm: 1.5rem;
+$btn-font-size-sm: 1rem;
+$btn-border-radius: var(--bs-border-radius-pill);
+$btn-border-radius-lg: var(--bs-border-radius-pill);
+$btn-border-radius-sm: var(--bs-border-radius-pill);
 
-$btn-padding-y: 0.75rem;
-$btn-padding-x: 1.5rem;
+// Link
+$link-color: $primary;
+$link-hover-color: $brown-50;
+
+// Breadcrumb
+$breadcrumb-font-size: 1rem;
+$breadcrumb-item-padding-x: 1rem;
+$breadcrumb-divider-color: $font-secondary;
+$breadcrumb-active-color: $font-primary;
+
+// Pagination
+$pagination-color: $font-secondary;
+$pagination-bg: transparent;
+$pagination-border-width: 0;
+$pagination-font-size: 1.125rem;
+$pagination-hover-color: $font-brand;
+$pagination-hover-bg: transparent;
+$pagination-focus-color: $font-brand;
+$pagination-focus-bg: transparent;
+$pagination-focus-box-shadow: none;
+$pagination-active-color: $font-brand;
+$pagination-active-bg: transparent;
 
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";

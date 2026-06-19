@@ -3,15 +3,37 @@ import AppHeader from '../components/AppHeader.vue';
 import AppFooter from '../components/AppFooter.vue';
 
 const themeColors = [
-  'primary', 'secondary', 'success', 'danger',
-  'warning', 'info', 'light', 'dark',
+  'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark',
+];
+
+const dsButtonTypes = [
+  { key: 'solid', label: '實心', class: 'btn-solid' },
+  { key: 'outline', label: '空心', class: 'btn-outline-primary' },
+  { key: 'text', label: '無框無底色', class: 'btn-text' },
+];
+const dsButtonSizes = [
+  { key: 'l', label: 'L', class: 'btn-lg' },
+  { key: 'm', label: 'M', class: '' },
+  { key: 's', label: 'S', class: 'btn-sm' },
+];
+const dsIconButtons = [
+  { key: 'solid-r', class: 'btn-solid', icon: 'fa-light fa-arrow-right-long', dir: 'right' },
+  { key: 'solid-l', class: 'btn-solid', icon: 'fa-light fa-arrow-left', dir: 'left' },
+  { key: 'outline-r', class: 'btn-outline-soft', icon: 'fa-light fa-arrow-right-long', dir: 'right' },
+  { key: 'outline-l', class: 'btn-outline-soft', icon: 'fa-light fa-arrow-left', dir: 'left' },
+];
+const floatButtons = [
+  { key: 'scripture', icon: 'fa-solid fa-book', text: '聖典檢索' },
+  { key: 'donate', icon: 'fa-solid fa-hand-holding-heart', text: '線上捐款' },
+  { key: 'museum', icon: 'fa-solid fa-building-columns', text: '創價美術館' },
+  { key: 'member', icon: 'fa-solid fa-user', text: '會員專區' },
 ];
 </script>
 
 <template>
   <AppHeader />
 
-  <div class="container overflow-hidden py-5">
+  <div class="container py-5 mt-5">
     <!--      button      -->
     <div class="title row">
       <div class="col-12">
@@ -23,45 +45,16 @@ const themeColors = [
         <div class="bs-component mb-3">
           <button v-for="themeColor of themeColors" :key="themeColor" type="button" :class="`btn btn-${themeColor}`">{{
             themeColor }}</button>
-          <button type="button" class="btn btn-link">
-            <span>Link</span>
-            <i class="fa-regular fa-arrow-up-right"></i>
-          </button>
+          <button type="button" class="btn btn-link">Link</button>
         </div>
         <div class="bs-component mb-3">
           <button v-for="themeColor of themeColors" :key="themeColor" type="button"
             :class="`btn btn-${themeColor} disabled`">{{ themeColor }}</button>
           <button type="button" class="btn btn-link disabled">Link</button>
-
-          <a href="#" class="btn btn-primary btn-lg">
-            按鈕文字
-            <i class="fa-light fa-angle-right"></i>
-          </a>
-          <a href="#" class="btn btn-gold btn-lg">
-            按鈕文字
-            <i class="fa-light fa-angle-right"></i>
-          </a>
-          <a href="#" class="btn btn-link">
-            <span>按鈕文字</span>
-            <i class="fa-regular fa-arrow-up-right"></i>
-          </a>
         </div>
         <div class="bs-component mb-3">
           <button v-for="themeColor of themeColors" :key="themeColor" type="button"
             :class="`btn btn-outline-${themeColor}`">{{ themeColor }}</button>
-
-          <a href="#" class="btn btn-primary btn-lg">
-            按鈕文字
-            <i class="fa-light fa-angle-right"></i>
-          </a>
-          <a href="#" class="btn btn-gold btn-lg">
-            按鈕文字
-            <i class="fa-light fa-angle-right"></i>
-          </a>
-          <a href="#" class="btn btn-link">
-            <span>按鈕文字</span>
-            <i class="fa-regular fa-arrow-up-right"></i>
-          </a>
         </div>
         <div class="dropdown-split-button bs-component mb-3">
           <div v-for="themeColor of themeColors" :key="themeColor" class="btn-group">
@@ -94,16 +87,9 @@ const themeColors = [
           </div>
         </div>
         <div class="bs-component">
-          <button type="button" class="btn btn-primary">Default button</button>
           <button type="button" class="btn btn-primary btn-lg">Large button</button>
-          <button type="button" class="btn btn-primary btn-md">Medium button</button>
+          <button type="button" class="btn btn-primary">Default button</button>
           <button type="button" class="btn btn-primary btn-sm">Small button</button>
-        </div>
-        <div class="bs-component">
-          <button type="button" class="btn btn-gold">Default button</button>
-          <button type="button" class="btn btn-gold btn-lg">Large button</button>
-          <button type="button" class="btn btn-gold btn-md">Medium button</button>
-          <button type="button" class="btn btn-gold btn-sm">Small button</button>
         </div>
       </div>
       <div class="col-3">
@@ -152,6 +138,41 @@ const themeColors = [
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h3>Special Buttons</h3>
+      <div v-for="type in dsButtonTypes" :key="type.key" class="d-flex flex-wrap align-items-center gap-3 mb-3">
+        <button v-for="size in dsButtonSizes" :key="size.key" type="button"
+          class="btn d-inline-flex align-items-center gap-2" :class="[type.class, size.class]">
+          按鈕文字
+          <span v-if="type.key === 'text'" class="btn-text__icon">
+            <span class="btn-arrow">
+              <span class="btn-arrow__track">
+                <i class="fa-light fa-arrow-right-long"></i>
+                <i class="fa-light fa-arrow-right-long"></i>
+              </span>
+            </span>
+          </span>
+          <span v-else class="btn-arrow">
+            <span class="btn-arrow__track">
+              <i class="fa-light fa-arrow-right-long"></i>
+              <i class="fa-light fa-arrow-right-long"></i>
+            </span>
+          </span>
+        </button>
+      </div>
+
+      <div class="d-flex flex-wrap align-items-center gap-3">
+        <button v-for="icon in dsIconButtons" :key="icon.key" type="button" class="btn btn-icon" :class="icon.class">
+          <span class="btn-arrow" :class="{ 'btn-arrow--left': icon.dir === 'left' }">
+            <span class="btn-arrow__track">
+              <i :class="icon.icon"></i>
+              <i :class="icon.icon"></i>
+            </span>
+          </span>
+        </button>
       </div>
     </div>
 
@@ -292,31 +313,19 @@ const themeColors = [
             elit. Nihil veritatis voluptas! Adipisci cum, incidunt nostrum quidem repellat sed
             velit. Architecto ipsum itaque reprehenderit! Aliquam aut culpa ipsam
           </p>
-          <p><mark>This line of text is meant to be treated as marked text.</mark></p>
-          <p><del>This line of text is meant to be treated as deleted text.</del></p>
-          <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-          <p>
-            <ins>This line of text is meant to be treated as an addition to the document.</ins>
-          </p>
-          <p><u>This line of text will render as underlined</u></p>
           <p><small>This line of text is meant to be treated as fine print.</small></p>
-          <p><strong>This line rendered as bold text.</strong></p>
-          <p><em>This line rendered as italicized text.</em></p>
+          <p>The following is <strong>rendered as bold text.</strong></p>
+          <p>The following is <em>rendered as italic text.</em></p>
+          <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
         </div>
       </div>
       <div class="col-4">
-        <h2>Text utilities</h2>
+        <h2>text-color classes</h2>
         <div class="bs-component">
-          <p class="text-primary">Primary text</p>
-          <p class="text-secondary">Secondary text</p>
-          <p class="text-success">Success text</p>
-          <p class="text-danger">Danger text</p>
-          <p class="text-warning">Warning text</p>
-          <p class="text-info">Info text</p>
-          <p class="text-light bg-dark">Light text</p>
-          <p class="text-dark">Dark text</p>
-          <p class="text-muted">Muted text</p>
-          <p class="text-white bg-dark">White text</p>
+          <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+          <p v-for="themeColor of themeColors" :key="themeColor" :class="`text-${themeColor}`">
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+          </p>
         </div>
       </div>
     </div>
@@ -431,55 +440,19 @@ const themeColors = [
               </div>
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">
-                Email address
-                <span class="text-danger">*</span>
-              </label>
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                 placeholder="Enter email" />
               <div id="emailHelp" class="form-text">
                 We'll never share your email with anyone else.
               </div>
             </div>
-            <div class="mb-3 d-flex gap-3">
-              <label for="exampleInputEmail1" class="form-label">
-                標題
-                <span class="text-danger">*</span>
-              </label>
-              <div class="flex-grow-1">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                  placeholder="Enter email" />
-              </div>
-            </div>
             <div class="mb-3">
               <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-              <div class="position-relative">
+              <div>
                 <input type="password" class="form-control" id="inputPassword" />
-                <button
-                  class="border-0 bg-transparent position-absolute end-0 top-50 translate-middle-y me-2 d-flex align-items-center justify-content-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
-                    <path
-                      d="M9.03125 1.5C6.96875 1.5 5.3125 2.4375 4.03125 3.625C2.8125 4.75 2 6.0625 1.5625 7C2 7.9375 2.8125 9.28125 4.03125 10.4062C5.3125 11.5938 6.96875 12.5 9.03125 12.5C11.0625 12.5 12.7188 11.5938 14 10.4062C15.2188 9.28125 16.0625 7.9375 16.4688 7C16.0625 6.0625 15.2188 4.75 14.0312 3.625C12.7188 2.4375 11.0625 1.5 9.03125 1.5ZM3 2.53125C4.46875 1.15625 6.5 0 9.03125 0C11.5312 0 13.5625 1.15625 15.0312 2.53125C16.5 3.90625 17.4688 5.5 17.9375 6.625C18.0312 6.875 18.0312 7.15625 17.9375 7.40625C17.4688 8.5 16.5 10.125 15.0312 11.5C13.5625 12.875 11.5312 14 9.03125 14C6.5 14 4.46875 12.875 3 11.5C1.53125 10.125 0.5625 8.5 0.09375 7.40625C0 7.15625 0 6.875 0.09375 6.625C0.5625 5.5 1.53125 3.875 3 2.53125ZM9.03125 9.5C10.4062 9.5 11.5312 8.40625 11.5312 7C11.5312 5.625 10.4062 4.5 9.03125 4.5C9 4.5 8.96875 4.5 8.96875 4.5C9 4.6875 9.03125 4.84375 9.03125 5C9.03125 6.125 8.125 7 7.03125 7C6.84375 7 6.6875 7 6.53125 6.9375C6.53125 6.96875 6.53125 7 6.53125 7C6.53125 8.40625 7.625 9.5 9.03125 9.5ZM9.03125 3C10.4375 3 11.75 3.78125 12.4688 5C13.1875 6.25 13.1875 7.78125 12.4688 9C11.75 10.25 10.4375 11 9.03125 11C7.59375 11 6.28125 10.25 5.5625 9C4.84375 7.78125 4.84375 6.25 5.5625 5C6.28125 3.78125 7.59375 3 9.03125 3Z"
-                      fill="#9A9C9F" />
-                  </svg>
-                </button>
               </div>
             </div>
-            <div class="mb-3">
-              <label for="inputSearch" class="col-sm-2 col-form-label">Search</label>
-              <div class="position-relative">
-                <button
-                  class="border-0 bg-transparent position-absolute start-0 top-50 translate-middle-y ms-2 d-flex align-items-center justify-content-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <path
-                      d="M11.5 6.5C11.5 4.71875 10.5312 3.09375 9 2.1875C7.4375 1.28125 5.53125 1.28125 4 2.1875C2.4375 3.09375 1.5 4.71875 1.5 6.5C1.5 8.3125 2.4375 9.9375 4 10.8438C5.53125 11.75 7.4375 11.75 9 10.8438C10.5312 9.9375 11.5 8.3125 11.5 6.5ZM10.5312 11.625C9.40625 12.5 8 13 6.5 13C2.90625 13 0 10.0938 0 6.5C0 2.9375 2.90625 0 6.5 0C10.0625 0 13 2.9375 13 6.5C13 8.03125 12.4688 9.4375 11.5938 10.5625L15.7812 14.7188C16.0625 15.0312 16.0625 15.5 15.7812 15.7812C15.4688 16.0938 15 16.0938 14.7188 15.7812L10.5312 11.625Z"
-                      fill="#9A9C9F" />
-                  </svg>
-                </button>
-                <input type="text" class="form-control ps-5" id="inputSearch" />
-              </div>
-            </div>
-
             <div class="mb-3">
               <label for="exampleSelect">Example select</label>
               <select class="form-select" aria-label="Default select example" id="exampleSelect">
@@ -490,28 +463,6 @@ const themeColors = [
                 <option value="5">5</option>
               </select>
             </div>
-
-            <div class="mb-3">
-              <label for="exampleIconSelect">Example icon select</label>
-              <div class="position-relative">
-                <button
-                  class="border-0 bg-transparent position-absolute start-0 top-50 translate-middle-y ms-3 d-flex align-items-center justify-content-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17" fill="none">
-                    <path
-                      d="M10.5 6C10.5 3.53125 8.46875 1.5 6 1.5C3.5 1.5 1.5 3.53125 1.5 6C1.5 6.40625 1.625 7 1.96875 7.8125C2.28125 8.5625 2.75 9.4375 3.28125 10.3125C4.1875 11.75 5.21875 13.125 6 14.125C6.75 13.125 7.78125 11.75 8.6875 10.3125C9.21875 9.4375 9.6875 8.5625 10 7.8125C10.3438 7 10.5 6.40625 10.5 6ZM12 6C12 8.75 8.34375 13.5938 6.71875 15.625C6.34375 16.0938 5.625 16.0938 5.25 15.625C3.65625 13.5938 0 8.75 0 6C0 2.6875 2.6875 0 6 0C9.3125 0 12 2.6875 12 6ZM7 6C7 5.46875 6.53125 5 6 5C5.4375 5 5 5.46875 5 6C5 6.5625 5.4375 7 6 7C6.53125 7 7 6.5625 7 6ZM3.5 6C3.5 5.125 3.96875 4.3125 4.75 3.84375C5.5 3.40625 6.46875 3.40625 7.25 3.84375C8 4.3125 8.5 5.125 8.5 6C8.5 6.90625 8 7.71875 7.25 8.1875C6.46875 8.625 5.5 8.625 4.75 8.1875C3.96875 7.71875 3.5 6.90625 3.5 6Z"
-                      fill="#9A9C9F" />
-                  </svg>
-                </button>
-                <select class="form-select ps-5" aria-label="Default select example" id="exampleIconSelect">
-                  <option value="1">縣市</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </div>
-            </div>
-
             <div class="mb-3">
               <label for="exampleMultiSelect">Example multiple select</label>
               <select class="form-select" multiple aria-label="multiple select example" id="exampleMultiSelect">
@@ -600,15 +551,7 @@ const themeColors = [
                   <label for="validationCustom03" class="form-label">Invalid input</label>
                   <input type="text" class="form-control is-invalid" id="validationCustom02" value="Wrong value"
                     required />
-                  <div class="invalid-feedback">
-                    <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                      fill="none">
-                      <path
-                        d="M8 0C3.58922 0 0 3.58922 0 8C0 12.4108 3.58922 16 8 16C12.4108 16 16 12.4108 16 8C16 3.58922 12.4108 0 8 0ZM8 12.5714C7.36888 12.5714 6.85714 12.0597 6.85714 11.4286C6.85714 10.7973 7.36888 10.2857 8 10.2857C8.63112 10.2857 9.14286 10.7973 9.14286 11.4286C9.14286 12.0597 8.63112 12.5714 8 12.5714ZM9.14286 8C9.14286 8.63177 8.63177 9.14286 8 9.14286C7.36823 9.14286 6.85714 8.63177 6.85714 8V4.57143C6.85714 3.93966 7.36823 3.42857 8 3.42857C8.63177 3.42857 9.14286 3.93966 9.14286 4.57143V8Z"
-                        fill="#E60012" />
-                    </svg>
-                    請輸入正確格式
-                  </div>
+                  <div class="invalid-feedback">Please provide a valid input.</div>
                 </div>
               </form>
             </div>
@@ -622,7 +565,7 @@ const themeColors = [
             </div>
             <div class="mb-3">
               <label for="inputSmall" class="form-label">Small input</label>
-              <input type="email" class="form-control form-control-sm" id="inputSmall" placeholder="Small size" />
+              <input type="email" class="form-control" id="inputSmall" placeholder="Small size" />
             </div>
             <label for="inputAmount" class="form-label">Enter amount</label>
             <div class="input-group mb-3">
@@ -643,22 +586,6 @@ const themeColors = [
                   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled />
                   <label class="form-check-label" for="flexSwitchCheckDisabled">
                     Disabled switch checkbox input
-                  </label>
-                </div>
-              </div>
-              <div class="mb-3">
-                <div class="form-check form-switch form-switch--light">
-                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedLight"
-                    checked />
-                  <label class="form-check-label" for="flexSwitchCheckCheckedLight">
-                    Checked switch checkbox input (Light)
-                  </label>
-                </div>
-                <div class="form-check form-switch form-switch--light">
-                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabledLight"
-                    disabled />
-                  <label class="form-check-label" for="flexSwitchCheckDisabledLight">
-                    Disabled switch checkbox input (Light)
                   </label>
                 </div>
               </div>
@@ -690,21 +617,10 @@ const themeColors = [
       </div>
     </div>
 
-    <!--      Search bar      -->
+    <!--      Navs      -->
     <div class="title row">
-      <h2>Search bar</h2>
-      <div style="max-width: 500px">
-        <div class="header__search-form">
-          <div class="header__search-input-wrapper">
-            <svg class="header__search-input-icon" width="28" height="28" viewBox="0 0 28 28" fill="currentColor">
-              <path
-                d="M21.625 19.875C22.0938 20.375 22.0938 21.1562 21.625 21.6562C21.125 22.125 20.3438 22.125 19.8438 21.6562L16.125 17.9062C14.8438 18.75 13.2812 19.1875 11.5938 18.9688C8.71875 18.5625 6.40625 16.2188 6.03125 13.375C5.5 9.125 9.09375 5.53125 13.3438 6.0625C16.1875 6.4375 18.5312 8.75 18.9375 11.625C19.1562 13.3125 18.7188 14.875 17.875 16.125L21.625 19.875ZM8.46875 12.5C8.46875 14.7188 10.25 16.5 12.4688 16.5C14.6562 16.5 16.4688 14.7188 16.4688 12.5C16.4688 10.3125 14.6562 8.5 12.4688 8.5C10.25 8.5 8.46875 10.3125 8.46875 12.5Z"
-                fill="#currentColor"></path>
-            </svg>
-            <input type="text" class="header__search-input" placeholder="搜尋" />
-          </div>
-          <button type="submit" class="btn btn-md btn-primary">搜尋</button>
-        </div>
+      <div class="col-12">
+        <h2>Navs</h2>
       </div>
     </div>
     <div class="navs row my-4">
@@ -712,6 +628,10 @@ const themeColors = [
         <h2>Tabs</h2>
         <nav>
           <div class="nav nav-tabs" id="nav-tab" role="tablist" style="margin-bottom: 15px">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+              type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+              Home
+            </button>
             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
               type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
               Profile
@@ -888,50 +808,47 @@ const themeColors = [
     <div class="navs row">
       <div class="col-6">
         <h2>Breadcrumbs</h2>
-        <!--      breadcrumb's each padding is 0 now      -->
         <div class="bs-component">
-          <nav aria-label="breadcrumb" class="">
+          <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item active" aria-current="page">Home</li>
             </ol>
           </nav>
 
-          <nav aria-label="breadcrumb" class="">
+          <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item active">
-                <a href="#">Home</a>
-              </li>
-              <li class="breadcrumb-item" aria-current="page">Library</li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Library</li>
             </ol>
           </nav>
 
-          <nav aria-label="breadcrumb" class="">
+          <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item active">
-                <a href="#">
-                  <span>Home</span>
-                </a>
-              </li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item"><a href="#">Library</a></li>
-              <li class="breadcrumb-item" aria-current="page">Data</li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
             </ol>
           </nav>
 
-          <nav aria-label="breadcrumb" class="">
+          <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item active"><a href="#">Home</a></li>
-              <li class="breadcrumb-item" aria-current="page">Library</li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Library</li>
             </ol>
           </nav>
-
-          <nav aria-label="breadcrumb" class="">
+          <nav>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item active">
-                <a href="#">
-                  <i class="fa-solid fa-angle-left"></i>
-                  首頁
-                </a>
-              </li>
+              <li class="breadcrumb-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+              <li class="breadcrumb-item"><a href="#">內頁</a></li>
+              <li class="breadcrumb-item"><a href="#">內頁</a></li>
+              <li class="breadcrumb-item"><a href="#">內頁</a></li>
+              <li class="breadcrumb-item active">內頁</li>
+            </ol>
+          </nav>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+              <li class="breadcrumb-item active">內頁</li>
             </ol>
           </nav>
         </div>
@@ -939,107 +856,95 @@ const themeColors = [
       <div class="col-6">
         <h2>Pagination</h2>
         <div class="bs-component">
-          <ul class="pagination d-flex column-gap-3">
-            <li class="page-item disabled">
-              <button class="btn btn-arrow" disabled type="button" aria-label="Arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" fill="none">
-                  <path d="M22.8604 8L2.86035 8" stroke="#183390" stroke-width="1.8" />
-                  <path d="M10.917 1.33301C10.8319 3.55523 8.8239 7.99967 1.47255 7.99967" stroke="#183390"
-                    stroke-width="1.8" />
-                  <path d="M10.917 14.667C10.8319 12.4448 8.8239 8.00033 1.47255 8.00033" stroke="#183390"
-                    stroke-width="1.8" />
-                </svg>
-              </button>
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="btn btn-icon btn-pagination-arrow" href="#">
+                <span class="btn-arrow btn-arrow--left">
+                  <span class="btn-arrow__track">
+                    <i class="fa-light fa-arrow-left"></i>
+                    <i class="fa-light fa-arrow-left"></i>
+                  </span>
+                </span>
+              </a>
             </li>
-            <li class="page-item active" aria-current="page">
-              <span class="page-link">1</span>
-            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item"><a class="page-link" href="#">4</a></li>
             <li class="page-item"><a class="page-link" href="#">5</a></li>
             <li class="page-item">
-              <button class="btn btn-arrow" type="button" aria-label="Arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" fill="none">
-                  <path d="M1.13965 8L21.1396 8" stroke="#183390" stroke-width="1.8" />
-                  <path d="M13.083 1.33301C13.1681 3.55523 15.1761 7.99967 22.5275 7.99967" stroke="#183390"
-                    stroke-width="1.8" />
-                  <path d="M13.083 14.667C13.1681 12.4448 15.1761 8.00033 22.5275 8.00033" stroke="#183390"
-                    stroke-width="1.8" />
-                </svg>
-              </button>
+              <a class="btn btn-icon btn-pagination-arrow" href="#">
+                <span class="btn-arrow">
+                  <span class="btn-arrow__track">
+                    <i class="fa-light fa-arrow-right-long"></i>
+                    <i class="fa-light fa-arrow-right-long"></i>
+                  </span>
+                </span>
+              </a>
             </li>
           </ul>
         </div>
         <div class="bs-component">
-          <ul class="pagination pagination-lg d-flex column-gap-3">
+          <ul class="pagination pagination-lg">
             <li class="page-item">
-              <button class="btn btn-arrow" type="button" aria-label="Arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" fill="none">
-                  <path d="M22.8604 8L2.86035 8" stroke="#183390" stroke-width="1.8" />
-                  <path d="M10.917 1.33301C10.8319 3.55523 8.8239 7.99967 1.47255 7.99967" stroke="#183390"
-                    stroke-width="1.8" />
-                  <path d="M10.917 14.667C10.8319 12.4448 8.8239 8.00033 1.47255 8.00033" stroke="#183390"
-                    stroke-width="1.8" />
-                </svg>
-              </button>
+              <a class="btn btn-icon btn-pagination-arrow btn-pagination-arrow--lg" href="#">
+                <span class="btn-arrow btn-arrow--left">
+                  <span class="btn-arrow__track">
+                    <i class="fa-light fa-arrow-left"></i>
+                    <i class="fa-light fa-arrow-left"></i>
+                  </span>
+                </span>
+              </a>
             </li>
-            <li class="page-item active" aria-current="page">
-              <span class="page-link">1</span>
-            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item"><a class="page-link" href="#">4</a></li>
             <li class="page-item"><a class="page-link" href="#">5</a></li>
             <li class="page-item">
-              <button class="btn btn-arrow" type="button" aria-label="Arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" fill="none">
-                  <path d="M1.13965 8L21.1396 8" stroke="#183390" stroke-width="1.8" />
-                  <path d="M13.083 1.33301C13.1681 3.55523 15.1761 7.99967 22.5275 7.99967" stroke="#183390"
-                    stroke-width="1.8" />
-                  <path d="M13.083 14.667C13.1681 12.4448 15.1761 8.00033 22.5275 8.00033" stroke="#183390"
-                    stroke-width="1.8" />
-                </svg>
-              </button>
+              <a class="btn btn-icon btn-pagination-arrow btn-pagination-arrow--lg" href="#">
+                <span class="btn-arrow">
+                  <span class="btn-arrow__track">
+                    <i class="fa-light fa-arrow-right-long"></i>
+                    <i class="fa-light fa-arrow-right-long"></i>
+                  </span>
+                </span>
+              </a>
             </li>
           </ul>
         </div>
         <div class="bs-component">
-          <ul class="pagination pagination-sm d-flex column-gap-3">
+          <ul class="pagination pagination-sm">
             <li class="page-item">
-              <button class="btn btn-arrow" type="button" aria-label="Arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" fill="none">
-                  <path d="M22.8604 8L2.86035 8" stroke="#183390" stroke-width="1.8" />
-                  <path d="M10.917 1.33301C10.8319 3.55523 8.8239 7.99967 1.47255 7.99967" stroke="#183390"
-                    stroke-width="1.8" />
-                  <path d="M10.917 14.667C10.8319 12.4448 8.8239 8.00033 1.47255 8.00033" stroke="#183390"
-                    stroke-width="1.8" />
-                </svg>
-              </button>
+              <a class="btn btn-icon btn-pagination-arrow btn-pagination-arrow--sm" href="#">
+                <span class="btn-arrow btn-arrow--left">
+                  <span class="btn-arrow__track">
+                    <i class="fa-light fa-arrow-left"></i>
+                    <i class="fa-light fa-arrow-left"></i>
+                  </span>
+                </span>
+              </a>
             </li>
-            <li class="page-item active" aria-current="page">
-              <span class="page-link">1</span>
-            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item"><a class="page-link" href="#">4</a></li>
             <li class="page-item"><a class="page-link" href="#">5</a></li>
             <li class="page-item">
-              <button class="btn btn-arrow" type="button" aria-label="Arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" fill="none">
-                  <path d="M1.13965 8L21.1396 8" stroke="#183390" stroke-width="1.8" />
-                  <path d="M13.083 1.33301C13.1681 3.55523 15.1761 7.99967 22.5275 7.99967" stroke="#183390"
-                    stroke-width="1.8" />
-                  <path d="M13.083 14.667C13.1681 12.4448 15.1761 8.00033 22.5275 8.00033" stroke="#183390"
-                    stroke-width="1.8" />
-                </svg>
-              </button>
+              <a class="btn btn-icon btn-pagination-arrow btn-pagination-arrow--sm" href="#">
+                <span class="btn-arrow">
+                  <span class="btn-arrow__track">
+                    <i class="fa-light fa-arrow-right-long"></i>
+                    <i class="fa-light fa-arrow-right-long"></i>
+                  </span>
+                </span>
+              </a>
             </li>
           </ul>
         </div>
         <div class="bs-component">
           <nav aria-label="Page navigation example">
-            <ul class="pagination d-flex column-gap-3">
+            <ul class="pagination">
               <li class="page-item"><a class="page-link" href="#">Previous</a></li>
               <li class="page-item"><a class="page-link" href="#">1</a></li>
               <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -1050,30 +955,6 @@ const themeColors = [
             </ul>
           </nav>
         </div>
-      </div>
-    </div>
-
-    <!-- Carousel -->
-    <h2>Carousel</h2>
-    <div class="mb-5">
-      <ul class="carousel-pagination">
-        <li class="carousel-pagination__item active" aria-current="page"></li>
-        <li class="carousel-pagination__item"></li>
-        <li class="carousel-pagination__item"></li>
-        <li class="carousel-pagination__item"></li>
-        <li class="carousel-pagination__item"></li>
-        <li class="carousel-pagination__item"></li>
-      </ul>
-
-      <div class="bg-dark py-2 mt-2">
-        <ul class="carousel-pagination carousel-pagination--dark">
-          <li class="carousel-pagination__item active" aria-current="page"></li>
-          <li class="carousel-pagination__item"></li>
-          <li class="carousel-pagination__item"></li>
-          <li class="carousel-pagination__item"></li>
-          <li class="carousel-pagination__item"></li>
-          <li class="carousel-pagination__item"></li>
-        </ul>
       </div>
     </div>
 
@@ -1092,7 +973,8 @@ const themeColors = [
     <div class="alerts row my-4">
       <div v-for="themeColor of themeColors" :key="themeColor" class="col-4 bs-component">
         <div :class="`alert alert-${themeColor}`" role="alert">
-          <button type="button" class="btn-close" data-bs-dismiss="alert" style="float: right"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+            style="float: right"></button>
           <div>
             Danger!! Change a few things up and
             <a href="#" class="alert-link">try submitting</a>
@@ -1109,9 +991,8 @@ const themeColors = [
     </div>
     <div class="badges row" style="margin-bottom: 40px">
       <div class="col-6 bs-component">
-        <!--   in bootstrap v5.2 , <span class="badge text-bg-primary">Primary</span> is available   -->
         <span v-for="themeColor of themeColors" :key="themeColor" :class="`badge text-bg-${themeColor}`">{{ themeColor
-        }}</span>
+          }}</span>
       </div>
       <div class="col-6 bs-component">
         <button type="button" class="btn btn-primary">
@@ -1134,59 +1015,6 @@ const themeColors = [
           </span>
         </button>
       </div>
-    </div>
-
-    <!--      Tag      -->
-    <div class="mt-3">
-      <h2>Tag</h2>
-    </div>
-    <div style="margin-bottom: 40px">
-      <span class="tag tag-l">
-        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M5.38672 0C5.85156 0 6.28906 0.191406 6.61719 0.519531L11.4297 5.33203C12.1133 6.01562 12.1133 7.13672 11.4297 7.82031L7.79297 11.457C7.10938 12.1406 5.98828 12.1406 5.30469 11.457L0.492188 6.64453C0.164062 6.31641 0 5.87891 0 5.41406V1.3125C0 0.601562 0.574219 0 1.3125 0H5.38672ZM1.3125 5.41406C1.3125 5.52344 1.33984 5.63281 1.42188 5.71484L6.23438 10.5273C6.39844 10.6914 6.69922 10.6914 6.86328 10.5273L10.5 6.89062C10.6914 6.72656 10.6914 6.42578 10.5 6.26172L5.6875 1.44922C5.60547 1.36719 5.49609 1.3125 5.38672 1.3125H1.3125V5.41406ZM3.0625 2.1875C3.52734 2.1875 3.9375 2.59766 3.9375 3.0625C3.9375 3.55469 3.52734 3.9375 3.0625 3.9375C2.57031 3.9375 2.1875 3.55469 2.1875 3.0625C2.1875 2.59766 2.57031 2.1875 3.0625 2.1875Z"
-            fill="#0F0F0F" />
-        </svg>
-        標籤樣式
-      </span>
-      <span class="tag tag-s">
-        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M5.38672 0C5.85156 0 6.28906 0.191406 6.61719 0.519531L11.4297 5.33203C12.1133 6.01562 12.1133 7.13672 11.4297 7.82031L7.79297 11.457C7.10938 12.1406 5.98828 12.1406 5.30469 11.457L0.492188 6.64453C0.164062 6.31641 0 5.87891 0 5.41406V1.3125C0 0.601562 0.574219 0 1.3125 0H5.38672ZM1.3125 5.41406C1.3125 5.52344 1.33984 5.63281 1.42188 5.71484L6.23438 10.5273C6.39844 10.6914 6.69922 10.6914 6.86328 10.5273L10.5 6.89062C10.6914 6.72656 10.6914 6.42578 10.5 6.26172L5.6875 1.44922C5.60547 1.36719 5.49609 1.3125 5.38672 1.3125H1.3125V5.41406ZM3.0625 2.1875C3.52734 2.1875 3.9375 2.59766 3.9375 3.0625C3.9375 3.55469 3.52734 3.9375 3.0625 3.9375C2.57031 3.9375 2.1875 3.55469 2.1875 3.0625C2.1875 2.59766 2.57031 2.1875 3.0625 2.1875Z"
-            fill="#0F0F0F" />
-        </svg>
-        標籤樣式
-      </span>
-    </div>
-
-    <!--      Share      -->
-    <div class="mt-3">
-      <h2>Share</h2>
-    </div>
-    <div class="mb-5 d-flex gap-3 align-items-center">
-      <button class="btn-share btn-share-fb" aria-label="分享到 Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-      </button>
-      <button class="btn-share btn-share-line" aria-label="分享到 Line">
-        <i class="fa-brands fa-line"></i>
-      </button>
-      <button class="btn-share btn-share-twitter" aria-label="分享到 Twitter">
-        <i class="fa-brands fa-twitter"></i>
-      </button>
-      <button class="btn-share btn-share-thread" aria-label="分享到 Threads">
-        <i class="fa-brands fa-threads"></i>
-      </button>
-    </div>
-    <!--      anchor link      -->
-    <div class="mt-3">
-      <h2>anchor link</h2>
-    </div>
-    <div class="mb-5">
-      <a href="#" class="anchor-link" aria-label="Step 01. 初步諮詢與需求對接">
-        <span class="anchor-link__step">Step 01.</span>
-        <span class="anchor-link__title">初步諮詢與需求對接</span>
-        <i class="fa-solid fa-chevron-down anchor-link__icon"></i>
-      </a>
     </div>
 
     <!--      Progress      -->
@@ -1685,6 +1513,13 @@ const themeColors = [
         </button>
       </div>
     </div>
+  </div>
+
+  <div class="btn-float-group">
+    <a v-for="item in floatButtons" :key="item.key" href="#" class="btn-float">
+      <i :class="item.icon" class="btn-float__icon"></i>
+      <span class="btn-float__text">{{ item.text }}</span>
+    </a>
   </div>
 
   <AppFooter />

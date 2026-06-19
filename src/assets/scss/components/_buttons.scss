@@ -1,106 +1,172 @@
-.btn-primary {
+$btn-arrow-icon-width: 1.5em;
+$btn-arrow-gap: 0.5em;
+$btn-arrow-shift: calc(#{$btn-arrow-icon-width} + #{$btn-arrow-gap});
+
+// 實心按鈕
+.btn-solid {
   --bs-btn-color: #{$white-100};
+  --bs-btn-bg: #{$primary};
+  --bs-btn-border-color: #{$primary};
+  --bs-btn-hover-color: #{$primary};
+  --bs-btn-hover-bg: #{$white-100};
+  --bs-btn-hover-border-color: #{$primary};
+  --bs-btn-active-color: #{$primary};
+  --bs-btn-active-bg: #{$white-100};
+  --bs-btn-active-border-color: #{$primary};
+}
+
+// 空心按鈕
+.btn-outline-soft {
+  --bs-btn-color: #{$primary};
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #{$gray-30};
   --bs-btn-hover-color: #{$white-100};
-  --bs-btn-hover-bg: #{$green-700};
-  --bs-btn-hover-border-color: #{$green-700};
+  --bs-btn-hover-bg: #{$primary};
+  --bs-btn-hover-border-color: #{$primary};
   --bs-btn-active-color: #{$white-100};
-  --bs-btn-active-bg: #{$green-900};
-  --bs-btn-active-border-color: #{$green-900};
-  --bs-btn-disabled-bg: #{$gray-50};
-  --bs-btn-disabled-border-color: #{$gray-50};
-  --bs-btn-disabled-color: #{$white-100};
-  --bs-btn-disabled-opacity: 1;
+  --bs-btn-active-bg: #{$primary};
+  --bs-btn-active-border-color: #{$primary};
 }
 
-.btn-outline-primary {
-  --bs-btn-hover-bg: #{$green-50};
-  --bs-btn-hover-color: #{$green-500};
-  --bs-btn-hover-border-color: #{$green-700};
-  --bs-btn-active-bg: #{$green-100};
-  --bs-btn-active-color: #{$green-700};
-  --bs-btn-active-border-color: #{$green-900};
-  --bs-btn-disabled-border-color: #{$gray-50};
-  --bs-btn-disabled-color: #{$gray-50};
-  --bs-btn-disabled-opacity: 1;
-}
-
-.btn-green-secondary {
-  --bs-btn-color: #{$green-500};
-  --bs-btn-bg: #{$white-100};
+// 無框無底色按鈕
+.btn-text {
+  --bs-btn-color: #{$gray-90};
+  --bs-btn-bg: transparent;
   --bs-btn-border-color: transparent;
-  --bs-btn-hover-color: #{$green-700};
-  --bs-btn-hover-bg: #{$green-50};
+  --bs-btn-hover-color: #{$primary};
+  --bs-btn-hover-bg: transparent;
   --bs-btn-hover-border-color: transparent;
-  --bs-btn-active-color: #{$green-900};
-  --bs-btn-active-bg: #{$green-100};
+  --bs-btn-active-color: #{$primary};
+  --bs-btn-active-bg: transparent;
   --bs-btn-active-border-color: transparent;
-  --bs-btn-disabled-color: #{$white-100};
-  --bs-btn-disabled-bg: #{$gray-50};
-  --bs-btn-disabled-border-color: transparent;
-  --bs-btn-disabled-opacity: 1;
-}
 
-.btn-icon-right {
-  min-width: 11.25rem;
-  height: 3rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-  gap: 0.625rem;
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem; // 40px
+    height: 2.5rem;
+    border-radius: $border-radius-pill;
+    color: $white-100;
+    background-color: $primary;
+    border: 1px solid $primary;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+  }
 
-  img {
-    flex-shrink: 0;
-    width: 2rem;
-    height: 2rem;
-    transform: scaleX(-1);
+  &:hover &__icon {
+    color: $primary;
+    background-color: $white-100;
   }
 }
 
-.btn-icon-circle {
-  --bs-btn-bg: #{$white-100};
-  --bs-btn-border-color: #{$white-100};
-  --bs-btn-hover-bg: rgba(255, 255, 255, 0.3);
-  --bs-btn-hover-border-color: #{$white-100};
-  --bs-btn-active-bg: rgba(255, 255, 255, 0.3);
-  --bs-btn-active-border-color: #{$white-100};
-  --bs-btn-disabled-bg: #{$white-100};
-  --bs-btn-disabled-border-color: #{$white-100};
-  --bs-btn-disabled-opacity: 0.4;
-  min-width: 0;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border-radius: 50%;
-  box-shadow: 0 0 28px 9px rgba(0, 0, 0, 0.05);
-  display: flex;
+// icon 圓鈕
+.btn-icon {
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  font-size: 1.25rem;
+  --bs-btn-border-radius: #{$border-radius-pill};
+  border-radius: $border-radius-pill;
+}
 
-  img {
-    flex-shrink: 0;
-    width: 25px;
-    height: 25px;
+// 箭頭滑動按鈕
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  width: $btn-arrow-icon-width;
+
+  &__track {
+    display: flex;
+    flex: none;
+    gap: $btn-arrow-gap;
+    transition: transform 0.3s ease;
+    transform: translateX(calc(-1 * #{$btn-arrow-shift}));
+
+    > i {
+      flex: none;
+      width: $btn-arrow-icon-width;
+      text-align: center;
+    }
   }
 
-  &--right img {
-    transform: scaleX(-1);
+  &--left .btn-arrow__track {
+    transform: translateX(0);
+  }
+}
+
+.btn:hover .btn-arrow__track {
+  transform: translateX(0);
+}
+
+.btn:hover .btn-arrow--left .btn-arrow__track {
+  transform: translateX(calc(-1 * #{$btn-arrow-shift}));
+}
+
+// 浮動按鈕群組
+.btn-float-group {
+  position: fixed;
+  right: 0;
+  bottom: 1.75rem;
+  z-index: $zindex-fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+
+  @include media-breakpoint-down(lg) {
+    bottom: 1rem;
+  }
+}
+
+// 浮動按鈕
+.btn-float {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  width: 3rem;
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: 0.5rem 0 0 0.5rem;
+  color: $white-100;
+  background-color: $primary;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+
+  &:hover {
+    width: 3.25rem;
+    color: $white-100;
+    background-color: $brown-50;
   }
 
-  &--outline {
-    --bs-btn-bg: transparent;
-    --bs-btn-border-color: #d6d6d6;
-    --bs-btn-hover-bg: #{$green-50};
-    --bs-btn-hover-border-color: #{$green-500};
-    --bs-btn-active-bg: #{$green-50};
-    --bs-btn-active-border-color: #{$green-500};
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: #{$gray-30};
-    --bs-btn-disabled-opacity: 0.4;
-    box-shadow: none;
+  @include media-breakpoint-down(lg) {
+    width: 2rem;
+    padding: 1rem 0.5rem;
+
+    &:hover {
+      width: 2.25rem;
+    }
+  }
+
+  &__icon {
+    font-size: 0.875rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25;
   }
 }
