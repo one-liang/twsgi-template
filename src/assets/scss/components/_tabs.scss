@@ -1,0 +1,41 @@
+.tab-member {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $font-primary;
+  background-color: transparent;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.625rem;
+    color: $font-tertiary;
+    border: 1px solid $gray-30;
+    border-radius: $border-radius-pill;
+    transition:
+      color 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  &:hover,
+  &.active {
+    color: $font-brand;
+  }
+
+  &:hover &__icon,
+  &.active &__icon {
+    color: $font-brand;
+    border-color: $font-brand;
+  }
+}

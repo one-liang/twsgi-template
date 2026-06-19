@@ -22,6 +22,10 @@ const dsIconButtons = [
   { key: 'outline-r', class: 'btn-outline-soft', icon: 'fa-light fa-arrow-right-long', dir: 'right' },
   { key: 'outline-l', class: 'btn-outline-soft', icon: 'fa-light fa-arrow-left', dir: 'left' },
 ];
+const dsTabs = [
+  { key: 'default', label: '關於勤行唱題', active: false },
+  { key: 'active', label: '關於勤行唱題', active: true },
+];
 const floatButtons = [
   { key: 'scripture', icon: 'fa-solid fa-book', text: '聖典檢索' },
   { key: 'donate', icon: 'fa-solid fa-hand-holding-heart', text: '線上捐款' },
@@ -736,6 +740,23 @@ const floatButtons = [
       </div>
     </div>
 
+    <!--      Tabs      -->
+    <div class="title row">
+      <div class="col-12">
+        <h2>Tabs</h2>
+      </div>
+    </div>
+    <div class="tabs row my-4">
+      <div class="col-12 bs-component">
+        <div class="d-flex flex-wrap align-items-center gap-3">
+          <button v-for="tab in dsTabs" :key="tab.key" type="button" class="tab-member" :class="{ active: tab.active }">
+            {{ tab.label }}
+            <span class="tab-member__icon"><i class="fa-regular fa-angle-down"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="row my-4">
       <!-- Offcanvas -->
       <div class="col-6">
@@ -992,7 +1013,7 @@ const floatButtons = [
     <div class="badges row" style="margin-bottom: 40px">
       <div class="col-6 bs-component">
         <span v-for="themeColor of themeColors" :key="themeColor" :class="`badge text-bg-${themeColor}`">{{ themeColor
-          }}</span>
+        }}</span>
       </div>
       <div class="col-6 bs-component">
         <button type="button" class="btn btn-primary">
