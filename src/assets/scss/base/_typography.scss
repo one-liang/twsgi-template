@@ -21,7 +21,6 @@ h1,
   @include media-breakpoint-down(lg) {
     font-size: $h1-font-size-sm;
     line-height: $h1-line-height-sm;
-    letter-spacing: 0;
   }
 }
 
@@ -33,7 +32,6 @@ h2,
   @include media-breakpoint-down(lg) {
     font-size: $h2-font-size-sm;
     line-height: $h2-line-height-sm;
-    letter-spacing: 0;
   }
 }
 
@@ -45,7 +43,6 @@ h3,
   @include media-breakpoint-down(lg) {
     font-size: $h3-font-size-sm;
     line-height: $h3-line-height-sm;
-    letter-spacing: 0;
   }
 }
 
@@ -57,18 +54,85 @@ h4,
   @include media-breakpoint-down(lg) {
     font-size: $h4-font-size-sm;
     line-height: $h4-line-height-sm;
-    letter-spacing: 0;
   }
 }
 
 h5,
 .h5 {
   line-height: $h5-line-height-zh;
-  letter-spacing: 0;
+  letter-spacing: $h5-letter-spacing-zh;
 }
 
 h6,
 .h6 {
   line-height: $h6-line-height-zh;
-  letter-spacing: 0;
+  letter-spacing: $h6-letter-spacing-zh;
+}
+
+.h1-en {
+  font-family: $font-family-en;
+  font-weight: $headings-font-weight-en;
+  font-size: $h1-font-size-en;
+  line-height: $h1-line-height-en;
+  letter-spacing: $headings-letter-spacing-en;
+
+  @include media-breakpoint-down(lg) {
+    font-size: $h1-font-size-en-sm;
+    line-height: $h1-line-height-en-sm;
+  }
+}
+
+.h2-en {
+  font-family: $font-family-en;
+  font-weight: $headings-font-weight-en;
+  font-size: $h2-font-size-en;
+  line-height: $h2-line-height-en;
+  letter-spacing: $headings-letter-spacing-en;
+
+  @include media-breakpoint-down(lg) {
+    font-size: $h2-font-size-en-sm;
+    line-height: $h2-line-height-en-sm;
+  }
+}
+
+.h3-en {
+  font-family: $font-family-en;
+  font-weight: $headings-font-weight-en;
+  font-size: $h3-font-size-en;
+  line-height: $h3-line-height-en;
+  letter-spacing: $headings-letter-spacing-en;
+
+  @include media-breakpoint-down(lg) {
+    font-size: $h3-font-size-en-sm;
+    line-height: $h3-line-height-en-sm;
+  }
+}
+
+.h4-en {
+  font-family: $font-family-en;
+  font-weight: $headings-font-weight-en;
+  font-size: $h4-font-size-en;
+  line-height: $h4-line-height-en;
+  letter-spacing: $headings-letter-spacing-en;
+
+  @include media-breakpoint-down(lg) {
+    font-size: $h4-font-size-en-sm;
+    line-height: $h4-line-height-en-sm;
+  }
+}
+
+.h5-en {
+  font-family: $font-family-en;
+  font-weight: $headings-font-weight-en;
+  font-size: $h5-font-size-en;
+  line-height: $h5-line-height-en;
+  letter-spacing: $headings-letter-spacing-en;
+}
+
+.h6-en {
+  font-family: $font-family-en;
+  font-weight: $headings-font-weight-en;
+  font-size: $h6-font-size-en;
+  line-height: $h6-line-height-en;
+  letter-spacing: $headings-letter-spacing-en;
 }

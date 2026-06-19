@@ -41,11 +41,9 @@ export const BOOTSTRAP_CDN_CSS =
 export const BOOTSTRAP_CDN_JS =
   "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js";
 export const NOTO_SANS_TC_CDN =
-  "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap";
-export const NOTO_SERIF_SC_CDN =
-  "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap";
-export const MONTSERRAT_CDN =
-  "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap";
+  "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap";
+export const POPPINS_CDN =
+  "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap";
 export const FONT_AWESOME_KIT = "https://kit.fontawesome.com/9ef14e7135.css";
 export const SWIPER_CDN_CSS =
   "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";
@@ -141,10 +139,8 @@ export function createPageHtml({
     '  <link rel="preconnect" href="https://fonts.googleapis.com">',
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
     `  <link rel="stylesheet" href="${NOTO_SANS_TC_CDN}">`,
-    "  <!-- 裝飾標題字體：Noto Serif SC -->",
-    `  <link rel="stylesheet" href="${NOTO_SERIF_SC_CDN}">`,
-    "  <!-- 英文、數字字體：Montserrat -->",
-    `  <link rel="stylesheet" href="${MONTSERRAT_CDN}">`,
+    "  <!-- 英文、數字字體：Poppins -->",
+    `  <link rel="stylesheet" href="${POPPINS_CDN}">`,
     `  <link rel="stylesheet" href="${FONT_AWESOME_KIT}">`,
     ...(swiperCssTag ? [swiperCssTag] : []),
     ...(aosCssTag ? [aosCssTag] : []),
@@ -188,10 +184,8 @@ export function createDevHtml({ pageName }) {
     '  <link rel="preconnect" href="https://fonts.googleapis.com">',
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
     `  <link rel="stylesheet" href="${NOTO_SANS_TC_CDN}">`,
-    "  <!-- 裝飾標題字體：Noto Serif SC -->",
-    `  <link rel="stylesheet" href="${NOTO_SERIF_SC_CDN}">`,
-    "  <!-- 英文、數字字體：Montserrat -->",
-    `  <link rel="stylesheet" href="${MONTSERRAT_CDN}">`,
+    "  <!-- 英文、數字字體：Poppins -->",
+    `  <link rel="stylesheet" href="${POPPINS_CDN}">`,
     `  <link rel="stylesheet" href="${FONT_AWESOME_KIT}">`,
     ...(swiperCssTag ? [swiperCssTag] : []),
     ...(aosCssTag ? [aosCssTag] : []),
