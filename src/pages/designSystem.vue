@@ -615,6 +615,26 @@ const floatButtons = [
                 <input type="file" class="form-control" id="inputGroupFile02" />
                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
               </div>
+              <!-- Search input -->
+              <div class="mb-3">
+                <label class="form-label">Search input</label>
+                <div class="d-flex flex-wrap align-items-center gap-3">
+                  <!-- Default -->
+                  <form class="search-input">
+                    <input type="search" class="search-input__field" placeholder="請選擇..." />
+                    <button type="submit" class="search-input__btn">
+                      <i class="fa-regular fa-magnifying-glass"></i>
+                    </button>
+                  </form>
+                  <!-- Disable -->
+                  <form class="search-input">
+                    <input type="search" class="search-input__field" placeholder="請選擇..." disabled />
+                    <button type="submit" class="search-input__btn" disabled>
+                      <i class="fa-regular fa-magnifying-glass"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
             </fieldset>
           </fieldset>
         </form>
@@ -1534,7 +1554,30 @@ const floatButtons = [
         </button>
       </div>
     </div>
+
+    <!--      Banner      -->
+    <div class="title row mt-5">
+      <div class="col-12">
+        <h2>Banner</h2>
+      </div>
+    </div>
   </div>
+
+  <section class="banner">
+    <div class="container banner__inner">
+      <h1 class="banner__title">社會行動</h1>
+      <nav>
+        <ol class="breadcrumb d-none d-lg-flex mb-0">
+          <li class="breadcrumb-item"><a href="#"><span class="banner__home-icon"></span></a></li>
+          <li class="breadcrumb-item active">社會行動</li>
+        </ol>
+        <a href="#" class="banner__back d-inline-flex d-lg-none">
+          <i class="fa-regular fa-chevron-left"></i>
+          <span class="banner__home-icon"></span>
+        </a>
+      </nav>
+    </div>
+  </section>
 
   <div class="btn-float-group">
     <a v-for="item in floatButtons" :key="item.key" href="#" class="btn-float">

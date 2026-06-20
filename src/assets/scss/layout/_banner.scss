@@ -1,0 +1,66 @@
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 240px;
+  background: $brown-5 url("../../images/banner/banner-pattern.png") no-repeat
+    right center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1076px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__home-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: currentColor;
+    mask: url("../../images/icons/home.svg") no-repeat center / contain;
+    transition: background-color 0.3s ease-out;
+  }
+
+  .breadcrumb-item:first-child a {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+
+    .fa-chevron-left {
+      font-size: 0.75rem;
+      color: $font-secondary;
+      transition: color 0.3s ease-out;
+    }
+
+    .banner__home-icon {
+      color: $font-brand;
+    }
+
+    &:hover {
+      .fa-chevron-left,
+      .banner__home-icon {
+        color: $brown-50;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    min-height: 180px;
+    padding-block: 20px;
+    background-image: url("../../images/banner/banner-pattern-mobile.png");
+    background-position: center;
+    background-size: cover;
+  }
+}

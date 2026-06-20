@@ -1,0 +1,221 @@
+.l-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 72px 24px;
+  background: $brown-5;
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 44px 24px 12px;
+  }
+
+  // 右下角裝飾花紋
+  &__bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 736px;
+    height: 736px;
+    max-width: 100%;
+    opacity: 0.15;
+    background: url("../../images/footer/footer-pattern.svg") no-repeat right
+      bottom;
+    background-size: contain;
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  // Logo + 社群列
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin-bottom: 40px;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+  }
+
+  &__logo {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  // 主選單
+  &__nav {
+    display: flex;
+    gap: 80px;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  &__copyright {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid $brown-10;
+    font-family: $font-family-en;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: $font-secondary;
+    text-align: center;
+  }
+}
+
+// 單一選單區塊
+.footer-menu {
+  &__title {
+    display: block;
+    padding: 8px 12px;
+    border-bottom: 1px solid $gray-30;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: $font-primary;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+
+    &:hover {
+      color: $font-brand;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 8px;
+    margin-top: 8px;
+  }
+}
+
+// 選單連結
+.footer-link {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 4px 12px;
+  text-decoration: none;
+
+  &__text {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $font-secondary;
+    transition: color 0.3s ease-out;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    margin-top: 0.35em;
+    font-size: 0.75rem;
+    color: $font-brand;
+  }
+
+  &:hover &__text {
+    color: $font-brand;
+  }
+}
+
+// 展開選單
+.footer-accordion {
+  &__toggle {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    width: 100%;
+    padding: 4px 12px;
+    background: transparent;
+    border: 0;
+    text-align: left;
+
+    &:hover .footer-link__text {
+      color: $font-brand;
+    }
+
+    &.collapsed .fa-minus {
+      display: none;
+    }
+
+    &:not(.collapsed) .fa-plus {
+      display: none;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    margin-top: 0.35em;
+    font-size: 0.75rem;
+    line-height: 1;
+    color: $font-brand;
+  }
+
+  &__panel {
+    padding-left: 12px;
+
+    &.collapsing {
+      transition: height 0.3s ease-out;
+    }
+  }
+}
+
+// 社群列
+.footer-social {
+  display: flex;
+  gap: 28px;
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__icon {
+    font-size: 1.125rem;
+    color: $font-brand;
+  }
+
+  &__link {
+    padding: 0 4px;
+    font-size: 1rem;
+    line-height: 1.625;
+    color: $font-secondary;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+
+    &:hover {
+      color: $font-brand;
+    }
+  }
+
+  &__sep {
+    width: 1px;
+    height: 10px;
+    background: $gray-30;
+  }
+}
