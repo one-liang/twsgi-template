@@ -132,7 +132,8 @@ const footerColumns = [
   ],
 ];
 
-const accId = (ci, si, ii) => `footer-acc-${ci}-${si}-${ii}`;
+const accordionCollapseId = (columnIndex, sectionIndex, itemIndex) =>
+  `footer-accordion-${columnIndex}-${sectionIndex}-${itemIndex}`;
 </script>
 
 <template>
@@ -146,10 +147,10 @@ const accId = (ci, si, ii) => `footer-acc-${ci}-${si}-${ii}`;
         <img class="l-footer__logo" :src="logoUrl" alt="台灣創價學會" />
 
         <div class="footer-social">
-          <div v-for="(group, gi) in socialGroups" :key="gi" class="footer-social__group">
+          <div v-for="(group, groupIndex) in socialGroups" :key="groupIndex" class="footer-social__group">
             <i class="footer-social__icon fa-brands" :class="group.icon"></i>
-            <template v-for="(link, li) in group.links" :key="li">
-              <span v-if="li > 0" class="footer-social__sep"></span>
+            <template v-for="(link, linkIndex) in group.links" :key="linkIndex">
+              <span v-if="linkIndex > 0" class="footer-social__sep"></span>
               <a class="footer-social__link" :href="link.href">{{ link.text }}</a>
             </template>
           </div>
@@ -158,23 +159,23 @@ const accId = (ci, si, ii) => `footer-acc-${ci}-${si}-${ii}`;
 
       <!-- 主選單 -->
       <nav class="l-footer__nav">
-        <div v-for="(column, ci) in footerColumns" :key="ci" class="l-footer__col">
-          <div v-for="(section, si) in column" :key="si" class="footer-menu">
+        <div v-for="(column, columnIndex) in footerColumns" :key="columnIndex" class="l-footer__col">
+          <div v-for="(section, sectionIndex) in column" :key="sectionIndex" class="footer-menu">
             <a class="footer-menu__title" :href="section.href || '#'">{{ section.title }}</a>
 
             <div v-if="section.items" class="footer-menu__list">
-              <template v-for="(item, ii) in section.items" :key="ii">
+              <template v-for="(item, itemIndex) in section.items" :key="itemIndex">
                 <template v-if="item.children">
                   <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse"
-                    :data-bs-target="'#' + accId(ci, si, ii)">
+                    :data-bs-target="'#' + accordionCollapseId(columnIndex, sectionIndex, itemIndex)">
                     <span class="footer-link__text">{{ item.text }}</span>
                     <span class="footer-accordion__icon">
                       <i class="fa-light fa-plus"></i>
                       <i class="fa-light fa-minus"></i>
                     </span>
                   </button>
-                  <div class="collapse footer-accordion__panel" :id="accId(ci, si, ii)">
-                    <a v-for="(child, ki) in item.children" :key="ki" class="footer-link footer-link--sub"
+                  <div class="collapse footer-accordion__panel" :id="accordionCollapseId(columnIndex, sectionIndex, itemIndex)">
+                    <a v-for="(child, childIndex) in item.children" :key="childIndex" class="footer-link footer-link--sub"
                       :href="child.href">
                       <span class="footer-link__text">{{ child.text }}</span>
                       <i class="footer-link__icon fa-light fa-angle-right"></i>
