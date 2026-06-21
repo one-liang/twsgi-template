@@ -124,6 +124,15 @@ const locationStats = [
   { icon: locationsCienen, name: '慈恩堂', count: '1', unit: '座', variant: 'green', link: '#' },
   { icon: locationsMuseum, name: '創價美術館', count: '12', unit: '間', variant: 'blue', link: '#' },
 ];
+
+const relatedLinks = [
+  { icon: 'fa-books', name: '聖典檢索', url: '#' },
+  { icon: 'fa-book', name: '池田大作中文網', url: '#' },
+  { icon: 'fa-globe', name: '創價學會全球網', url: '#' },
+  { icon: 'fa-newspaper', name: '創價新聞電子報', url: '#' },
+  { icon: 'fa-building-columns', name: '創價藝文', url: '#' },
+  { icon: 'fa-hand-holding-heart', name: '線上捐款', url: '#' },
+];
 </script>
 
 <template>
@@ -383,6 +392,38 @@ const locationStats = [
             <a href="#" class="home-locations__more btn btn-text btn-lg d-inline-flex align-items-center gap-2">
               查看各地據點
               <span class="btn-text__icon">
+                <span class="btn-arrow">
+                  <span class="btn-arrow__track">
+                    <i class="fa-light fa-arrow-right-long"></i>
+                    <i class="fa-light fa-arrow-right-long"></i>
+                  </span>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相關網站 -->
+  <section class="home-links" data-home-links>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <!-- 標題 -->
+          <div class="home-links__heading">
+            <p class="home-links__eyebrow">Related Websites</p>
+            <h2 class="home-links__title">
+              <span class="home-links__title-bar"></span>
+              相關網站
+            </h2>
+          </div>
+          <div class="home-links__grid">
+            <a v-for="(link, linkIndex) in relatedLinks" :key="linkIndex" class="home-links__card" :href="link.url">
+              <span class="home-links__icon"><i class="fa-thin" :class="link.icon"></i></span>
+              <span class="home-links__name">{{ link.name }}</span>
+              <span class="home-links__arrow">
                 <span class="btn-arrow">
                   <span class="btn-arrow__track">
                     <i class="fa-light fa-arrow-right-long"></i>

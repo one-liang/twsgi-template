@@ -771,6 +771,156 @@
   }
 }
 
+// 相關網站
+.home-links {
+  padding: 0 0 120px;
+
+  // 標題
+  &__heading {
+    width: fit-content;
+    margin: 0 auto 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__eyebrow {
+    margin-bottom: 0;
+    font-family: $font-family-en;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: $font-brand;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 0;
+  }
+
+  &__title-bar {
+    flex-shrink: 0;
+    width: 6px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: $brown-50;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 200px;
+    padding: 48px 40px;
+    text-decoration: none;
+    background-color: $white-100;
+    border: 1px solid $gray-30;
+    border-radius: $border-radius-sm;
+    transition:
+      background-color 0.3s ease-out,
+      border-color 0.3s ease-out;
+
+    &:hover {
+      background-color: $brown-5;
+      border-color: $brown-70;
+    }
+  }
+
+  &__icon {
+    font-size: 52px;
+    line-height: 1;
+    color: $font-brand;
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-align: center;
+    color: $font-primary;
+    transition: color 0.3s ease-out;
+  }
+
+  &__card:hover &__name {
+    color: $font-brand;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    font-size: 14px;
+    color: $font-brand;
+    background-color: transparent;
+    border-radius: 999px;
+    transition:
+      background-color 0.3s ease-out,
+      color 0.3s ease-out;
+  }
+
+  &__card:hover &__arrow {
+    color: $white-100;
+    background-color: $brown-70;
+  }
+
+  &__card:hover .btn-arrow__track {
+    transform: translateX(0);
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 0 60px;
+
+    &__heading {
+      width: auto;
+      margin: 0 0 40px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    &__card {
+      min-height: 0;
+      padding: 24px 12px;
+    }
+
+    &__icon {
+      font-size: 48px;
+    }
+
+    &__name {
+      font-size: 1.125rem;
+      line-height: 1.78;
+      letter-spacing: 0;
+    }
+
+    &__arrow {
+      display: none;
+    }
+  }
+}
+
 // 向下捲動指示
 @keyframes home-banner-scroll {
   0% {
