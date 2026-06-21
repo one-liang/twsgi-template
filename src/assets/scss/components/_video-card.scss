@@ -1,0 +1,82 @@
+// 線上影音卡片
+.video-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 32px;
+  text-decoration: none;
+  background-color: $white-100;
+  border-radius: $border-radius;
+
+  &__media {
+    position: relative;
+    flex-shrink: 0;
+    width: 280px;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: $border-radius-sm;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+  }
+
+  // 遮罩
+  &__mask {
+    position: absolute;
+    inset: 0;
+    background-color: $gray-90;
+    opacity: 0.25;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+  }
+
+  // 標題
+  &__title {
+    flex: 1 0 0;
+    min-width: 0;
+    margin-bottom: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0;
+    color: $font-primary;
+    transition: color 0.3s ease-out;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  &:hover {
+    .video-card__mask {
+      opacity: 0;
+    }
+
+    .video-card__title {
+      color: $font-brand;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: $radius-m-mobile;
+
+    &__media {
+      width: 100%;
+      border-radius: $radius-s-mobile;
+    }
+
+    &__title {
+      flex: none;
+      width: 100%;
+    }
+  }
+}
