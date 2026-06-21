@@ -88,3 +88,148 @@
     window.addEventListener('load', tryInit);
   }
 })();
+
+// 最新訊息輪播
+(function () {
+  if (typeof document === 'undefined' || window.__twsgiHomeNewsInit) {
+    return;
+  }
+  window.__twsgiHomeNewsInit = true;
+
+  const initNews = (root) => {
+    if (root.dataset.newsReady === 'true' || typeof window.Swiper === 'undefined') {
+      return false;
+    }
+    root.dataset.newsReady = 'true';
+
+    new window.Swiper(root.querySelector('.home-news__swiper'), {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 16,
+      speed: 600,
+      loop: true,
+      navigation: {
+        prevEl: root.querySelector('[data-news-prev]'),
+        nextEl: root.querySelector('[data-news-next]'),
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 40,
+        },
+      },
+    });
+
+    return true;
+  };
+
+  const tryInitNews = () => {
+    const root = document.querySelector('[data-home-news]');
+    if (root) {
+      return initNews(root);
+    }
+    return false;
+  };
+
+  if (!tryInitNews()) {
+    const observer = new MutationObserver(() => {
+      if (tryInitNews()) {
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.addEventListener('load', tryInitNews);
+  }
+})();
+
+// 線上影音輪播
+(function () {
+  if (typeof document === 'undefined' || window.__twsgiHomeVideoInit) {
+    return;
+  }
+  window.__twsgiHomeVideoInit = true;
+
+  const VIDEO_AUTOPLAY_DELAY = 5000;
+
+  const initVideo = (root) => {
+    if (root.dataset.videoReady === 'true' || typeof window.Swiper === 'undefined') {
+      return false;
+    }
+    root.dataset.videoReady = 'true';
+
+    new window.Swiper(root.querySelector('.home-video__swiper'), {
+      slidesPerView: 1.1,
+      slidesPerGroup: 1,
+      spaceBetween: 16,
+      loop: true,
+      speed: 600,
+      autoplay: {
+        delay: VIDEO_AUTOPLAY_DELAY,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        prevEl: root.querySelector('[data-video-prev]'),
+        nextEl: root.querySelector('[data-video-next]'),
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 2.3,
+          spaceBetween: 24,
+        },
+      },
+    });
+
+    return true;
+  };
+
+  const tryInitVideo = () => {
+    const root = document.querySelector('[data-home-video]');
+    if (root) {
+      return initVideo(root);
+    }
+    return false;
+  };
+
+  if (!tryInitVideo()) {
+    const observer = new MutationObserver(() => {
+      if (tryInitVideo()) {
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.addEventListener('load', tryInitVideo);
+  }
+})();
+
+// 社會行動 + 日常活動
+(function () {
+  if (typeof document === 'undefined' || window.__twsgiHomeActionInit) {
+    return;
+  }
+  window.__twsgiHomeActionInit = true;
+
+  const initAction = () => {
+    const root = document.querySelector('[data-home-action]');
+    if (!root || typeof window.AOS === 'undefined') {
+      return false;
+    }
+    window.AOS.init({
+      duration: 700,
+      easing: 'ease-out',
+      once: true,
+      offset: 120,
+    });
+    return true;
+  };
+
+  if (!initAction()) {
+    const observer = new MutationObserver(() => {
+      if (initAction()) {
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.addEventListener('load', initAction);
+  }
+})();
