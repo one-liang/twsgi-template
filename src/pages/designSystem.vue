@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppHeader from '../components/AppHeader.vue';
 import AppFooter from '../components/AppFooter.vue';
+import AppFloatButtons from '../components/AppFloatButtons.vue';
 
 const themeColors = [
   'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark',
@@ -25,12 +26,6 @@ const dsIconButtons = [
 const dsTabs = [
   { key: 'default', label: '關於勤行唱題', active: false },
   { key: 'active', label: '關於勤行唱題', active: true },
-];
-const floatButtons = [
-  { key: 'scripture', icon: 'fa-solid fa-book', text: '聖典檢索' },
-  { key: 'donate', icon: 'fa-solid fa-hand-holding-heart', text: '線上捐款' },
-  { key: 'museum', icon: 'fa-solid fa-building-columns', text: '創價美術館' },
-  { key: 'member', icon: 'fa-solid fa-user', text: '會員專區' },
 ];
 </script>
 
@@ -1579,12 +1574,7 @@ const floatButtons = [
     </div>
   </section>
 
-  <div class="btn-float-group">
-    <a v-for="item in floatButtons" :key="item.key" href="#" class="btn-float">
-      <i :class="item.icon" class="btn-float__icon"></i>
-      <span class="btn-float__text">{{ item.text }}</span>
-    </a>
-  </div>
+  <AppFloatButtons />
 
   <AppFooter />
 </template>

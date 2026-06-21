@@ -44,7 +44,7 @@ $btn-arrow-shift: calc(#{$btn-arrow-icon-width} + #{$btn-arrow-gap});
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem; // 40px
+    width: 2.5rem;
     height: 2.5rem;
     border-radius: $border-radius-pill;
     color: $white-100;
@@ -120,6 +120,19 @@ $btn-arrow-shift: calc(#{$btn-arrow-icon-width} + #{$btn-arrow-gap});
   flex-direction: column;
   align-items: flex-end;
   gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition:
+    opacity 0.3s ease-out,
+    visibility 0.3s ease-out,
+    transform 0.3s ease-out;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
 
   @include media-breakpoint-down(lg) {
     bottom: 1rem;
