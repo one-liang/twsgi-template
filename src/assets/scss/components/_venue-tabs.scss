@@ -1,0 +1,58 @@
+.venue-tabs {
+  display: flex;
+
+  &__item {
+    flex: 1 0 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    color: $font-secondary;
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 1px solid $gray-30;
+    transition:
+      color 0.3s ease-out,
+      border-color 0.3s ease-out;
+
+    &:hover {
+      color: $font-brand;
+    }
+
+    &--active {
+      color: $font-brand;
+      border-bottom: 2px solid $font-brand;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    flex-wrap: wrap;
+    gap: 8px;
+
+    &__item {
+      flex: 0 0 auto;
+      padding: 0.5rem 1rem;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      letter-spacing: 0;
+      border: 1px solid $gray-30;
+      border-radius: $radius-s-mobile;
+      transition:
+        color 0.3s ease-out,
+        background-color 0.3s ease-out,
+        border-color 0.3s ease-out;
+
+      &:hover,
+      &--active {
+        color: $font-white;
+        background-color: $font-brand;
+        border-color: $font-brand;
+      }
+    }
+  }
+}
