@@ -29,6 +29,10 @@
   @include media-breakpoint-down(lg) {
     padding-block: 60px;
 
+    .col-lg-10 {
+      padding-right: calc(12px + #{$float-reserve});
+    }
+
     &__decoration {
       display: none;
     }

@@ -103,7 +103,7 @@
     &__intro {
       max-width: none;
       margin-left: 0;
-      padding: 0 32px 0 0;
+      padding: 0 $float-reserve 0 0;
     }
   }
 }
@@ -175,6 +175,7 @@
 
     &__inner {
       gap: 20px;
+      padding-right: $float-reserve;
     }
 
     &__heading {
@@ -279,6 +280,7 @@
 
     &__inner {
       gap: 20px;
+      padding-right: $float-reserve;
     }
 
     &__heading {
@@ -362,6 +364,7 @@
 
     &__inner {
       gap: 20px;
+      padding-right: $float-reserve;
     }
 
     &__heading {
@@ -443,6 +446,7 @@
 
     &__inner {
       gap: 20px;
+      padding-right: $float-reserve;
     }
 
     &__heading {

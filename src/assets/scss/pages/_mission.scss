@@ -27,6 +27,10 @@
   @include media-breakpoint-down(lg) {
     padding: 60px 0;
 
+    .col-lg-10 {
+      padding-right: calc(12px + #{$float-reserve});
+    }
+
     &__lead {
       margin-top: 24px;
       font-size: 1.125rem;
@@ -72,6 +76,10 @@
 
   @include media-breakpoint-down(lg) {
     padding: 60px 0 80px;
+
+    .col-lg-10 {
+      padding-right: calc(12px + #{$float-reserve});
+    }
 
     &__media {
       border-radius: $radius-m-mobile;
@@ -164,7 +172,7 @@
     &__card {
       width: 100%;
       gap: 32px;
-      padding: 60px 24px;
+      padding: 60px calc(24px + #{$float-reserve}) 60px 24px;
     }
 
     &__media {

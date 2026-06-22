@@ -40,7 +40,12 @@
       display: none;
     }
 
+    &__lead {
+      margin-right: $float-reserve;
+    }
+
     &__panel {
+      margin-right: $float-reserve;
       border-radius: $radius-m-mobile;
     }
   }

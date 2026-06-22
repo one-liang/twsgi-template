@@ -100,6 +100,10 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 
   &__count-item {
@@ -208,6 +212,7 @@
       display: flex;
       flex-direction: column;
       gap: 25px;
+      padding-right: $float-reserve;
     }
 
     &__media {
@@ -303,6 +308,10 @@
   @include media-breakpoint-down(lg) {
     padding: 60px 0;
 
+    &__inner {
+      padding-right: calc(12px + #{$float-reserve});
+    }
+
     &__head {
       gap: 20px;
       margin-bottom: 20px;
@@ -396,10 +405,12 @@
 
     &__head {
       gap: 20px;
+      padding-right: $float-reserve;
     }
 
     &__swiper {
-      padding-inline: 12px;
+      padding-left: 12px;
+      padding-right: calc(12px + #{$float-reserve});
     }
 
     &__nav {
@@ -547,7 +558,8 @@
 
     &__card {
       order: 2;
-      width: 100%;
+      width: auto;
+      margin-right: $float-reserve;
       padding: 110px 20px 40px;
 
       .btn {
@@ -753,6 +765,7 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
+      margin-right: $float-reserve;
       padding: 60px 20px;
       border-radius: $radius-xl-mobile;
     }
@@ -893,11 +906,13 @@
     &__heading {
       width: auto;
       margin: 0 0 40px;
+      padding-right: $float-reserve;
     }
 
     &__grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
+      padding-right: $float-reserve;
     }
 
     &__card {
