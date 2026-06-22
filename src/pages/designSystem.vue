@@ -2,6 +2,7 @@
 import AppHeader from '../components/AppHeader.vue';
 import AppFooter from '../components/AppFooter.vue';
 import AppFloatButtons from '../components/AppFloatButtons.vue';
+import AppBanner from '../components/AppBanner.vue';
 
 const themeColors = [
   'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark',
@@ -1558,21 +1559,7 @@ const dsTabs = [
     </div>
   </div>
 
-  <section class="banner">
-    <div class="container banner__inner">
-      <h1 class="banner__title">社會行動</h1>
-      <nav>
-        <ol class="breadcrumb d-none d-lg-flex mb-0">
-          <li class="breadcrumb-item"><a href="#"><span class="banner__home-icon"></span></a></li>
-          <li class="breadcrumb-item active">社會行動</li>
-        </ol>
-        <a href="#" class="banner__back d-inline-flex d-lg-none">
-          <i class="fa-regular fa-chevron-left"></i>
-          <span class="banner__home-icon"></span>
-        </a>
-      </nav>
-    </div>
-  </section>
+  <AppBanner title="社會行動" :breadcrumb="[{ label: '社會行動' }]" />
 
   <AppFloatButtons />
 

@@ -1,1 +1,457 @@
-// socialAction page styles
+.socialAction-foundation {
+  position: relative;
+  padding: 100px 0 80px;
+
+  &__bg {
+    position: absolute;
+    top: 551px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-color: $gray-10;
+  }
+
+  &__media {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+    width: 708px;
+    max-width: 50%;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 531px;
+    object-fit: cover;
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    min-height: 531px;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: auto;
+    max-width: 600px;
+    padding: 48px 40px 120px 0;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 16px;
+  }
+
+  &__bar {
+    flex-shrink: 0;
+    width: 6px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: $brown-50;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: $font-secondary;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+
+    &__bg {
+      display: none;
+    }
+
+    &__media {
+      position: static;
+      width: 300px;
+      max-width: 80%;
+    }
+
+    &__img {
+      height: 225px;
+      border-radius: 0 $radius-m-mobile $radius-m-mobile 0;
+    }
+
+    .container {
+      min-height: 0;
+      margin-top: 60px;
+    }
+
+    &__intro {
+      max-width: none;
+      margin-left: 0;
+      padding: 0 32px 0 0;
+    }
+  }
+}
+
+// 文化
+.socialAction-culture {
+  padding: 24px 0 80px;
+  background-color: $gray-10;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-inline: 40px;
+  }
+
+  &__eyebrow {
+    margin: 0;
+    font-family: $font-family-en;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: $font-brand;
+  }
+
+  &__title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 16px;
+  }
+
+  &__bar {
+    flex-shrink: 0;
+    width: 6px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: $brown-50;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__lead {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $font-primary;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+
+    &__inner {
+      gap: 20px;
+    }
+
+    &__heading {
+      padding-inline: 0;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+// 教育
+.socialAction-education {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+  background-color: $white-100;
+
+  &__bg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    img {
+      display: block;
+      width: 1583px;
+      max-width: none;
+      height: auto;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-inline: 40px;
+  }
+
+  &__eyebrow {
+    margin: 0;
+    font-family: $font-family-en;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: $font-brand;
+  }
+
+  &__title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 16px;
+  }
+
+  &__bar {
+    flex-shrink: 0;
+    width: 6px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: $brown-50;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__lead {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $font-primary;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+
+    &__bg {
+      display: none;
+    }
+
+    &__inner {
+      gap: 20px;
+    }
+
+    &__heading {
+      padding-inline: 0;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+// 社會貢獻
+.socialAction-contribution {
+  padding: 80px 0;
+  background-color: $white-100;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-inline: 40px;
+  }
+
+  &__eyebrow {
+    margin: 0;
+    font-family: $font-family-en;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: $font-brand;
+  }
+
+  &__title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 16px;
+  }
+
+  &__bar {
+    flex-shrink: 0;
+    width: 6px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: $brown-50;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__lead {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $font-primary;
+  }
+
+  &__panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 12px;
+    background-color: $white-100;
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+
+    &__inner {
+      gap: 20px;
+    }
+
+    &__heading {
+      padding-inline: 0;
+    }
+
+    &__panel {
+      grid-template-columns: 1fr;
+      padding: 0;
+      border-radius: $radius-m-mobile;
+    }
+  }
+}
+
+// 和平
+.socialAction-peace {
+  padding: 80px 0;
+  background-color: $brown-5;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-inline: 40px;
+  }
+
+  &__eyebrow {
+    margin: 0;
+    font-family: $font-family-en;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: $font-brand;
+  }
+
+  &__title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 16px;
+  }
+
+  &__bar {
+    flex-shrink: 0;
+    width: 6px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: $brown-50;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__lead {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $font-primary;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+
+    &__inner {
+      gap: 20px;
+    }
+
+    &__heading {
+      padding-inline: 0;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
