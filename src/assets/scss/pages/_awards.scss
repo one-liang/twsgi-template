@@ -1,1 +1,47 @@
-// awards page styles
+.awards-honor {
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 120px;
+
+  // 裝飾圖
+  &__bg {
+    position: absolute;
+    left: -781px;
+    bottom: 0;
+    width: 1562px;
+    max-width: none;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__lead {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__panel {
+    padding: 12px;
+    background-color: $gray-10;
+    border-radius: $border-radius;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__bg {
+      display: none;
+    }
+
+    &__panel {
+      border-radius: $radius-m-mobile;
+    }
+  }
+}
