@@ -1,1 +1,181 @@
-// mission page styles
+// 宗旨介紹
+.mission-intro {
+  padding: 100px 0;
+
+  &__title {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  &__bar {
+    flex-shrink: 0;
+    width: 6px;
+    border-radius: 999px;
+    background-color: $brown-50;
+  }
+
+  &__lead {
+    margin: 32px 0 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: $font-secondary;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+
+    &__lead {
+      margin-top: 24px;
+      font-size: 1.125rem;
+      letter-spacing: 0;
+    }
+  }
+}
+
+// 榮譽成果
+.mission-honor {
+  padding: 100px 0 120px;
+  background-color: #fff9f4;
+
+  &__desc {
+    margin: 0 0 40px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $font-secondary;
+  }
+
+  &__media {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: $border-radius;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__caption {
+    margin: 12px 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    color: $font-secondary;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0 80px;
+
+    &__media {
+      border-radius: $radius-m-mobile;
+    }
+  }
+}
+
+// 台灣創價學會
+.mission-about {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+
+  // 裝飾圖
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+
+    img {
+      display: block;
+      width: 1440px;
+      height: 520px;
+      max-width: none;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__card {
+    position: relative;
+    width: 69.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 80px 240px 80px 80px;
+    background-color: $brown-5;
+    border-radius: $border-radius;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $font-secondary;
+  }
+
+  &__media {
+    position: absolute;
+    top: -36px;
+    right: -44.3%;
+    z-index: 1;
+    width: 56.3%;
+    aspect-ratio: 7 / 10;
+    overflow: hidden;
+    border-radius: $border-radius;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__btn {
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 80px 0;
+
+    &__bg {
+      left: 0;
+      transform: none;
+    }
+
+    &__card {
+      width: 100%;
+      gap: 32px;
+      padding: 60px 24px;
+    }
+
+    &__media {
+      position: static;
+      width: 100%;
+      border-radius: $radius-m-mobile;
+    }
+
+    &__btn {
+      --bs-btn-font-size: 1rem;
+      --bs-btn-padding-y: 0.5625rem;
+    }
+  }
+}
