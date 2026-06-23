@@ -51,8 +51,9 @@ export const SWIPER_CDN_JS =
   "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
 export const AOS_CDN_CSS =
   "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css";
-export const AOS_CDN_JS =
-  "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js";
+export const AOS_CDN_JS = "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js";
+
+export const SWIPER_PAGES = new Set(["index", "awardDetail"]);
 
 export async function discoverPages(pagesDir) {
   const dirPath = pagesDir instanceof URL ? fileURLToPath(pagesDir) : pagesDir;
@@ -157,7 +158,7 @@ export function createPageHtml({
 
 export function createDevHtml({ pageName }) {
   const title = escapeHtml(pageTitle(pageName));
-  const includeSwiper = pageName === "index";
+  const includeSwiper = SWIPER_PAGES.has(pageName);
   const includeAOS = pageName === "index";
   const swiperCssTag = includeSwiper
     ? `  <link rel="stylesheet" href="${SWIPER_CDN_CSS}">`
@@ -420,10 +421,7 @@ export function formatHtml(html) {
 
   return lines
     .join("\n")
-    .replace(
-      /<(textarea|pre)\b([^>]*)>\s*<\/\1>/gi,
-      "<$1$2></$1>",
-    );
+    .replace(/<(textarea|pre)\b([^>]*)>\s*<\/\1>/gi, "<$1$2></$1>");
 }
 
 export async function extractPageScript(source) {

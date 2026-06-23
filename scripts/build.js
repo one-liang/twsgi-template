@@ -12,6 +12,7 @@ import {
   initAssetBasenameMap,
   stripScopedCssMarkers,
   validateAssetImports,
+  SWIPER_PAGES,
 } from "./build-utils.js";
 
 const rootDir = fileURLToPath(new URL("../", import.meta.url));
@@ -53,7 +54,7 @@ async function buildProject() {
         pageName: page.name,
         appHtml,
         componentScripts,
-        includeSwiper: page.name === "index",
+        includeSwiper: SWIPER_PAGES.has(page.name),
         includeAOS: page.name === "index",
       }),
       "utf8",

@@ -95,6 +95,15 @@
     }
   }
 
+  &--flat {
+    padding: 40px 28px;
+    background-color: transparent;
+
+    .award-card__title {
+      font-size: 1.25rem;
+    }
+  }
+
   @include media-breakpoint-down(lg) {
     padding: 20px;
     border-radius: $radius-m-mobile;
@@ -105,6 +114,19 @@
 
     &__title {
       font-size: 1.375rem;
+    }
+
+    &--flat {
+      padding: 20px;
+
+      .award-card__title {
+        font-size: 1.25rem;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
     }
   }
 }
