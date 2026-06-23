@@ -18,8 +18,8 @@
 - [x] 服務據點 - 會員服務中心: `pages/memberCenter.html`
 - [x] 服務據點 - 創價美術館: `pages/artMuseum.html`
 - [x] 獲獎與肯定列表: `pages/awards.html`
-- [] 獲獎與肯定內頁: `pages/awardDetail.html`
-- [] 佛法教學入門列表: `pages/teachings.html`
+- [x] 獲獎與肯定內頁: `pages/awardDetail.html`
+- [x] 佛法教學入門列表: `pages/teachings.html`
 
 ### 最新消息
 
@@ -43,4 +43,4 @@
 
 ### 其他
 
-- [] Design System: `pages/designSystem.html`
+- [x] Design System: `pages/designSystem.html`
