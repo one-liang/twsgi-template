@@ -1,5 +1,5 @@
 // 文化卡片
-.culture-card {
+.c-culture-card {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -99,15 +99,15 @@
   }
 
   &:hover {
-    .culture-card__mask {
+    .c-culture-card__mask {
       opacity: 0;
     }
 
-    .culture-card__title {
+    .c-culture-card__title {
       color: $font-brand;
     }
 
-    .culture-card__arrow {
+    .c-culture-card__arrow {
       background-color: $white-100;
       border-color: $brown-70;
     }

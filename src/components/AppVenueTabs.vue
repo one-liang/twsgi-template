@@ -12,8 +12,8 @@ const tabs = [
 </script>
 
 <template>
-  <nav class="venue-tabs">
-    <a v-for="tab in tabs" :key="tab.key" :href="tab.href" class="venue-tabs__item"
-      :class="{ 'venue-tabs__item--active': tab.key === active }">{{ tab.label }}</a>
+  <nav class="c-venue-tabs">
+    <a v-for="tab in tabs" :key="tab.key" :href="tab.href" class="c-venue-tabs__item"
+      :class="{ 'c-venue-tabs__item--active': tab.key === active }">{{ tab.label }}</a>
   </nav>
 </template>

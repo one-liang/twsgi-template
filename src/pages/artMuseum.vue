@@ -44,9 +44,9 @@ for (let rowIndex = 0; rowIndex < venues.length; rowIndex += 2) {
   <AppHeader />
   <AppBanner title="服務據點" :breadcrumb="[{ label: '服務據點' }]" />
 
-  <section class="venues-locations">
+  <section class="l-venues-locations">
     <!-- 裝飾花紋 -->
-    <span class="venues-locations__decoration">
+    <span class="l-venues-locations__decoration">
       <img :src="venuesDecoration" alt="" />
     </span>
 
@@ -54,8 +54,8 @@ for (let rowIndex = 0; rowIndex < venues.length; rowIndex += 2) {
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
           <AppVenueTabs active="art" />
-          <div class="museum-grid">
-            <div v-for="(venueRow, rowIndex) in venueRows" :key="rowIndex" class="museum-grid__row">
+          <div class="l-museum-grid">
+            <div v-for="(venueRow, rowIndex) in venueRows" :key="rowIndex" class="l-museum-grid__row">
               <AppMuseumCard v-for="museum in venueRow" :key="museum.title" v-bind="museum" />
             </div>
           </div>

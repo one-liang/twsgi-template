@@ -1,4 +1,4 @@
-.banner {
+.l-banner {
   position: relative;
   display: flex;
   align-items: center;
@@ -48,14 +48,14 @@
       font-size: 0.75rem;
     }
 
-    .banner__home-icon {
+    .l-banner__home-icon {
       color: $font-brand;
     }
 
     &:hover {
       color: $brown-50;
 
-      .banner__home-icon {
+      .l-banner__home-icon {
         color: $brown-50;
       }
     }

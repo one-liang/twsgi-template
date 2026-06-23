@@ -1,5 +1,5 @@
 // 宗教公益獎簡介
-.l-award-intro {
+.l-awardDetail-intro {
   position: relative;
   padding: 100px 0 80px;
 
@@ -110,7 +110,7 @@
 }
 
 // 歷年獲獎照片牆
-.l-award-years {
+.l-awardDetail-years {
   padding: 100px 0;
   background-color: $gray-10;
 
@@ -159,7 +159,7 @@
 }
 
 // 相關獎項輪播
-.l-award-related {
+.l-awardDetail-related {
   padding: 40px 0 120px;
 
   &__swiper {

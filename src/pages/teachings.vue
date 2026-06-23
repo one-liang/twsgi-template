@@ -40,37 +40,37 @@ const teachingGroups = [
   <AppBanner title="佛法教學入門" :breadcrumb="[{ label: '佛法教學入門' }]" />
 
   <!-- 教學導覽區 -->
-  <section class="teaching">
-    <span class="teaching__bg" :style="{ backgroundImage: `url(${teachingPattern})` }"></span>
+  <section class="l-teaching">
+    <span class="l-teaching__bg" :style="{ backgroundImage: `url(${teachingPattern})` }"></span>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
-          <div class="teaching__layout">
+          <div class="l-teaching__layout">
             <!-- 下拉選單(mobile) -->
-            <select class="form-select teaching__select d-lg-none js-teaching-select">
+            <select class="form-select l-teaching__select d-lg-none js-teaching-select">
               <option v-for="group in teachingGroups" :key="group.id" :value="group.id">
                 {{ group.title }}
               </option>
             </select>
 
             <!-- 選單(desktop) -->
-            <aside class="teaching__sidebar d-none d-lg-block">
-              <nav class="teaching-nav">
+            <aside class="l-teaching__sidebar d-none d-lg-block">
+              <nav class="c-teaching-nav">
                 <button v-for="(group, groupIndex) in teachingGroups" :key="group.id" type="button"
-                  class="teaching-nav__item" :class="{ 'is-active': groupIndex === 0 }" :data-target="group.id">
-                  <span class="teaching-nav__dot"></span>
-                  <span class="teaching-nav__text">{{ group.title }}</span>
+                  class="c-teaching-nav__item" :class="{ 'is-active': groupIndex === 0 }" :data-target="group.id">
+                  <span class="c-teaching-nav__dot"></span>
+                  <span class="c-teaching-nav__text">{{ group.title }}</span>
                 </button>
               </nav>
             </aside>
-            <div class="teaching__content">
-              <div v-for="(group, groupIndex) in teachingGroups" :key="group.id" :id="group.id" class="teaching-group"
+            <div class="l-teaching__content">
+              <div v-for="(group, groupIndex) in teachingGroups" :key="group.id" :id="group.id" class="c-teaching-group"
                 :class="{ 'is-shown': groupIndex === 0 }">
-                <div class="teaching-group__title">
-                  <span class="teaching-group__bar"></span>
+                <div class="c-teaching-group__title">
+                  <span class="c-teaching-group__bar"></span>
                   <h2 class="mb-0">{{ group.title }}</h2>
                 </div>
-                <div class="teaching-group__list">
+                <div class="c-teaching-group__list">
                   <a v-for="(card, cardIndex) in group.cards" :key="cardIndex" href="#" class="c-teaching-card">
                     <span class="c-teaching-card__text">{{ card }}</span>
                     <span class="c-teaching-card__icon">
@@ -112,14 +112,14 @@ const teachingGroups = [
   };
 
   const init = () => {
-    const layout = document.querySelector('.teaching__layout');
+    const layout = document.querySelector('.l-teaching__layout');
     if (!layout) {
       return false;
     }
 
-    const navItems = Array.from(layout.querySelectorAll('.teaching-nav__item'));
+    const navItems = Array.from(layout.querySelectorAll('.c-teaching-nav__item'));
     const select = layout.querySelector('.js-teaching-select');
-    const groups = Array.from(layout.querySelectorAll('.teaching-group'));
+    const groups = Array.from(layout.querySelectorAll('.c-teaching-group'));
     if (!groups.length) {
       return false;
     }

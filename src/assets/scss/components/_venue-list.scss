@@ -1,4 +1,4 @@
-.venues-locations {
+.l-venues-locations {
   position: relative;
   overflow: hidden;
   padding-block: 100px;
@@ -40,7 +40,7 @@
 }
 
 // 據點清單
-.venue-list {
+.l-venue-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -57,7 +57,7 @@
 }
 
 // 單筆據點
-.venue-row {
+.c-venue-row {
   position: relative;
   display: flex;
   align-items: center;

@@ -131,19 +131,19 @@ const contributionCards = [
   <AppHeader />
   <AppBanner title="社會行動" :breadcrumb="[{ label: '社會行動' }]" />
 
-  <section class="socialAction-foundation">
+  <section class="l-socialAction-foundation">
     <!-- 灰底帶(PC) -->
-    <span class="socialAction-foundation__bg"></span>
-    <div class="socialAction-foundation__media">
-      <img class="socialAction-foundation__img" :src="foundationPeace" alt="台灣創價學會會員合影" />
+    <span class="l-socialAction-foundation__bg"></span>
+    <div class="l-socialAction-foundation__media">
+      <img class="l-socialAction-foundation__img" :src="foundationPeace" alt="台灣創價學會會員合影" />
     </div>
     <div class="container">
-      <div class="socialAction-foundation__intro">
-        <div class="socialAction-foundation__heading">
-          <span class="socialAction-foundation__bar"></span>
-          <h2 class="socialAction-foundation__title">文化．教育．和平</h2>
+      <div class="l-socialAction-foundation__intro">
+        <div class="l-socialAction-foundation__heading">
+          <span class="l-socialAction-foundation__bar"></span>
+          <h2 class="l-socialAction-foundation__title">文化．教育．和平</h2>
         </div>
-        <div class="socialAction-foundation__content">
+        <div class="l-socialAction-foundation__content">
           <p>創價的和平運動起源於1930年代。在戰爭動盪與軍國主義氛圍下，初代會長 牧口常三郎 與第二代會長 戶田城聖 以「民眾幸福」為核心，創立創價學會，致力於推廣尊重生命的思想。</p>
           <p>秉持「人飢己飢、人溺己溺」的精神，創價積極投入社會關懷行動，關懷弱勢族群，並在國內外重大災害發生時迅速投入援助，為受災者帶來支持與希望。</p>
         </div>
@@ -152,22 +152,22 @@ const contributionCards = [
   </section>
 
   <!-- 文化 -->
-  <section class="socialAction-culture">
+  <section class="l-socialAction-culture">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
-          <div class="socialAction-culture__inner">
-            <div class="socialAction-culture__heading">
-              <p class="socialAction-culture__eyebrow">culture</p>
-              <div class="socialAction-culture__title-row">
-                <span class="socialAction-culture__bar"></span>
-                <h2 class="socialAction-culture__title">文化</h2>
+          <div class="l-socialAction-culture__inner">
+            <div class="l-socialAction-culture__heading">
+              <p class="l-socialAction-culture__eyebrow">culture</p>
+              <div class="l-socialAction-culture__title-row">
+                <span class="l-socialAction-culture__bar"></span>
+                <h2 class="l-socialAction-culture__title">文化</h2>
               </div>
-              <p class="socialAction-culture__lead">
+              <p class="l-socialAction-culture__lead">
                 文化是人性的表現，所以創造卓越的文化， 首先要耕耘人的精神和生命， 培養豐饒的人性土壤，此即宗教的使命。
               </p>
             </div>
-            <div class="socialAction-culture__grid">
+            <div class="l-socialAction-culture__grid">
               <AppCultureCard v-for="card in cultureCards" :key="card.title" :image="card.image" :title="card.title"
                 :description="card.description" :link="card.link" />
             </div>
@@ -178,27 +178,27 @@ const contributionCards = [
   </section>
 
   <!-- 教育 -->
-  <section class="socialAction-education">
+  <section class="l-socialAction-education">
     <!-- 裝飾花紋 -->
-    <span class="socialAction-education__bg">
+    <span class="l-socialAction-education__bg">
       <img :src="educationBg" alt="" />
     </span>
 
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
-          <div class="socialAction-education__inner">
-            <div class="socialAction-education__heading">
-              <p class="socialAction-education__eyebrow">education</p>
-              <div class="socialAction-education__title-row">
-                <span class="socialAction-education__bar"></span>
-                <h2 class="socialAction-education__title">教育</h2>
+          <div class="l-socialAction-education__inner">
+            <div class="l-socialAction-education__heading">
+              <p class="l-socialAction-education__eyebrow">education</p>
+              <div class="l-socialAction-education__title-row">
+                <span class="l-socialAction-education__bar"></span>
+                <h2 class="l-socialAction-education__title">教育</h2>
               </div>
-              <p class="socialAction-education__lead">
+              <p class="l-socialAction-education__lead">
                 所謂「智慧的人」，就是無論在何種環境， 皆能在自己所處的地方， 闊達地創造美、利、善價值的人， 去磨鍊、培養這種智慧， 即是「創價教育」的意義。
               </p>
             </div>
-            <div class="socialAction-education__grid">
+            <div class="l-socialAction-education__grid">
               <AppCultureCard v-for="card in educationCards" :key="card.title" :image="card.image" :title="card.title"
                 :description="card.description" :link="card.link" />
             </div>
@@ -209,22 +209,22 @@ const contributionCards = [
   </section>
 
   <!-- 和平 -->
-  <section class="socialAction-peace">
+  <section class="l-socialAction-peace">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
-          <div class="socialAction-peace__inner">
-            <div class="socialAction-peace__heading">
-              <p class="socialAction-peace__eyebrow">peace</p>
-              <div class="socialAction-peace__title-row">
-                <span class="socialAction-peace__bar"></span>
-                <h2 class="socialAction-peace__title">和平</h2>
+          <div class="l-socialAction-peace__inner">
+            <div class="l-socialAction-peace__heading">
+              <p class="l-socialAction-peace__eyebrow">peace</p>
+              <div class="l-socialAction-peace__title-row">
+                <span class="l-socialAction-peace__bar"></span>
+                <h2 class="l-socialAction-peace__title">和平</h2>
               </div>
-              <p class="socialAction-peace__lead">
+              <p class="l-socialAction-peace__lead">
                 「和平」不在遙遠的地方，而是在自己所在之處， 在與這位朋友見面、與那位朋友結緣當中， 在不斷的誠實對話之中！
               </p>
             </div>
-            <div class="socialAction-peace__grid">
+            <div class="l-socialAction-peace__grid">
               <AppCultureCard v-for="card in peaceCards" :key="card.title" :image="card.image" :title="card.title"
                 :description="card.description" :link="card.link" />
             </div>
@@ -235,22 +235,22 @@ const contributionCards = [
   </section>
 
   <!-- 社會貢獻 -->
-  <section class="socialAction-contribution">
+  <section class="l-socialAction-contribution">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
-          <div class="socialAction-contribution__inner">
-            <div class="socialAction-contribution__heading">
-              <p class="socialAction-contribution__eyebrow">Social contribution</p>
-              <div class="socialAction-contribution__title-row">
-                <span class="socialAction-contribution__bar"></span>
-                <h2 class="socialAction-contribution__title">社會貢獻</h2>
+          <div class="l-socialAction-contribution__inner">
+            <div class="l-socialAction-contribution__heading">
+              <p class="l-socialAction-contribution__eyebrow">Social contribution</p>
+              <div class="l-socialAction-contribution__title-row">
+                <span class="l-socialAction-contribution__bar"></span>
+                <h2 class="l-socialAction-contribution__title">社會貢獻</h2>
               </div>
-              <p class="socialAction-contribution__lead">
+              <p class="l-socialAction-contribution__lead">
                 創價懷抱「人飢己飢、人溺己溺」精神，積極展開社會關懷行動，不僅為弱勢族群送去溫暖，每當國內外有重大災難發生時，更在第一時間前往協助，為災民送去希望光輝。
               </p>
             </div>
-            <div class="socialAction-contribution__panel">
+            <div class="l-socialAction-contribution__panel">
               <AppCultureCard v-for="card in contributionCards" :key="card.title" :image="card.image"
                 :title="card.title" :description="card.description" :link="card.link" />
             </div>

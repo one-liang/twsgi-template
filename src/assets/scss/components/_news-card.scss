@@ -1,5 +1,5 @@
 // 新聞卡片
-.news-card {
+.c-news-card {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -80,11 +80,11 @@
   }
 
   &:hover {
-    .news-card__mask {
+    .c-news-card__mask {
       opacity: 0;
     }
 
-    .news-card__title {
+    .c-news-card__title {
       color: $font-brand;
     }
   }

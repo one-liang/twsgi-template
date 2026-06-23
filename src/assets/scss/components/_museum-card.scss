@@ -1,4 +1,4 @@
-.museum-grid {
+.l-museum-grid {
   display: flex;
   flex-direction: column;
   gap: 56px;
@@ -40,7 +40,7 @@
   }
 }
 
-.museum-card {
+.c-museum-card {
   flex: 1 0 0;
   min-width: 0;
   display: flex;
@@ -118,7 +118,7 @@
     line-height: 1.6;
     color: $font-primary;
 
-    .museum-card__icon {
+    .c-museum-card__icon {
       margin-top: 0;
     }
   }

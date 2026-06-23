@@ -7,14 +7,14 @@ defineProps({
 </script>
 
 <template>
-  <a class="award-card" :href="link">
-    <div class="award-card__media">
-      <img class="award-card__img" :src="image" :alt="title" />
-      <span class="award-card__mask"></span>
+  <a class="c-award-card" :href="link">
+    <div class="c-award-card__media">
+      <img class="c-award-card__img" :src="image" :alt="title" />
+      <span class="c-award-card__mask"></span>
     </div>
-    <div class="award-card__head">
-      <h4 class="award-card__title">{{ title }}</h4>
-      <span class="award-card__arrow">
+    <div class="c-award-card__head">
+      <h4 class="c-award-card__title">{{ title }}</h4>
+      <span class="c-award-card__arrow">
         <span class="btn-arrow">
           <span class="btn-arrow__track">
             <i class="fa-light fa-arrow-right-long"></i>

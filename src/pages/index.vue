@@ -139,68 +139,68 @@ const relatedLinks = [
   <AppHeader />
 
   <!-- 主輪播 -->
-  <section class="home-banner" data-home-banner>
-    <div class="container home-banner__container">
-      <div class="home-banner__swiper swiper">
+  <section class="l-home-banner" data-home-banner>
+    <div class="container l-home-banner__container">
+      <div class="l-home-banner__swiper swiper">
         <div class="swiper-wrapper">
-          <div v-for="(banner, bannerIndex) in banners" :key="bannerIndex" class="home-banner__slide swiper-slide">
+          <div v-for="(banner, bannerIndex) in banners" :key="bannerIndex" class="l-home-banner__slide swiper-slide">
             <!-- 標題 -->
-            <div class="home-banner__caption">
-              <h1 class="home-banner__title h1-en">
+            <div class="l-home-banner__caption">
+              <h1 class="l-home-banner__title h1-en">
                 <template v-for="(line, lineIndex) in banner.titleLines" :key="lineIndex">{{ line }}<br /></template>
               </h1>
-              <p class="home-banner__subtitle">
-                <span class="home-banner__subtitle-bar"></span>
+              <p class="l-home-banner__subtitle">
+                <span class="l-home-banner__subtitle-bar"></span>
                 {{ banner.subtitle }}
               </p>
             </div>
 
             <!-- 主圖片 -->
-            <div class="home-banner__media">
-              <img class="home-banner__img" :src="banner.image" alt="台灣創價學會主視覺" />
-              <span class="home-banner__overlay"></span>
+            <div class="l-home-banner__media">
+              <img class="l-home-banner__img" :src="banner.image" alt="台灣創價學會主視覺" />
+              <span class="l-home-banner__overlay"></span>
             </div>
           </div>
         </div>
 
         <!-- 計數器 -->
-        <div class="home-banner__count" data-banner-count>
+        <div class="l-home-banner__count" data-banner-count>
           <button v-for="(banner, bannerIndex) in banners" :key="bannerIndex" type="button"
-            class="home-banner__count-item" :class="{ 'is-active': bannerIndex === 0 }" :data-banner-go="bannerIndex">
-            <svg class="home-banner__count-ring" viewBox="0 0 52 52">
-              <circle class="home-banner__count-ring-track" cx="26" cy="26" r="24" />
-              <circle class="home-banner__count-ring-progress" cx="26" cy="26" r="23.5" />
+            class="l-home-banner__count-item" :class="{ 'is-active': bannerIndex === 0 }" :data-banner-go="bannerIndex">
+            <svg class="l-home-banner__count-ring" viewBox="0 0 52 52">
+              <circle class="l-home-banner__count-ring-track" cx="26" cy="26" r="24" />
+              <circle class="l-home-banner__count-ring-progress" cx="26" cy="26" r="23.5" />
             </svg>
-            <span class="home-banner__count-num">{{ formatCount(bannerIndex) }}</span>
+            <span class="l-home-banner__count-num">{{ formatCount(bannerIndex) }}</span>
           </button>
         </div>
       </div>
 
       <!-- 向下捲動指示 -->
-      <div class="home-banner__scroll">
-        <div class="home-banner__scroll-label"><span>SCROLL</span></div>
-        <span class="home-banner__scroll-line"></span>
+      <div class="l-home-banner__scroll">
+        <div class="l-home-banner__scroll-label"><span>SCROLL</span></div>
+        <span class="l-home-banner__scroll-line"></span>
       </div>
     </div>
   </section>
 
   <!-- 最新訊息 -->
-  <section class="home-news" data-home-news>
+  <section class="l-home-news" data-home-news>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-10 home-news__inner">
+        <div class="col-12 col-lg-10 l-home-news__inner">
           <!-- 標題 -->
-          <div class="home-news__head">
-            <div class="home-news__heading">
-              <p class="home-news__eyebrow">News</p>
-              <h2 class="home-news__title">
-                <span class="home-news__title-bar"></span>
+          <div class="l-home-news__head">
+            <div class="l-home-news__heading">
+              <p class="l-home-news__eyebrow">News</p>
+              <h2 class="l-home-news__title">
+                <span class="l-home-news__title-bar"></span>
                 最新訊息
               </h2>
             </div>
 
             <!-- 上一頁 / 下一頁 -->
-            <div class="home-news__nav">
+            <div class="l-home-news__nav">
               <button type="button" class="btn btn-icon btn-outline-soft" data-news-prev>
                 <span class="btn-arrow btn-arrow--left">
                   <span class="btn-arrow__track">
@@ -221,7 +221,7 @@ const relatedLinks = [
           </div>
 
           <!-- 卡片輪播 -->
-          <div class="home-news__swiper swiper">
+          <div class="l-home-news__swiper swiper">
             <div class="swiper-wrapper">
               <div v-for="(news, newsIndex) in newsList" :key="newsIndex" class="swiper-slide">
                 <AppNewsCard :image="news.image" :date="news.date" :title="news.title" :excerpt="news.excerpt"
@@ -231,7 +231,7 @@ const relatedLinks = [
           </div>
 
           <!-- 查看更多 -->
-          <div class="home-news__more">
+          <div class="l-home-news__more">
             <a href="#" class="btn btn-solid btn-lg d-inline-flex align-items-center justify-content-center gap-2">
               查看更多
               <span class="btn-arrow">
@@ -248,16 +248,16 @@ const relatedLinks = [
   </section>
 
   <!-- 線上影音 -->
-  <section class="home-video" data-home-video>
+  <section class="l-home-video" data-home-video>
     <!-- 標題 -->
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
-          <div class="home-video__head">
-            <div class="home-video__heading">
-              <p class="home-video__eyebrow">Online Video</p>
-              <h2 class="home-video__title">
-                <span class="home-video__title-bar"></span>
+          <div class="l-home-video__head">
+            <div class="l-home-video__heading">
+              <p class="l-home-video__eyebrow">Online Video</p>
+              <h2 class="l-home-video__title">
+                <span class="l-home-video__title-bar"></span>
                 線上影音
               </h2>
             </div>
@@ -280,7 +280,7 @@ const relatedLinks = [
     </div>
 
     <!-- 卡片輪播 -->
-    <div class="home-video__swiper swiper">
+    <div class="l-home-video__swiper swiper">
       <div class="swiper-wrapper">
         <div v-for="(video, videoIndex) in videoList" :key="videoIndex" class="swiper-slide">
           <AppVideoCard :image="video.image" :title="video.title" :link="video.link" />
@@ -289,7 +289,7 @@ const relatedLinks = [
     </div>
 
     <!-- 上一頁 / 下一頁 -->
-    <div class="home-video__nav">
+    <div class="l-home-video__nav">
       <button type="button" class="btn btn-icon btn-outline-soft" data-video-prev>
         <span class="btn-arrow btn-arrow--left">
           <span class="btn-arrow__track">
@@ -310,25 +310,25 @@ const relatedLinks = [
   </section>
 
   <!-- 社會行動 + 日常活動 -->
-  <section class="home-action" data-home-action>
+  <section class="l-home-action" data-home-action>
     <!-- 裝飾背景 -->
-    <span class="home-action__bg" :style="{ backgroundImage: `url(${bgGlobe})` }"></span>
+    <span class="l-home-action__bg" :style="{ backgroundImage: `url(${bgGlobe})` }"></span>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-10 home-action__inner">
+        <div class="col-12 col-lg-10 l-home-action__inner">
           <!-- 卡片 -->
-          <div v-for="(action, actionIndex) in actionList" :key="actionIndex" class="home-action__item"
-            :class="{ 'home-action__item--reverse': action.reverse }" data-aos="fade-up"
+          <div v-for="(action, actionIndex) in actionList" :key="actionIndex" class="c-action-item"
+            :class="{ 'c-action-item--reverse': action.reverse }" data-aos="fade-up"
             :data-aos-delay="action.reverse ? 150 : 0">
             <!-- 內容卡片 -->
-            <div class="home-action__card">
-              <p class="home-action__eyebrow">{{ action.eyebrow }}</p>
-              <h2 class="home-action__title">{{ action.title }}</h2>
-              <p class="home-action__subtitle">
-                <span class="home-action__subtitle-bar"></span>
+            <div class="c-action-item__card">
+              <p class="c-action-item__eyebrow">{{ action.eyebrow }}</p>
+              <h2 class="c-action-item__title">{{ action.title }}</h2>
+              <p class="c-action-item__subtitle">
+                <span class="c-action-item__subtitle-bar"></span>
                 {{ action.subtitle }}
               </p>
-              <p class="home-action__desc">{{ action.desc }}</p>
+              <p class="c-action-item__desc">{{ action.desc }}</p>
               <a :href="action.link" class="btn btn-solid d-inline-flex align-items-center gap-2">
                 <span class="flex-grow-1 text-center">查看更多</span>
                 <span class="btn-arrow">
@@ -341,8 +341,8 @@ const relatedLinks = [
             </div>
 
             <!-- 圖片 -->
-            <div class="home-action__media">
-              <img class="home-action__img" :src="action.image" :alt="action.title" />
+            <div class="c-action-item__media">
+              <img class="c-action-item__img" :src="action.image" :alt="action.title" />
             </div>
           </div>
         </div>
@@ -351,45 +351,45 @@ const relatedLinks = [
   </section>
 
   <!-- 服務據點 -->
-  <section class="home-locations" data-home-locations>
+  <section class="l-home-locations" data-home-locations>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
-          <div class="home-locations__box">
+          <div class="l-home-locations__box">
             <!-- 標題 -->
-            <div class="home-locations__heading">
-              <p class="home-locations__eyebrow">Locations / Our Centers</p>
-              <h2 class="home-locations__title">
-                <span class="home-locations__title-bar"></span>
+            <div class="l-home-locations__heading">
+              <p class="l-home-locations__eyebrow">Locations / Our Centers</p>
+              <h2 class="l-home-locations__title">
+                <span class="l-home-locations__title-bar"></span>
                 服務據點
               </h2>
             </div>
 
             <!-- 地圖 -->
-            <div class="home-locations__map">
-              <img class="home-locations__map-img" :src="locationsMap" alt="台灣創價學會各地服務據點分布地圖" />
+            <div class="l-home-locations__map">
+              <img class="l-home-locations__map-img" :src="locationsMap" alt="台灣創價學會各地服務據點分布地圖" />
             </div>
 
             <!-- 卡片 -->
-            <div class="home-locations__cards">
-              <a v-for="(item, locationIndex) in locationStats" :key="locationIndex" class="home-locations__card"
+            <div class="l-home-locations__cards">
+              <a v-for="(item, locationIndex) in locationStats" :key="locationIndex" class="c-location-card"
                 :href="item.link">
-                <span class="home-locations__info">
-                  <span class="home-locations__icon">
+                <span class="c-location-card__info">
+                  <span class="c-location-card__icon">
                     <img :src="item.icon" :alt="item.name" />
                   </span>
-                  <span class="home-locations__name">{{ item.name }}</span>
+                  <span class="c-location-card__name">{{ item.name }}</span>
                 </span>
-                <span class="home-locations__count">
-                  <span class="home-locations__number h1-en" :class="`home-locations__number--${item.variant}`">{{
+                <span class="c-location-card__count">
+                  <span class="c-location-card__number h1-en" :class="`c-location-card__number--${item.variant}`">{{
                     item.count }}</span>
-                  <span class="home-locations__unit">{{ item.unit }}</span>
+                  <span class="c-location-card__unit">{{ item.unit }}</span>
                 </span>
               </a>
             </div>
 
             <!-- 查看更多 -->
-            <a href="#" class="home-locations__more btn btn-text btn-lg d-inline-flex align-items-center gap-2">
+            <a href="#" class="l-home-locations__more btn btn-text btn-lg d-inline-flex align-items-center gap-2">
               查看各地據點
               <span class="btn-text__icon">
                 <span class="btn-arrow">
@@ -407,23 +407,23 @@ const relatedLinks = [
   </section>
 
   <!-- 相關網站 -->
-  <section class="home-links" data-home-links>
+  <section class="l-home-links" data-home-links>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
           <!-- 標題 -->
-          <div class="home-links__heading">
-            <p class="home-links__eyebrow">Related Websites</p>
-            <h2 class="home-links__title">
-              <span class="home-links__title-bar"></span>
+          <div class="l-home-links__heading">
+            <p class="l-home-links__eyebrow">Related Websites</p>
+            <h2 class="l-home-links__title">
+              <span class="l-home-links__title-bar"></span>
               相關網站
             </h2>
           </div>
-          <div class="home-links__grid">
-            <a v-for="(link, linkIndex) in relatedLinks" :key="linkIndex" class="home-links__card" :href="link.url">
-              <span class="home-links__icon"><i class="fa-thin" :class="link.icon"></i></span>
-              <span class="home-links__name">{{ link.name }}</span>
-              <span class="home-links__arrow">
+          <div class="l-home-links__grid">
+            <a v-for="(link, linkIndex) in relatedLinks" :key="linkIndex" class="c-link-card" :href="link.url">
+              <span class="c-link-card__icon"><i class="fa-thin" :class="link.icon"></i></span>
+              <span class="c-link-card__name">{{ link.name }}</span>
+              <span class="c-link-card__arrow">
                 <span class="btn-arrow">
                   <span class="btn-arrow__track">
                     <i class="fa-light fa-arrow-right-long"></i>
@@ -458,14 +458,14 @@ const relatedLinks = [
     }
     root.dataset.bannerReady = 'true';
 
-    const countItems = Array.from(root.querySelectorAll('.home-banner__count-item'));
+    const countItems = Array.from(root.querySelectorAll('.l-home-banner__count-item'));
 
     const setActiveCount = (activeIndex) => {
       countItems.forEach((item, itemIndex) => {
         const isActive = itemIndex === activeIndex;
         item.classList.toggle('is-active', isActive);
         if (!isActive) {
-          const ring = item.querySelector('.home-banner__count-ring-progress');
+          const ring = item.querySelector('.l-home-banner__count-ring-progress');
           if (ring) {
             ring.style.strokeDashoffset = RING_CIRCUMFERENCE;
           }
@@ -495,7 +495,7 @@ const relatedLinks = [
           if (!activeItem) {
             return;
           }
-          const ring = activeItem.querySelector('.home-banner__count-ring-progress');
+          const ring = activeItem.querySelector('.l-home-banner__count-ring-progress');
           if (ring) {
             ring.style.strokeDashoffset = RING_CIRCUMFERENCE * progress;
           }
@@ -547,7 +547,7 @@ const relatedLinks = [
     }
     root.dataset.newsReady = 'true';
 
-    new window.Swiper(root.querySelector('.home-news__swiper'), {
+    new window.Swiper(root.querySelector('.l-home-news__swiper'), {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 16,
@@ -603,7 +603,7 @@ const relatedLinks = [
     }
     root.dataset.videoReady = 'true';
 
-    new window.Swiper(root.querySelector('.home-video__swiper'), {
+    new window.Swiper(root.querySelector('.l-home-video__swiper'), {
       slidesPerView: 1.1,
       slidesPerGroup: 1,
       spaceBetween: 16,

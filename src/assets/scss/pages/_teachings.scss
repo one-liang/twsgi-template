@@ -1,4 +1,4 @@
-.teaching {
+.l-teaching {
   position: relative;
   padding-block: 80px;
   background-color: $white-100;
@@ -74,7 +74,7 @@
 }
 
 // 導覽選單
-.teaching-nav {
+.c-teaching-nav {
   position: sticky;
   top: 94px;
 
@@ -96,11 +96,11 @@
 
     &:hover,
     &.is-active {
-      .teaching-nav__dot {
+      .c-teaching-nav__dot {
         opacity: 1;
       }
 
-      .teaching-nav__text {
+      .c-teaching-nav__text {
         color: $font-brand;
       }
     }
@@ -128,7 +128,7 @@
   }
 }
 
-.teaching-group {
+.c-teaching-group {
   scroll-margin-top: 94px;
 
   @include media-breakpoint-down(lg) {

@@ -1,5 +1,5 @@
 // 主輪播
-.home-banner {
+.l-home-banner {
   padding: 20px 0 40px;
 
   &__container {
@@ -240,7 +240,7 @@
 }
 
 // 最新訊息
-.home-news {
+.l-home-news {
   padding: 20px 0 100px;
 
   &__inner {
@@ -334,7 +334,7 @@
 }
 
 // 線上影音
-.home-video {
+.l-home-video {
   padding: 100px 0;
   display: flex;
   flex-direction: column;
@@ -420,7 +420,7 @@
 }
 
 // 社會行動 + 日常活動
-.home-action {
+.l-home-action {
   position: relative;
   padding: 100px 0;
   overflow: hidden;
@@ -447,9 +447,21 @@
     gap: 80px;
   }
 
-  &__item {
-    position: relative;
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+
+    &__bg {
+      display: none;
+    }
+
+    &__inner {
+      gap: 40px;
+    }
   }
+}
+
+.c-action-item {
+  position: relative;
 
   &__card {
     position: relative;
@@ -526,13 +538,13 @@
     border-radius: $border-radius;
   }
 
-  &__item--reverse {
-    .home-action__card {
+  &--reverse {
+    .c-action-item__card {
       margin-left: auto;
       padding: 40px 60px 40px 330px;
     }
 
-    .home-action__media {
+    .c-action-item__media {
       right: auto;
       left: 0;
       padding-right: 20px;
@@ -541,20 +553,8 @@
   }
 
   @include media-breakpoint-down(lg) {
-    padding: 60px 0;
-
-    &__bg {
-      display: none;
-    }
-
-    &__inner {
-      gap: 40px;
-    }
-
-    &__item {
-      display: flex;
-      flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
 
     &__card {
       order: 2;
@@ -590,13 +590,13 @@
       border-radius: 0;
     }
 
-    &__item--reverse {
-      .home-action__card {
+    &--reverse {
+      .c-action-item__card {
         margin-left: 0;
         padding: 110px 20px 40px;
       }
 
-      .home-action__media {
+      .c-action-item__media {
         margin: 0 60px -70px -12px;
         padding-right: 0;
         border-radius: 0 $radius-m-mobile $radius-m-mobile 0;
@@ -606,7 +606,7 @@
 }
 
 // 服務據點
-.home-locations {
+.l-home-locations {
   padding: 0 0 100px;
 
   &__box {
@@ -675,21 +675,41 @@
     gap: 20px;
   }
 
-  &__card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 12px 40px;
-    background-color: $white-100;
-    border: 1px solid transparent;
-    border-radius: $border-radius-sm;
-    text-decoration: none;
-    transition: border-color 0.3s ease-out;
+  &__more {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+  }
 
-    // hover：加上品牌金邊框
-    &:hover {
-      border-color: $brown-70;
+  @include media-breakpoint-down(lg) {
+    padding: 0 0 60px;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-right: $float-reserve;
+      padding: 60px 20px;
+      border-radius: $radius-xl-mobile;
     }
+  }
+}
+
+// 服務據點
+.c-location-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 40px;
+  background-color: $white-100;
+  border: 1px solid transparent;
+  border-radius: $border-radius-sm;
+  text-decoration: none;
+  transition: border-color 0.3s ease-out;
+
+  // hover：加上品牌金邊框
+  &:hover {
+    border-color: $brown-70;
   }
 
   &__info {
@@ -752,27 +772,8 @@
     color: $font-primary;
   }
 
-  &__more {
-    grid-column: 1;
-    grid-row: 3;
-    justify-self: start;
-  }
-
   @include media-breakpoint-down(lg) {
-    padding: 0 0 60px;
-
-    &__box {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      margin-right: $float-reserve;
-      padding: 60px 20px;
-      border-radius: $radius-xl-mobile;
-    }
-
-    &__card {
-      padding: 12px 22px;
-    }
+    padding: 12px 22px;
 
     &__name {
       font-size: 1.375rem;
@@ -785,7 +786,7 @@
 }
 
 // 相關網站
-.home-links {
+.l-home-links {
   padding: 0 0 120px;
 
   // 標題
@@ -829,27 +830,44 @@
     gap: 28px;
   }
 
-  &__card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    min-height: 200px;
-    padding: 48px 40px;
-    text-decoration: none;
-    background-color: $white-100;
-    border: 1px solid $gray-30;
-    border-radius: $border-radius-sm;
-    transition:
-      background-color 0.3s ease-out,
-      border-color 0.3s ease-out;
+  @include media-breakpoint-down(lg) {
+    padding: 0 0 60px;
 
-    &:hover {
-      background-color: $brown-5;
-      border-color: $brown-70;
+    &__heading {
+      width: auto;
+      margin: 0 0 40px;
+      padding-right: $float-reserve;
     }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      padding-right: $float-reserve;
+    }
+  }
+}
+
+// 相關網站
+.c-link-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 200px;
+  padding: 48px 40px;
+  text-decoration: none;
+  background-color: $white-100;
+  border: 1px solid $gray-30;
+  border-radius: $border-radius-sm;
+  transition:
+    background-color 0.3s ease-out,
+    border-color 0.3s ease-out;
+
+  &:hover {
+    background-color: $brown-5;
+    border-color: $brown-70;
   }
 
   &__icon {
@@ -868,7 +886,7 @@
     transition: color 0.3s ease-out;
   }
 
-  &__card:hover &__name {
+  &:hover &__name {
     color: $font-brand;
   }
 
@@ -891,34 +909,18 @@
       color 0.3s ease-out;
   }
 
-  &__card:hover &__arrow {
+  &:hover &__arrow {
     color: $white-100;
     background-color: $brown-70;
   }
 
-  &__card:hover .btn-arrow__track {
+  &:hover .btn-arrow__track {
     transform: translateX(0);
   }
 
   @include media-breakpoint-down(lg) {
-    padding: 0 0 60px;
-
-    &__heading {
-      width: auto;
-      margin: 0 0 40px;
-      padding-right: $float-reserve;
-    }
-
-    &__grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      padding-right: $float-reserve;
-    }
-
-    &__card {
-      min-height: 0;
-      padding: 24px 12px;
-    }
+    min-height: 0;
+    padding: 24px 12px;
 
     &__icon {
       font-size: 48px;

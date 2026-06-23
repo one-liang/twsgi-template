@@ -13,14 +13,14 @@
     }
     root.dataset.bannerReady = 'true';
 
-    const countItems = Array.from(root.querySelectorAll('.home-banner__count-item'));
+    const countItems = Array.from(root.querySelectorAll('.l-home-banner__count-item'));
 
     const setActiveCount = (activeIndex) => {
       countItems.forEach((item, itemIndex) => {
         const isActive = itemIndex === activeIndex;
         item.classList.toggle('is-active', isActive);
         if (!isActive) {
-          const ring = item.querySelector('.home-banner__count-ring-progress');
+          const ring = item.querySelector('.l-home-banner__count-ring-progress');
           if (ring) {
             ring.style.strokeDashoffset = RING_CIRCUMFERENCE;
           }
@@ -50,7 +50,7 @@
           if (!activeItem) {
             return;
           }
-          const ring = activeItem.querySelector('.home-banner__count-ring-progress');
+          const ring = activeItem.querySelector('.l-home-banner__count-ring-progress');
           if (ring) {
             ring.style.strokeDashoffset = RING_CIRCUMFERENCE * progress;
           }
@@ -102,7 +102,7 @@
     }
     root.dataset.newsReady = 'true';
 
-    new window.Swiper(root.querySelector('.home-news__swiper'), {
+    new window.Swiper(root.querySelector('.l-home-news__swiper'), {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 16,
@@ -158,7 +158,7 @@
     }
     root.dataset.videoReady = 'true';
 
-    new window.Swiper(root.querySelector('.home-video__swiper'), {
+    new window.Swiper(root.querySelector('.l-home-video__swiper'), {
       slidesPerView: 1.1,
       slidesPerGroup: 1,
       spaceBetween: 16,

@@ -4,7 +4,7 @@
   }
   window.__twsgiFloatTabInit = true;
 
-  const BANNER_SELECTOR = '[data-home-banner], .home-banner, .banner';
+  const BANNER_SELECTOR = '[data-home-banner], .l-home-banner, .l-banner';
 
   const init = () => {
     const group = document.querySelector('.btn-float-group');

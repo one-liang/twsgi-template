@@ -18,14 +18,14 @@ const backCrumb = computed(() => {
 </script>
 
 <template>
-  <section class="banner">
-    <div class="container banner__inner">
-      <h1 class="banner__title">{{ title }}</h1>
+  <section class="l-banner">
+    <div class="container l-banner__inner">
+      <h1 class="l-banner__title">{{ title }}</h1>
       <nav>
         <!-- PC 麵包屑 -->
         <ol class="breadcrumb d-none d-lg-flex mb-0">
           <li class="breadcrumb-item">
-            <a :href="homeHref"><span class="banner__home-icon"></span></a>
+            <a :href="homeHref"><span class="l-banner__home-icon"></span></a>
           </li>
           <li v-for="(crumb, crumbIndex) in breadcrumb" :key="crumbIndex" class="breadcrumb-item"
             :class="{ active: !crumb.href }">
@@ -34,10 +34,10 @@ const backCrumb = computed(() => {
           </li>
         </ol>
         <!-- Mobile 返回上一層(頂層用首頁 icon，子頁用上一層文字) -->
-        <a :href="backCrumb.href" class="banner__back d-inline-flex d-lg-none">
+        <a :href="backCrumb.href" class="l-banner__back d-inline-flex d-lg-none">
           <i class="fa-regular fa-chevron-left"></i>
-          <span v-if="backCrumb.isHome" class="banner__home-icon"></span>
-          <span v-else class="banner__back-label">{{ backCrumb.label }}</span>
+          <span v-if="backCrumb.isHome" class="l-banner__home-icon"></span>
+          <span v-else class="l-banner__back-label">{{ backCrumb.label }}</span>
         </a>
       </nav>
     </div>

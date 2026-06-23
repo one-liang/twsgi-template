@@ -1,5 +1,5 @@
 // 線上影音卡片
-.video-card {
+.c-video-card {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -53,11 +53,11 @@
   }
 
   &:hover {
-    .video-card__mask {
+    .c-video-card__mask {
       opacity: 0;
     }
 
-    .video-card__title {
+    .c-video-card__title {
       color: $font-brand;
     }
   }

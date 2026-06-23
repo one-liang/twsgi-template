@@ -1,5 +1,5 @@
 // 宗旨介紹
-.mission-intro {
+.l-mission-intro {
   padding: 100px 0;
 
   &__title {
@@ -40,7 +40,7 @@
 }
 
 // 榮譽成果
-.mission-honor {
+.l-mission-honor {
   padding: 100px 0 120px;
   background-color: #fff9f4;
 
@@ -52,6 +52,17 @@
     color: $font-secondary;
   }
 
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0 80px;
+
+    .col-lg-10 {
+      padding-right: calc(12px + #{$float-reserve});
+    }
+  }
+}
+
+// 榮譽成果照片
+.c-honor-photo {
   &__media {
     aspect-ratio: 3 / 2;
     overflow: hidden;
@@ -75,12 +86,6 @@
   }
 
   @include media-breakpoint-down(lg) {
-    padding: 60px 0 80px;
-
-    .col-lg-10 {
-      padding-right: calc(12px + #{$float-reserve});
-    }
-
     &__media {
       border-radius: $radius-m-mobile;
     }
@@ -88,7 +93,7 @@
 }
 
 // 台灣創價學會
-.mission-about {
+.l-mission-about {
   position: relative;
   padding: 120px 0;
   overflow: hidden;

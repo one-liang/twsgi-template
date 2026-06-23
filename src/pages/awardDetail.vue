@@ -73,18 +73,18 @@ const relatedAwards = [
   <AppBanner title="獲獎與肯定" :breadcrumb="breadcrumb" />
 
   <!-- 宗教公益獎簡介 -->
-  <section class="l-award-intro">
-    <span class="l-award-intro__bg"></span>
-    <div class="l-award-intro__media">
-      <img class="l-award-intro__img" :src="introImage" alt="宗教公益獎頒獎典禮" />
+  <section class="l-awardDetail-intro">
+    <span class="l-awardDetail-intro__bg"></span>
+    <div class="l-awardDetail-intro__media">
+      <img class="l-awardDetail-intro__img" :src="introImage" alt="宗教公益獎頒獎典禮" />
     </div>
     <div class="container">
-      <div class="l-award-intro__intro">
-        <div class="l-award-intro__heading">
-          <span class="l-award-intro__bar"></span>
-          <h2 class="l-award-intro__title">宗教公益獎</h2>
+      <div class="l-awardDetail-intro__intro">
+        <div class="l-awardDetail-intro__heading">
+          <span class="l-awardDetail-intro__bar"></span>
+          <h2 class="l-awardDetail-intro__title">宗教公益獎</h2>
         </div>
-        <div class="l-award-intro__content">
+        <div class="l-awardDetail-intro__content">
           <p>台灣創價學會懷抱「人飢己飢，人溺己溺」之宗教情懷，投入各項公益慈善、社會教化及災難救助工作，迄今已23度榮獲內政部頒發「宗教公益獎」（原績優宗教團體獎）。</p>
         </div>
       </div>
@@ -92,11 +92,11 @@ const relatedAwards = [
   </section>
 
   <!-- 歷年獲獎照片牆 -->
-  <section class="l-award-years">
+  <section class="l-awardDetail-years">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8">
-          <div class="row l-award-years__grid">
+          <div class="row l-awardDetail-years__grid">
             <div v-for="item in awardYears" :key="item.year" class="col-12 col-lg-6">
               <figure class="c-year-photo">
                 <img class="c-year-photo__img" :src="item.image" :alt="`宗教公益獎 ${item.year}`" />
@@ -110,16 +110,16 @@ const relatedAwards = [
   </section>
 
   <!-- 相關獎項輪播 -->
-  <section class="l-award-related" data-award-carousel>
-    <div class="l-award-related__swiper swiper">
+  <section class="l-awardDetail-related" data-award-carousel>
+    <div class="l-awardDetail-related__swiper swiper">
       <div class="swiper-wrapper">
         <div v-for="award in relatedAwards" :key="award.title" class="swiper-slide">
-          <AppAwardCard class="award-card--flat" :image="award.image" :title="award.title" :link="award.link" />
+          <AppAwardCard class="c-award-card--flat" :image="award.image" :title="award.title" :link="award.link" />
         </div>
       </div>
     </div>
 
-    <div class="l-award-related__nav">
+    <div class="l-awardDetail-related__nav">
       <a class="btn btn-icon btn-pagination-arrow" href="#" data-award-prev>
         <span class="btn-arrow btn-arrow--left">
           <span class="btn-arrow__track">

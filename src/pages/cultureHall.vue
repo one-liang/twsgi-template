@@ -58,9 +58,9 @@ const venues = [
   <AppHeader />
   <AppBanner title="服務據點" :breadcrumb="[{ label: '服務據點' }]" />
 
-  <section class="venues-locations">
+  <section class="l-venues-locations">
     <!-- 裝飾花紋 -->
-    <span class="venues-locations__decoration">
+    <span class="l-venues-locations__decoration">
       <img :src="venuesDecoration" alt="" />
     </span>
 
@@ -68,7 +68,7 @@ const venues = [
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
           <AppVenueTabs active="culture" />
-          <div class="venue-list">
+          <div class="l-venue-list">
             <AppVenueRow v-for="(venue, venueIndex) in venues" :key="venueIndex" v-bind="venue" />
           </div>
         </div>

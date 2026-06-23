@@ -1,4 +1,4 @@
-.award-card {
+.c-award-card {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -77,15 +77,15 @@
   }
 
   &:hover {
-    .award-card__mask {
+    .c-award-card__mask {
       opacity: 0;
     }
 
-    .award-card__title {
+    .c-award-card__title {
       color: $font-brand;
     }
 
-    .award-card__arrow {
+    .c-award-card__arrow {
       background-color: transparent;
       border-color: $brown-70;
     }
@@ -99,7 +99,7 @@
     padding: 40px 28px;
     background-color: transparent;
 
-    .award-card__title {
+    .c-award-card__title {
       font-size: 1.25rem;
     }
   }
@@ -119,7 +119,7 @@
     &--flat {
       padding: 20px;
 
-      .award-card__title {
+      .c-award-card__title {
         font-size: 1.25rem;
         white-space: normal;
         display: -webkit-box;
