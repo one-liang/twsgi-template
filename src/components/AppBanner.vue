@@ -1,9 +1,19 @@
 <script setup>
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
   title: { type: String, required: true },
   breadcrumb: { type: Array, default: () => [] },
   homeHref: { type: String, default: '#' },
-  backHref: { type: String, default: '#' },
+});
+
+const backCrumb = computed(() => {
+  const items = props.breadcrumb;
+  if (items.length >= 2) {
+    const parent = items[items.length - 2];
+    return { label: parent.label, href: parent.href || props.homeHref, isHome: false };
+  }
+  return { label: '首頁', href: props.homeHref, isHome: true };
 });
 </script>
 
@@ -23,10 +33,11 @@ defineProps({
             <template v-else>{{ crumb.label }}</template>
           </li>
         </ol>
-        <!-- Mobile 返回 -->
-        <a :href="backHref" class="banner__back d-inline-flex d-lg-none">
+        <!-- Mobile 返回上一層(頂層用首頁 icon，子頁用上一層文字) -->
+        <a :href="backCrumb.href" class="banner__back d-inline-flex d-lg-none">
           <i class="fa-regular fa-chevron-left"></i>
-          <span class="banner__home-icon"></span>
+          <span v-if="backCrumb.isHome" class="banner__home-icon"></span>
+          <span v-else class="banner__back-label">{{ backCrumb.label }}</span>
         </a>
       </nav>
     </div>

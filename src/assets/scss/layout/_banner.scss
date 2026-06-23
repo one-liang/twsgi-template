@@ -40,12 +40,12 @@
     display: inline-flex;
     align-items: center;
     gap: 16px;
+    color: $font-secondary;
     text-decoration: none;
+    transition: color 0.3s ease-out;
 
     .fa-chevron-left {
       font-size: 0.75rem;
-      color: $font-secondary;
-      transition: color 0.3s ease-out;
     }
 
     .banner__home-icon {
@@ -53,11 +53,16 @@
     }
 
     &:hover {
-      .fa-chevron-left,
+      color: $brown-50;
+
       .banner__home-icon {
         color: $brown-50;
       }
     }
+  }
+
+  &__back-label {
+    font-size: 1rem;
   }
 
   @include media-breakpoint-down(lg) {
