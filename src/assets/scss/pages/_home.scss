@@ -72,7 +72,7 @@
 
   &__subtitle {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 12px;
     margin-bottom: 0;
     padding-left: 4px;
@@ -86,7 +86,7 @@
   &__subtitle-bar {
     flex-shrink: 0;
     width: 6px;
-    height: 32px;
+    margin-block: 0.4em;
     border-radius: 999px;
     background-color: $brown-50;
   }
@@ -275,7 +275,7 @@
 
   &__title {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 16px;
     margin-bottom: 0;
   }
@@ -283,7 +283,7 @@
   &__title-bar {
     flex-shrink: 0;
     width: 6px;
-    height: 32px;
+    margin-block: 0.25em;
     border-radius: 999px;
     background-color: $brown-50;
   }
@@ -367,7 +367,7 @@
 
   &__title {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 16px;
     margin-bottom: 0;
   }
@@ -375,7 +375,7 @@
   &__title-bar {
     flex-shrink: 0;
     width: 6px;
-    height: 32px;
+    margin-block: 0.25em;
     border-radius: 999px;
     background-color: $brown-50;
   }
@@ -495,7 +495,7 @@
 
   &__subtitle {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 16px;
     margin: 0 0 16px;
     font-size: 1.5rem;
@@ -508,7 +508,7 @@
   &__subtitle-bar {
     flex-shrink: 0;
     width: 4px;
-    height: 24px;
+    margin-block: 0.25em;
     border-radius: 999px;
     background-color: $brown-50;
   }
@@ -641,7 +641,7 @@
 
   &__title {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 16px;
     margin-bottom: 0;
   }
@@ -649,7 +649,7 @@
   &__title-bar {
     flex-shrink: 0;
     width: 6px;
-    height: 32px;
+    margin-block: 0.25em;
     border-radius: 999px;
     background-color: $brown-50;
   }
@@ -811,7 +811,7 @@
 
   &__title {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 16px;
     margin-bottom: 0;
   }
@@ -819,7 +819,7 @@
   &__title-bar {
     flex-shrink: 0;
     width: 6px;
-    height: 32px;
+    margin-block: 0.25em;
     border-radius: 999px;
     background-color: $brown-50;
   }

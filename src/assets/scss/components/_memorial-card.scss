@@ -25,13 +25,13 @@
   &__title {
     display: flex;
     gap: 8px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   &__bar {
     flex: none;
     width: 6px;
-    height: 36px;
+    height: 6px;
     border-radius: $border-radius-pill;
     background-color: $brown-50;
   }

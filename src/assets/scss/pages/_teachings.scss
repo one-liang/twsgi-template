@@ -141,7 +141,7 @@
 
   &__title {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 16px;
     margin-bottom: 24px;
   }
@@ -149,7 +149,7 @@
   &__bar {
     flex: none;
     width: 6px;
-    height: 32px;
+    margin-block: 10px;
     border-radius: $border-radius-pill;
     background: $brown-50;
   }

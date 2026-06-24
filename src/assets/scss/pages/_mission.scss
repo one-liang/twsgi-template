@@ -11,6 +11,7 @@
   &__bar {
     flex-shrink: 0;
     width: 6px;
+    margin-block: 10px;
     border-radius: 999px;
     background-color: $brown-50;
   }

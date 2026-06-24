@@ -76,7 +76,7 @@
 
   &__title {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 16px;
     margin-bottom: 40px;
@@ -89,7 +89,7 @@
   &__bar {
     flex-shrink: 0;
     width: 6px;
-    height: 32px;
+    margin-block: 0.25em;
     border-radius: $border-radius-pill;
     background-color: $brown-50;
   }
