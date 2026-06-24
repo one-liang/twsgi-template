@@ -15,11 +15,16 @@
 @import "components/forms";
 @import "components/news-card";
 @import "components/video-card";
+@import "components/media-card";
+@import "components/memorial-card";
 @import "components/culture-card";
 @import "components/award-card";
 @import "components/venue-tabs";
 @import "components/venue-list";
 @import "components/museum-card";
+@import "components/lecture-card";
+@import "components/tile-card";
+@import "components/search-card";
 
 // Layout
 @import "layout/base";
@@ -39,6 +44,7 @@
 @import "pages/awardDetail";
 @import "pages/teachings";
 @import "pages/news";
+@import "pages/newsList";
 @import "pages/newsDetail";
 @import "pages/videos";
 @import "pages/videoDetail";
