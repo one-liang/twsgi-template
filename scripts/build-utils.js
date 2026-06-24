@@ -53,7 +53,13 @@ export const AOS_CDN_CSS =
   "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css";
 export const AOS_CDN_JS = "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js";
 
-export const SWIPER_PAGES = new Set(["index", "awardDetail", "news", "videos", "newMembers"]);
+export const SWIPER_PAGES = new Set([
+  "index",
+  "awardDetail",
+  "news",
+  "videos",
+  "newMembers",
+]);
 
 export const AOS_PAGES = new Set(["index", "newMembers"]);
 
@@ -376,6 +382,23 @@ export function normalizeRenderedAssetPaths(html) {
         },
       );
       return `${prefix}${normalized}${suffix}`;
+    },
+  );
+
+  // 還原 inline style 的 background-image 圖片路徑
+  result = result.replace(
+    /url\((['"]?)(?:\.\/|\/)?assets\/([^)'"]+)\1\)/g,
+    (match, quote, assetRef) => {
+      const fileName = path.basename(assetRef);
+      const dehashed = fileName.match(/^(.+)-[A-Za-z0-9_-]{8}(\.\w+)$/);
+      const lookupName = dehashed ? `${dehashed[1]}${dehashed[2]}` : fileName;
+      const sourcePath = assetBasenameMap.get(lookupName);
+
+      if (!sourcePath) {
+        return match;
+      }
+
+      return `url(${quote}./assets/${sourcePath}${quote})`;
     },
   );
 
