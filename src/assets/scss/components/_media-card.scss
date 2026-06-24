@@ -1,0 +1,55 @@
+.c-media-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-decoration: none;
+
+  &__media {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: $border-radius-sm;
+
+    @include media-breakpoint-down(lg) {
+      border-radius: $radius-s-mobile;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+  }
+
+  &__mask {
+    position: absolute;
+    inset: 0;
+    background-color: $gray-90;
+    opacity: 0.25;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    padding-inline: 8px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0;
+    color: $font-primary;
+    transition: color 0.3s ease-out;
+  }
+
+  &:hover {
+    .c-media-card__mask {
+      opacity: 0;
+    }
+
+    .c-media-card__title {
+      color: $font-brand;
+    }
+  }
+}
