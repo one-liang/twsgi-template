@@ -130,10 +130,10 @@ const navItems = [
 const rowMajor = (columns) => {
   const max = Math.max(0, ...columns.map((col) => col.length));
   const out = [];
-  for (let r = 0; r < max; r += 1) {
+  for (let rowIndex = 0; rowIndex < max; rowIndex += 1) {
     for (const col of columns) {
-      if (col[r]) {
-        out.push(col[r]);
+      if (col[rowIndex]) {
+        out.push(col[rowIndex]);
       }
     }
   }
@@ -351,19 +351,19 @@ const mobileCollapseId = (navIndex, itemIndex) =>
 
   const closeDropdown = (root) => {
     root.classList.remove('is-dropdown-open');
-    root.querySelectorAll('.header-dropdown.is-open').forEach((el) => {
-      el.classList.remove('is-open');
+    root.querySelectorAll('.header-dropdown.is-open').forEach((dropdownEl) => {
+      dropdownEl.classList.remove('is-open');
     });
-    root.querySelectorAll('.nav-main__item--expandable.is-active').forEach((el) => {
-      el.classList.remove('is-active');
+    root.querySelectorAll('.nav-main__item--expandable.is-active').forEach((navItem) => {
+      navItem.classList.remove('is-active');
     });
   };
 
   const closeMenu = (root) => {
     if (root.classList.contains('is-menu-open')) {
       root.classList.remove('is-menu-open', 'is-l2-open');
-      root.querySelectorAll('.nav-mobile__panel--l2.is-open').forEach((el) => {
-        el.classList.remove('is-open');
+      root.querySelectorAll('.nav-mobile__panel--l2.is-open').forEach((panelEl) => {
+        panelEl.classList.remove('is-open');
       });
       lockBody(false);
     }
@@ -423,13 +423,13 @@ const mobileCollapseId = (navIndex, itemIndex) =>
     closeSearch(root);
   };
 
-  document.addEventListener('click', (e) => {
+  document.addEventListener('click', (event) => {
     const root = getRoot();
     if (!root) {
       return;
     }
 
-    const action = e.target.closest('[data-header]');
+    const action = event.target.closest('[data-header]');
     if (action && root.contains(action)) {
       const type = action.getAttribute('data-header');
       if (type === 'menu-toggle') {
@@ -443,13 +443,13 @@ const mobileCollapseId = (navIndex, itemIndex) =>
     }
 
     // Mobile 進入第二層
-    const drill = e.target.closest('[data-mobile-drill]');
+    const drill = event.target.closest('[data-mobile-drill]');
     if (drill && root.contains(drill)) {
       const index = drill.getAttribute('data-mobile-drill');
       const panel = root.querySelector(`.nav-mobile__panel--l2[data-mobile-panel="${index}"]`);
       if (panel) {
-        root.querySelectorAll('.nav-mobile__panel--l2.is-open').forEach((el) => {
-          el.classList.remove('is-open');
+        root.querySelectorAll('.nav-mobile__panel--l2.is-open').forEach((panelEl) => {
+          panelEl.classList.remove('is-open');
         });
         panel.classList.add('is-open');
         root.classList.add('is-l2-open');
@@ -458,28 +458,28 @@ const mobileCollapseId = (navIndex, itemIndex) =>
     }
 
     // Mobile 返回第一層
-    const back = e.target.closest('[data-mobile-back]');
+    const back = event.target.closest('[data-mobile-back]');
     if (back && root.contains(back)) {
       root.classList.remove('is-l2-open');
-      root.querySelectorAll('.nav-mobile__panel--l2.is-open').forEach((el) => {
-        el.classList.remove('is-open');
+      root.querySelectorAll('.nav-mobile__panel--l2.is-open').forEach((panelEl) => {
+        panelEl.classList.remove('is-open');
       });
     }
   });
 
-  document.addEventListener('mouseover', (e) => {
+  document.addEventListener('mouseover', (event) => {
     const root = getRoot();
     if (!root || window.matchMedia('(max-width: 1199.98px)').matches) {
       return;
     }
 
-    const item = e.target.closest('.nav-main__item--expandable');
+    const item = event.target.closest('.nav-main__item--expandable');
     if (item && root.contains(item)) {
       openDropdown(root, item.getAttribute('data-dropdown'));
       return;
     }
 
-    if (e.target.closest('[data-keep-open]') && root.contains(e.target)) {
+    if (event.target.closest('[data-keep-open]') && root.contains(event.target)) {
       return;
     }
 
@@ -488,8 +488,8 @@ const mobileCollapseId = (navIndex, itemIndex) =>
     }
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
       const root = getRoot();
       if (root) {
         closeAll(root);
