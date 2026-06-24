@@ -81,7 +81,6 @@ const lectureCards = [
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10 l-lecture__inner">
-          <!-- 卡片格線 -->
           <div class="l-lecture__grid">
             <AppLectureCard v-for="(card, cardIndex) in lectureCards" :key="cardIndex" :date="card.date"
               :title="card.title" :entries="card.entries" :source="card.source" :link="card.link" />

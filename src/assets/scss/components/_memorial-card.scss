@@ -1,0 +1,108 @@
+.c-memorial-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 16px 40px;
+  background-color: $white-100;
+  border-radius: $border-radius-sm;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease-out;
+
+  @include media-breakpoint-down(lg) {
+    gap: 16px;
+    padding: 16px 20px;
+    border-radius: $radius-s-mobile;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  &__bar {
+    flex: none;
+    width: 6px;
+    height: 36px;
+    border-radius: $border-radius-pill;
+    background-color: $brown-50;
+  }
+
+  &__heading {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    color: $font-primary;
+    transition: color 0.3s ease-out;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-left: 16px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $font-secondary;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 1rem;
+    }
+  }
+
+  &__arrow {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    border-radius: $border-radius-pill;
+    color: $white-100;
+    background-color: $brown-70;
+    border: 1px solid $brown-70;
+    transition:
+      color 0.3s ease-out,
+      background-color 0.3s ease-out;
+
+    @include media-breakpoint-down(lg) {
+      width: 32px;
+      height: 32px;
+      font-size: 0.875rem;
+    }
+  }
+
+  &:hover {
+    .c-memorial-card__heading {
+      color: $font-brand;
+    }
+
+    .c-memorial-card__arrow {
+      color: $brown-70;
+      background-color: $white-100;
+    }
+
+    .btn-arrow__track {
+      transform: translateX(0);
+    }
+  }
+}
