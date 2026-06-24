@@ -1,1 +1,98 @@
-// news page styles
+.l-news-section {
+  padding: 60px 0;
+
+  &--gray {
+    background-color: $gray-10;
+  }
+
+  &--decor {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 577px;
+    height: 641px;
+    background: url("../../images/news/news-education-bg.svg") no-repeat left
+      bottom / contain;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 0;
+  }
+
+  &__title-bar {
+    flex-shrink: 0;
+    width: 6px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: $brown-50;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+
+    &__inner {
+      padding-right: calc(#{$float-reserve});
+    }
+
+    &__head {
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__nav {
+      gap: 8px;
+    }
+
+    &__more {
+      margin-top: 24px;
+    }
+
+    &__more .btn-lg {
+      --bs-btn-padding-y: 0.75rem;
+      --bs-btn-padding-x: 1.5rem;
+      --bs-btn-font-size: 1.125rem;
+    }
+  }
+}
