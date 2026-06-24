@@ -469,7 +469,7 @@ const mobileCollapseId = (navIndex, itemIndex) =>
 
   document.addEventListener('mouseover', (e) => {
     const root = getRoot();
-    if (!root || window.matchMedia('(max-width: 991.98px)').matches) {
+    if (!root || window.matchMedia('(max-width: 1199.98px)').matches) {
       return;
     }
 
