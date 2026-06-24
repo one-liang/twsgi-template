@@ -12,6 +12,8 @@
   <!-- 英文、數字字體：Poppins -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://kit.fontawesome.com/9ef14e7135.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
@@ -1044,302 +1046,590 @@
     <div class="header-backdrop" data-header="close">
     </div>
   </header>
-  <div class="btn-float-group">
-    <a href="#" class="btn-float">
-      <i class="fa-solid fa-book btn-float__icon">
-      </i>
-      <span class="btn-float__text">聖典檢索</span>
+  <section class="l-banner">
+    <div class="container l-banner__inner">
+      <h1 class="l-banner__title">給新會員</h1>
+      <nav>
+        <ol class="breadcrumb d-none d-lg-flex mb-0">
+          <li class="breadcrumb-item">
+            <a href="#">
+              <span class="l-banner__home-icon">
+              </span>
+            </a>
+          </li>
+          <li class="active breadcrumb-item">給新會員</li>
+        </ol>
+        <a href="#" class="l-banner__back d-inline-flex d-lg-none">
+          <i class="fa-regular fa-chevron-left">
+          </i>
+          <span class="l-banner__home-icon">
+          </span>
+        </a>
+      </nav>
+    </div>
+  </section>
+  <nav class="l-newcomer-tabs js-newcomer-tabs">
+    <div class="l-newcomer-tabs__container container">
+      <ul class="l-newcomer-tabs__list">
+        <li class="l-newcomer-tabs__item">
+          <a class="tab-member" href="#gongyo" data-newcomer-tab="gongyo">關於勤行唱題 <span class="tab-member__icon">
+            <i class="fa-regular fa-angle-down">
+            </i>
+          </span>
+        </a>
+      </li>
+      <li class="l-newcomer-tabs__item">
+        <a class="tab-member" href="#activity" data-newcomer-tab="activity">關於創價活動 <span class="tab-member__icon">
+          <i class="fa-regular fa-angle-down">
+          </i>
+        </span>
+      </a>
+    </li>
+    <li class="l-newcomer-tabs__item">
+      <a class="tab-member" href="#memorial" data-newcomer-tab="memorial">關於追善回向 <span class="tab-member__icon">
+        <i class="fa-regular fa-angle-down">
+        </i>
+      </span>
     </a>
-    <a href="#" class="btn-float">
-      <i class="fa-solid fa-hand-holding-heart btn-float__icon">
+  </li>
+  <li class="l-newcomer-tabs__item">
+    <a class="tab-member" href="#teaching" data-newcomer-tab="teaching">關於佛法教學 <span class="tab-member__icon">
+      <i class="fa-regular fa-angle-down">
       </i>
-      <span class="btn-float__text">線上捐款</span>
-    </a>
-    <a href="#" class="btn-float">
-      <i class="fa-solid fa-building-columns btn-float__icon">
-      </i>
-      <span class="btn-float__text">創價美術館</span>
-    </a>
-    <a href="#" class="btn-float">
-      <i class="fa-solid fa-user btn-float__icon">
-      </i>
-      <span class="btn-float__text">會員專區</span>
-    </a>
-  </div>
-  <footer class="l-footer">
-    <span class="l-footer__bg">
     </span>
-    <div class="l-footer__container">
-      <div class="l-footer__top">
-        <img class="l-footer__logo" src="./assets/images/footer/logo.svg" alt="台灣創價學會">
-        <div class="footer-social">
-          <div class="footer-social__group">
-            <i class="fa-facebook footer-social__icon fa-brands">
-            </i>
-            <a class="footer-social__link" href="#">台灣創價學會</a>
-            <span class="footer-social__sep">
-            </span>
-            <a class="footer-social__link" href="#">創價藝文</a>
-          </div>
-          <div class="footer-social__group">
-            <i class="fa-youtube footer-social__icon fa-brands">
-            </i>
-            <a class="footer-social__link" href="#">創價新聞</a>
-            <span class="footer-social__sep">
-            </span>
-            <a class="footer-social__link" href="#">創價藝文</a>
-          </div>
-          <div class="footer-social__group">
-            <i class="fa-instagram footer-social__icon fa-brands">
-            </i>
-            <a class="footer-social__link" href="#">創價新聞</a>
-            <span class="footer-social__sep">
-            </span>
-            <a class="footer-social__link" href="#">創價SDGs</a>
-            <span class="footer-social__sep">
-            </span>
-            <a class="footer-social__link" href="#">文化團隊</a>
+  </a>
+  </li>
+  </ul>
+  </div>
+  </nav>
+  <section id="gongyo" class="l-newcomer-section--panel l-newcomer-section" data-newcomer-section data-newcomer-spv="2" data-newcomer-gap="40">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <h2 class="l-newcomer-section__title" data-aos="fade-up">
+            <span class="l-newcomer-section__bar">
+            </span> 關於勤行唱題</h2>
+            <div class="l-newcomer-section__body" data-aos="fade-up" data-aos-delay="100">
+              <div class="l-newcomer-section__carousel--panel l-newcomer-section__carousel">
+                <div class="l-newcomer-section__swiper swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a class="c-tile-card" href="#">
+                        <div class="c-tile-card__media">
+                          <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-gongyo-why.jpg" alt="為什麼要勤行呢？">
+                          <span class="c-tile-card__mask">
+                          </span>
+                        </div>
+                        <h3 class="c-tile-card__title">為什麼要勤行呢？</h3>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="c-tile-card" href="#">
+                        <div class="c-tile-card__media">
+                          <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-gongyo-qa.png" alt="關於勤行唱題Q&amp;A">
+                          <span class="c-tile-card__mask">
+                          </span>
+                        </div>
+                        <h3 class="c-tile-card__title">關於勤行唱題Q&amp;A</h3>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <nav class="l-footer__nav">
-        <div class="l-footer__col">
-          <div class="footer-menu">
-            <a class="footer-menu__title" href="#">首頁</a>
-          </div>
-          <div class="footer-menu">
-            <a class="footer-menu__title" href="#">關於創價學會</a>
-            <div class="footer-menu__list">
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">宗旨與使命</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">日蓮大聖人法理</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">佛法教學入門</span>
-              </a>
-              <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-0-1-3">
-                <span class="footer-link__text">三代會長</span>
-                <span class="footer-accordion__icon">
-                  <i class="fa-light fa-plus">
-                  </i>
-                  <i class="fa-light fa-minus">
-                  </i>
-                </span>
-              </button>
-              <div class="collapse footer-accordion__panel" id="footer-accordion-0-1-3">
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">牧口常三郎</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">戶田城聖</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">池田大作</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-              </div>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">國際創價學會</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">相關機構</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">台灣創價學會會則</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">獲獎與肯定</span>
-              </a>
-              <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-0-1-8">
-                <span class="footer-link__text">各地會館與講堂</span>
-                <span class="footer-accordion__icon">
-                  <i class="fa-light fa-plus">
-                  </i>
-                  <i class="fa-light fa-minus">
-                  </i>
-                </span>
-              </button>
-              <div class="collapse footer-accordion__panel" id="footer-accordion-0-1-8">
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">北部會館</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">中部會館</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">南部會館</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
+    </section>
+    <section id="activity" class="l-newcomer-section--cream l-newcomer-section" data-newcomer-section data-newcomer-spv="2" data-newcomer-gap="40">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <h2 class="l-newcomer-section__title" data-aos="fade-up">
+              <span class="l-newcomer-section__bar">
+              </span> 關於創價活動</h2>
+              <div class="l-newcomer-section__body" data-aos="fade-up" data-aos-delay="100">
+                <div class="l-newcomer-section__carousel">
+                  <div class="l-newcomer-section__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a class="c-tile-card" href="#">
+                          <div class="c-tile-card__media">
+                            <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-activity-events.jpg" alt="創價學會的活動">
+                            <span class="c-tile-card__mask">
+                            </span>
+                          </div>
+                          <h3 class="c-tile-card__title">創價學會的活動</h3>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="c-tile-card" href="#">
+                          <div class="c-tile-card__media">
+                            <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-activity-faq.jpg" alt="信仰過程中常見的問題">
+                            <span class="c-tile-card__mask">
+                            </span>
+                          </div>
+                          <h3 class="c-tile-card__title">信仰過程中常見的問題</h3>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="l-footer__col">
-          <div class="footer-menu">
-            <a class="footer-menu__title" href="#">最新訊息</a>
-            <div class="footer-menu__list">
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">創價電子新聞</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">線上影音</span>
-              </a>
-            </div>
-          </div>
-          <div class="footer-menu">
-            <a class="footer-menu__title" href="#">日常活動</a>
-            <div class="footer-menu__list">
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">每日修行</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">座談會</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">佛法教學</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">主要活動</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">年度活動主題</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="l-footer__col">
-          <div class="footer-menu">
-            <a class="footer-menu__title" href="#">社會行動</a>
-            <div class="footer-menu__list">
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">文化</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">教育</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">和平</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">社會貢獻</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">創價藝文</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">創價永續</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="l-footer__col">
-          <div class="footer-menu">
-            <a class="footer-menu__title" href="#">會員專區</a>
-            <div class="footer-menu__list">
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">座談會御書e講義</span>
-              </a>
-              <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-3-0-1">
-                <span class="footer-link__text">教學考試</span>
-                <span class="footer-accordion__icon">
-                  <i class="fa-light fa-plus">
-                  </i>
-                  <i class="fa-light fa-minus">
-                  </i>
-                </span>
-              </button>
-              <div class="collapse footer-accordion__panel" id="footer-accordion-3-0-1">
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">初級教學</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">中級教學</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
+      </section>
+      <section id="memorial" class="l-newcomer-section--decor l-newcomer-section" data-newcomer-section data-newcomer-spv="1" data-newcomer-gap="28">
+        <span class="l-newcomer-section__bg">
+          <img class="l-newcomer-section__bg-img l-newcomer-section__bg-img--left" src="./assets/images/newMembers/newmembers-decor-left.svg" alt="">
+          <img class="l-newcomer-section__bg-img l-newcomer-section__bg-img--right" src="./assets/images/newMembers/newmembers-decor-right.svg" alt="">
+        </span>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+              <h2 class="l-newcomer-section__title" data-aos="fade-up">
+                <span class="l-newcomer-section__bar">
+                </span> 關於追善回向</h2>
+                <div class="l-newcomer-section__body" data-aos="fade-up" data-aos-delay="100">
+                  <div class="l-newcomer-section__carousel">
+                    <div class="l-newcomer-section__swiper swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a class="c-tile-card" href="#">
+                            <div class="c-tile-card__media">
+                              <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-memorial-meaning.jpg" alt="「追善回向」的意義">
+                              <span class="c-tile-card__mask">
+                              </span>
+                            </div>
+                            <h3 class="c-tile-card__title">「追善回向」的意義</h3>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-3-0-2">
-                <span class="footer-link__text">佛法教學</span>
-                <span class="footer-accordion__icon">
-                  <i class="fa-light fa-plus">
-                  </i>
-                  <i class="fa-light fa-minus">
-                  </i>
-                </span>
-              </button>
-              <div class="collapse footer-accordion__panel" id="footer-accordion-3-0-2">
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">入門課程</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">進階課程</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-              </div>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">創價學會紀念日</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">創價學會歌</span>
-              </a>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">檔案下載區</span>
-              </a>
-              <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-3-0-6">
-                <span class="footer-link__text">給新會員</span>
-                <span class="footer-accordion__icon">
-                  <i class="fa-light fa-plus">
-                  </i>
-                  <i class="fa-light fa-minus">
-                  </i>
-                </span>
-              </button>
-              <div class="collapse footer-accordion__panel" id="footer-accordion-3-0-6">
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">新會員指南</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-                <a class="footer-link footer-link--sub" href="#">
-                  <span class="footer-link__text">常見問題</span>
-                  <i class="footer-link__icon fa-light fa-angle-right">
-                  </i>
-                </a>
-              </div>
-              <a class="footer-link" href="#">
-                <span class="footer-link__text">創價e購樂</span>
-              </a>
             </div>
           </div>
-          <div class="footer-menu">
-            <a class="footer-menu__title" href="https://cht.sgilibrary.org/">聖典檢索</a>
+        </section>
+        <section id="teaching" class="l-newcomer-section--gray l-newcomer-section" data-newcomer-section data-newcomer-spv="3" data-newcomer-gap="24">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-10">
+                <h2 class="l-newcomer-section__title" data-aos="fade-up">
+                  <span class="l-newcomer-section__bar">
+                  </span> 關於教學</h2>
+                  <div class="l-newcomer-section__body" data-aos="fade-up" data-aos-delay="100">
+                    <div class="l-newcomer-section__carousel">
+                      <button type="button" class="btn btn-icon btn-solid l-newcomer-section__arrow l-newcomer-section__arrow--prev" data-newcomer-prev>
+                        <span class="btn-arrow btn-arrow--left">
+                          <span class="btn-arrow__track">
+                            <i class="fa-light fa-arrow-left">
+                            </i>
+                            <i class="fa-light fa-arrow-left">
+                            </i>
+                          </span>
+                        </span>
+                      </button>
+                      <div class="l-newcomer-section__swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a class="c-tile-card" href="#">
+                              <div class="c-tile-card__media">
+                                <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-teaching-practice.jpg" alt="「實踐教學」的意義">
+                                <span class="c-tile-card__mask">
+                                </span>
+                              </div>
+                              <h3 class="c-tile-card__title">「實踐教學」的意義</h3>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a class="c-tile-card" href="#">
+                              <div class="c-tile-card__media">
+                                <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-teaching-study.png" alt="如劍豪般地鑽研御書">
+                                <span class="c-tile-card__mask">
+                                </span>
+                              </div>
+                              <h3 class="c-tile-card__title">如劍豪般地鑽研御書</h3>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a class="c-tile-card" href="#">
+                              <div class="c-tile-card__media">
+                                <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-teaching-kosen.jpg" alt="「廣宣流布」的意義">
+                                <span class="c-tile-card__mask">
+                                </span>
+                              </div>
+                              <h3 class="c-tile-card__title">「廣宣流布」的意義</h3>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a class="c-tile-card" href="#">
+                              <div class="c-tile-card__media">
+                                <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-teaching-gosho.jpg" alt="「御書全集」的發行意義">
+                                <span class="c-tile-card__mask">
+                                </span>
+                              </div>
+                              <h3 class="c-tile-card__title">「御書全集」的發行意義</h3>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a class="c-tile-card" href="#">
+                              <div class="c-tile-card__media">
+                                <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-teaching-hope.jpg" alt="御書是「希望之書」">
+                                <span class="c-tile-card__mask">
+                                </span>
+                              </div>
+                              <h3 class="c-tile-card__title">御書是「希望之書」</h3>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a class="c-tile-card" href="#">
+                              <div class="c-tile-card__media">
+                                <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-teaching-practice.jpg" alt="「實踐教學」的意義">
+                                <span class="c-tile-card__mask">
+                                </span>
+                              </div>
+                              <h3 class="c-tile-card__title">「實踐教學」的意義</h3>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a class="c-tile-card" href="#">
+                              <div class="c-tile-card__media">
+                                <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-teaching-study.png" alt="如劍豪般地鑽研御書">
+                                <span class="c-tile-card__mask">
+                                </span>
+                              </div>
+                              <h3 class="c-tile-card__title">如劍豪般地鑽研御書</h3>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a class="c-tile-card" href="#">
+                              <div class="c-tile-card__media">
+                                <img class="c-tile-card__img" src="./assets/images/newMembers/newmembers-teaching-kosen.jpg" alt="「廣宣流布」的意義">
+                                <span class="c-tile-card__mask">
+                                </span>
+                              </div>
+                              <h3 class="c-tile-card__title">「廣宣流布」的意義</h3>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-solid l-newcomer-section__arrow l-newcomer-section__arrow--next" data-newcomer-next>
+                        <span class="btn-arrow">
+                          <span class="btn-arrow__track">
+                            <i class="fa-light fa-arrow-right-long">
+                            </i>
+                            <i class="fa-light fa-arrow-right-long">
+                            </i>
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="btn-float-group">
+            <a href="#" class="btn-float">
+              <i class="fa-solid fa-book btn-float__icon">
+              </i>
+              <span class="btn-float__text">聖典檢索</span>
+            </a>
+            <a href="#" class="btn-float">
+              <i class="fa-solid fa-hand-holding-heart btn-float__icon">
+              </i>
+              <span class="btn-float__text">線上捐款</span>
+            </a>
+            <a href="#" class="btn-float">
+              <i class="fa-solid fa-building-columns btn-float__icon">
+              </i>
+              <span class="btn-float__text">創價美術館</span>
+            </a>
+            <a href="#" class="btn-float">
+              <i class="fa-solid fa-user btn-float__icon">
+              </i>
+              <span class="btn-float__text">會員專區</span>
+            </a>
           </div>
-          <div class="footer-menu">
-            <a class="footer-menu__title" href="#">線上捐款</a>
-          </div>
-        </div>
-      </nav>
-      <div class="l-footer__copyright"> © Taiwan Soka Association All Rights Reserved. </div>
-    </div>
-  </footer>
+          <footer class="l-footer">
+            <span class="l-footer__bg">
+            </span>
+            <div class="l-footer__container">
+              <div class="l-footer__top">
+                <img class="l-footer__logo" src="./assets/images/footer/logo.svg" alt="台灣創價學會">
+                <div class="footer-social">
+                  <div class="footer-social__group">
+                    <i class="fa-facebook footer-social__icon fa-brands">
+                    </i>
+                    <a class="footer-social__link" href="#">台灣創價學會</a>
+                    <span class="footer-social__sep">
+                    </span>
+                    <a class="footer-social__link" href="#">創價藝文</a>
+                  </div>
+                  <div class="footer-social__group">
+                    <i class="fa-youtube footer-social__icon fa-brands">
+                    </i>
+                    <a class="footer-social__link" href="#">創價新聞</a>
+                    <span class="footer-social__sep">
+                    </span>
+                    <a class="footer-social__link" href="#">創價藝文</a>
+                  </div>
+                  <div class="footer-social__group">
+                    <i class="fa-instagram footer-social__icon fa-brands">
+                    </i>
+                    <a class="footer-social__link" href="#">創價新聞</a>
+                    <span class="footer-social__sep">
+                    </span>
+                    <a class="footer-social__link" href="#">創價SDGs</a>
+                    <span class="footer-social__sep">
+                    </span>
+                    <a class="footer-social__link" href="#">文化團隊</a>
+                  </div>
+                </div>
+              </div>
+              <nav class="l-footer__nav">
+                <div class="l-footer__col">
+                  <div class="footer-menu">
+                    <a class="footer-menu__title" href="#">首頁</a>
+                  </div>
+                  <div class="footer-menu">
+                    <a class="footer-menu__title" href="#">關於創價學會</a>
+                    <div class="footer-menu__list">
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">宗旨與使命</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">日蓮大聖人法理</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">佛法教學入門</span>
+                      </a>
+                      <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-0-1-3">
+                        <span class="footer-link__text">三代會長</span>
+                        <span class="footer-accordion__icon">
+                          <i class="fa-light fa-plus">
+                          </i>
+                          <i class="fa-light fa-minus">
+                          </i>
+                        </span>
+                      </button>
+                      <div class="collapse footer-accordion__panel" id="footer-accordion-0-1-3">
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">牧口常三郎</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">戶田城聖</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">池田大作</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                      </div>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">國際創價學會</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">相關機構</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">台灣創價學會會則</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">獲獎與肯定</span>
+                      </a>
+                      <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-0-1-8">
+                        <span class="footer-link__text">各地會館與講堂</span>
+                        <span class="footer-accordion__icon">
+                          <i class="fa-light fa-plus">
+                          </i>
+                          <i class="fa-light fa-minus">
+                          </i>
+                        </span>
+                      </button>
+                      <div class="collapse footer-accordion__panel" id="footer-accordion-0-1-8">
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">北部會館</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">中部會館</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">南部會館</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-footer__col">
+                  <div class="footer-menu">
+                    <a class="footer-menu__title" href="#">最新訊息</a>
+                    <div class="footer-menu__list">
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">創價電子新聞</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">線上影音</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="footer-menu">
+                    <a class="footer-menu__title" href="#">日常活動</a>
+                    <div class="footer-menu__list">
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">每日修行</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">座談會</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">佛法教學</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">主要活動</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">年度活動主題</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-footer__col">
+                  <div class="footer-menu">
+                    <a class="footer-menu__title" href="#">社會行動</a>
+                    <div class="footer-menu__list">
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">文化</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">教育</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">和平</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">社會貢獻</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">創價藝文</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">創價永續</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-footer__col">
+                  <div class="footer-menu">
+                    <a class="footer-menu__title" href="#">會員專區</a>
+                    <div class="footer-menu__list">
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">座談會御書e講義</span>
+                      </a>
+                      <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-3-0-1">
+                        <span class="footer-link__text">教學考試</span>
+                        <span class="footer-accordion__icon">
+                          <i class="fa-light fa-plus">
+                          </i>
+                          <i class="fa-light fa-minus">
+                          </i>
+                        </span>
+                      </button>
+                      <div class="collapse footer-accordion__panel" id="footer-accordion-3-0-1">
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">初級教學</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">中級教學</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                      </div>
+                      <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-3-0-2">
+                        <span class="footer-link__text">佛法教學</span>
+                        <span class="footer-accordion__icon">
+                          <i class="fa-light fa-plus">
+                          </i>
+                          <i class="fa-light fa-minus">
+                          </i>
+                        </span>
+                      </button>
+                      <div class="collapse footer-accordion__panel" id="footer-accordion-3-0-2">
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">入門課程</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">進階課程</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                      </div>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">創價學會紀念日</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">創價學會歌</span>
+                      </a>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">檔案下載區</span>
+                      </a>
+                      <button type="button" class="footer-accordion__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#footer-accordion-3-0-6">
+                        <span class="footer-link__text">給新會員</span>
+                        <span class="footer-accordion__icon">
+                          <i class="fa-light fa-plus">
+                          </i>
+                          <i class="fa-light fa-minus">
+                          </i>
+                        </span>
+                      </button>
+                      <div class="collapse footer-accordion__panel" id="footer-accordion-3-0-6">
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">新會員指南</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                        <a class="footer-link footer-link--sub" href="#">
+                          <span class="footer-link__text">常見問題</span>
+                          <i class="footer-link__icon fa-light fa-angle-right">
+                          </i>
+                        </a>
+                      </div>
+                      <a class="footer-link" href="#">
+                        <span class="footer-link__text">創價e購樂</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="footer-menu">
+                    <a class="footer-menu__title" href="https://cht.sgilibrary.org/">聖典檢索</a>
+                  </div>
+                  <div class="footer-menu">
+                    <a class="footer-menu__title" href="#">線上捐款</a>
+                  </div>
+                </div>
+              </nav>
+              <div class="l-footer__copyright"> © Taiwan Soka Association All Rights Reserved. </div>
+            </div>
+          </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="./assets/js/components/header.js"></script>
   <script src="./assets/js/components/floatButtons.js"></script>
   <script src="./assets/js/newMembers.js"></script>

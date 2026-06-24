@@ -12,6 +12,7 @@
   <!-- 英文、數字字體：Poppins -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://kit.fontawesome.com/9ef14e7135.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
@@ -1044,6 +1045,566 @@
     <div class="header-backdrop" data-header="close">
     </div>
   </header>
+  <section class="l-banner">
+    <div class="container l-banner__inner">
+      <h1 class="l-banner__title">最新消息</h1>
+      <nav>
+        <ol class="breadcrumb d-none d-lg-flex mb-0">
+          <li class="breadcrumb-item">
+            <a href="#">
+              <span class="l-banner__home-icon">
+              </span>
+            </a>
+          </li>
+          <li class="active breadcrumb-item">最新消息</li>
+        </ol>
+        <a href="#" class="l-banner__back d-inline-flex d-lg-none">
+          <i class="fa-regular fa-chevron-left">
+          </i>
+          <span class="l-banner__home-icon">
+          </span>
+        </a>
+      </nav>
+    </div>
+  </section>
+  <section class="l-news-section" data-news-section="focus">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 l-news-section__inner">
+          <div class="l-news-section__head">
+            <h2 class="l-news-section__title">
+              <span class="l-news-section__title-bar">
+              </span> 焦點新聞</h2>
+              <div class="l-news-section__nav">
+                <button type="button" class="btn btn-icon btn-outline-soft" data-news-prev>
+                  <span class="btn-arrow btn-arrow--left">
+                    <span class="btn-arrow__track">
+                      <i class="fa-light fa-arrow-left">
+                      </i>
+                      <i class="fa-light fa-arrow-left">
+                      </i>
+                    </span>
+                  </span>
+                </button>
+                <button type="button" class="btn btn-icon btn-outline-soft" data-news-next>
+                  <span class="btn-arrow">
+                    <span class="btn-arrow__track">
+                      <i class="fa-light fa-arrow-right-long">
+                      </i>
+                      <i class="fa-light fa-arrow-right-long">
+                      </i>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="l-news-section__swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-focus-01.jpg" alt="日本創價大學理事長秋谷芳英訪問台灣大學、高雄大學">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">日本創價大學理事長秋谷芳英訪問台灣大學、高雄大學</h3>
+                      <p class="c-news-card__excerpt">日本創價大學理事長秋谷芳英、國際部部長川上喜彥及創價學會國際涉外局第二部部長水嶋肇等一行人，2月24日上午，在共同執行長林澤、吳青蓉等陪同下，前往台灣大學訪問。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-focus-02.jpg" alt="教師部盛大舉辦「創價·教育 EXPO」研修 秉持人本主義 建構為了教育的社會">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">教師部盛大舉辦「創價·教育 EXPO」研修 秉持人本主義 建構為了教育的社會</h3>
+                      <p class="c-news-card__excerpt">教師部「創價・教育 EXPO」研修會，2月7日於桃園文化會館盛大舉行，來自全台各地及離島澎湖的500多位教師踴躍參與，一同學習創價教育理念。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-focus-03.jpg" alt="晨曦合唱團成立紀念勤行會 台南古都 迎接嶄新文化團隊啟航">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">晨曦合唱團成立紀念勤行會 台南古都 迎接嶄新文化團隊啟航</h3>
+                      <p class="c-news-card__excerpt">迎來「1.27台灣師弟原點之日」63週年，1月31日，創價於安南文化會館舉行「晨曦合唱團成立紀念勤行會」，林釗理事長專程蒞臨主持。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-focus-04.jpg" alt="全國區長會 林釗理事長期勉幹部 全力培育青年後繼 建設廣布黃金城">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">全國區長會 林釗理事長期勉幹部 全力培育青年後繼 建設廣布黃金城</h3>
+                      <p class="c-news-card__excerpt">全國區長會於5月25日假桃園文化會館盛大舉行，林釗理事長首先向與會幹部宣布三項振奮人心的好消息，期勉全力培育青年後繼。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-focus-05.jpg" alt="5月份大研專場座談會 青年向創價母親表達感謝">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">5月份大研專場座談會 青年向創價母親表達感謝</h3>
+                      <p class="c-news-card__excerpt">創價於5月18至24日，在全台各地熱絡地舉辦5月份座談會，青年們把握機會向創價母親表達由衷的感謝。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-focus-06.jpg" alt="台灣SGI青年與亞洲5萬名青年大合唱〈歡樂頌〉">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">台灣SGI青年與亞洲5萬名青年大合唱〈歡樂頌〉</h3>
+                      <p class="c-news-card__excerpt">為慶祝創立95週年，堂堂邁向創立100週年，11月23日，九州創價學會舉辦「亞洲和平音樂節」，台灣青年共襄盛舉。</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="l-news-section__more">
+              <a href="newsList.html" class="btn btn-solid btn-lg d-inline-flex align-items-center justify-content-center gap-2"> 查看更多 <span class="btn-arrow">
+                <span class="btn-arrow__track">
+                  <i class="fa-light fa-arrow-right-long">
+                  </i>
+                  <i class="fa-light fa-arrow-right-long">
+                  </i>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="l-news-section--gray l-news-section" data-news-section="experience">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 l-news-section__inner">
+          <div class="l-news-section__head">
+            <h2 class="l-news-section__title">
+              <span class="l-news-section__title-bar">
+              </span> 體驗談</h2>
+              <div class="l-news-section__nav">
+                <button type="button" class="btn btn-icon btn-outline-soft" data-news-prev>
+                  <span class="btn-arrow btn-arrow--left">
+                    <span class="btn-arrow__track">
+                      <i class="fa-light fa-arrow-left">
+                      </i>
+                      <i class="fa-light fa-arrow-left">
+                      </i>
+                    </span>
+                  </span>
+                </button>
+                <button type="button" class="btn btn-icon btn-outline-soft" data-news-next>
+                  <span class="btn-arrow">
+                    <span class="btn-arrow__track">
+                      <i class="fa-light fa-arrow-right-long">
+                      </i>
+                      <i class="fa-light fa-arrow-right-long">
+                      </i>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="l-news-section__swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-experience-01.jpg" alt="承繼家族信心 超越求學時期逆境 夫妻同心創業 以福運翻轉人生">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">承繼家族信心 超越求學時期逆境 夫妻同心創業 以福運翻轉人生</h3>
+                      <p class="c-news-card__excerpt">我們家族信心的根源來自父親，在這條路上，我與妻子攜手同行，秉持信仰超越求學時期的逆境，最終以福運翻轉人生。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-experience-02.jpg" alt="透過信仰走出人生谷底 創價教師 拓展花蓮學子國際視野">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">透過信仰走出人生谷底 創價教師 拓展花蓮學子國際視野</h3>
+                      <p class="c-news-card__excerpt">我是花蓮人，15歲時加入創價，至今17年。我於人生低谷時透過信仰重新站起，如今投身教育，盼為花蓮學子拓展國際視野。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-experience-03.jpg" alt="積極投入廣布 超越疫情等考驗 建立事業新品牌 創造佳績">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">積極投入廣布 超越疫情等考驗 建立事業新品牌 創造佳績</h3>
+                      <p class="c-news-card__excerpt">我從小生長在虔誠信仰的家庭，疫情期間事業面臨嚴峻考驗，我持續積極投入廣布，最終建立事業新品牌，創造亮眼佳績。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-experience-04.jpg" alt="承繼家族信心 超越求學時期逆境 夫妻同心創業 以福運翻轉人生">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">承繼家族信心 超越求學時期逆境 夫妻同心創業 以福運翻轉人生</h3>
+                      <p class="c-news-card__excerpt">我們家族信心的根源來自父親，在這條路上，我與妻子攜手同行，秉持信仰超越求學時期的逆境，最終以福運翻轉人生。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-experience-05.jpg" alt="透過信仰走出人生谷底 創價教師 拓展花蓮學子國際視野">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">透過信仰走出人生谷底 創價教師 拓展花蓮學子國際視野</h3>
+                      <p class="c-news-card__excerpt">我是花蓮人，15歲時加入創價，至今17年。我於人生低谷時透過信仰重新站起，如今投身教育，盼為花蓮學子拓展國際視野。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-experience-06.jpg" alt="積極投入廣布 超越疫情等考驗 建立事業新品牌 創造佳績">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">積極投入廣布 超越疫情等考驗 建立事業新品牌 創造佳績</h3>
+                      <p class="c-news-card__excerpt">我從小生長在虔誠信仰的家庭，疫情期間事業面臨嚴峻考驗，我持續積極投入廣布，最終建立事業新品牌，創造亮眼佳績。</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="l-news-section__more">
+              <a href="newsList.html" class="btn btn-solid btn-lg d-inline-flex align-items-center justify-content-center gap-2"> 查看更多 <span class="btn-arrow">
+                <span class="btn-arrow__track">
+                  <i class="fa-light fa-arrow-right-long">
+                  </i>
+                  <i class="fa-light fa-arrow-right-long">
+                  </i>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="l-news-section--decor l-news-section" data-news-section="education">
+    <span class="l-news-section__bg">
+    </span>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 l-news-section__inner">
+          <div class="l-news-section__head">
+            <h2 class="l-news-section__title">
+              <span class="l-news-section__title-bar">
+              </span> 教育專欄</h2>
+              <div class="l-news-section__nav">
+                <button type="button" class="btn btn-icon btn-outline-soft" data-news-prev>
+                  <span class="btn-arrow btn-arrow--left">
+                    <span class="btn-arrow__track">
+                      <i class="fa-light fa-arrow-left">
+                      </i>
+                      <i class="fa-light fa-arrow-left">
+                      </i>
+                    </span>
+                  </span>
+                </button>
+                <button type="button" class="btn btn-icon btn-outline-soft" data-news-next>
+                  <span class="btn-arrow">
+                    <span class="btn-arrow__track">
+                      <i class="fa-light fa-arrow-right-long">
+                      </i>
+                      <i class="fa-light fa-arrow-right-long">
+                      </i>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="l-news-section__swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-education-01.png" alt="慢 才是王道">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">慢 才是王道</h3>
+                      <p class="c-news-card__excerpt">我住意，然我覺知「慢」才是王道。民國42年，我剛讀大學，有次只是在台北街頭緩步而行，便深刻體會到從容的力量。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-education-02.png" alt="當事人、關係人與路人">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">當事人、關係人與路人</h3>
+                      <p class="c-news-card__excerpt">通常在日常生活，我們扮演主角當事人；有時則成為關係人；停下腳步時，我們又是看戲的路人。三種身分時時轉換。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-education-03.png" alt="學校霸凌行為 不能忽視">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">學校霸凌行為 不能忽視</h3>
+                      <p class="c-news-card__excerpt">校園霸凌是不能忽視的議題。從旁觀者到當事人，每個人都應正視自身的角色，共同守護孩子安心成長的學習環境。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-education-01.png" alt="慢 才是王道">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">慢 才是王道</h3>
+                      <p class="c-news-card__excerpt">我住意，然我覺知「慢」才是王道。民國42年，我剛讀大學，有次只是在台北街頭緩步而行，便深刻體會到從容的力量。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-education-02.png" alt="當事人、關係人與路人">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">當事人、關係人與路人</h3>
+                      <p class="c-news-card__excerpt">通常在日常生活，我們扮演主角當事人；有時則成為關係人；停下腳步時，我們又是看戲的路人。三種身分時時轉換。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-education-03.png" alt="學校霸凌行為 不能忽視">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">學校霸凌行為 不能忽視</h3>
+                      <p class="c-news-card__excerpt">校園霸凌是不能忽視的議題。從旁觀者到當事人，每個人都應正視自身的角色，共同守護孩子安心成長的學習環境。</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="l-news-section__more">
+              <a href="newsList.html" class="btn btn-solid btn-lg d-inline-flex align-items-center justify-content-center gap-2"> 查看更多 <span class="btn-arrow">
+                <span class="btn-arrow__track">
+                  <i class="fa-light fa-arrow-right-long">
+                  </i>
+                  <i class="fa-light fa-arrow-right-long">
+                  </i>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="l-news-section--gray l-news-section" data-news-section="life">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 l-news-section__inner">
+          <div class="l-news-section__head">
+            <h2 class="l-news-section__title">
+              <span class="l-news-section__title-bar">
+              </span> 藝文、生活</h2>
+              <div class="l-news-section__nav">
+                <button type="button" class="btn btn-icon btn-outline-soft" data-news-prev>
+                  <span class="btn-arrow btn-arrow--left">
+                    <span class="btn-arrow__track">
+                      <i class="fa-light fa-arrow-left">
+                      </i>
+                      <i class="fa-light fa-arrow-left">
+                      </i>
+                    </span>
+                  </span>
+                </button>
+                <button type="button" class="btn btn-icon btn-outline-soft" data-news-next>
+                  <span class="btn-arrow">
+                    <span class="btn-arrow__track">
+                      <i class="fa-light fa-arrow-right-long">
+                      </i>
+                      <i class="fa-light fa-arrow-right-long">
+                      </i>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="l-news-section__swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-life-01.jpg" alt="一場美好的冒險記 蘇勵的創作教學">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">一場美好的冒險記 蘇勵的創作教學</h3>
+                      <p class="c-news-card__excerpt">亞洲大學現代美術館舉辦「蘇勵·美學·創作教育－1963大度山ära展」，由美學大師蘇勵領軍，帶來一場美好的冒險記。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-life-02.jpg" alt="網路購物 不可不知的權益！">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">網路購物 不可不知的權益！</h3>
+                      <p class="c-news-card__excerpt">隨著網際網路的普及，網路購物已牢不可破，因此產生的糾紛也日益增多，包含商品瑕疵、退貨爭議等，消費者不可不知。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-life-03.jpg" alt="台南 木造輝三兄弟">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">台南 木造輝三兄弟</h3>
+                      <p class="c-news-card__excerpt">火車站旁西側大樹綠蔭的鐵青平房，傳入台南境內，還有三派水流泉湧建立的木造老屋，靜靜訴說著城市的歷史記憶。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-life-04.jpg" alt="一場美好的冒險記 蘇勵的創作教學">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">一場美好的冒險記 蘇勵的創作教學</h3>
+                      <p class="c-news-card__excerpt">亞洲大學現代美術館舉辦「蘇勵·美學·創作教育－1963大度山ära展」，由美學大師蘇勵領軍，帶來一場美好的冒險記。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-life-05.jpg" alt="網路購物 不可不知的權益！">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">網路購物 不可不知的權益！</h3>
+                      <p class="c-news-card__excerpt">隨著網際網路的普及，網路購物已牢不可破，因此產生的糾紛也日益增多，包含商品瑕疵、退貨爭議等，消費者不可不知。</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="c-news-card" href="#">
+                    <div class="c-news-card__media">
+                      <img class="c-news-card__img" src="./assets/images/news/news-life-06.jpg" alt="台南 木造輝三兄弟">
+                      <span class="c-news-card__mask">
+                      </span>
+                    </div>
+                    <div class="c-news-card__body">
+                      <p class="c-news-card__date">2026.03.20</p>
+                      <h3 class="c-news-card__title">台南 木造輝三兄弟</h3>
+                      <p class="c-news-card__excerpt">火車站旁西側大樹綠蔭的鐵青平房，傳入台南境內，還有三派水流泉湧建立的木造老屋，靜靜訴說著城市的歷史記憶。</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="l-news-section__more">
+              <a href="newsList.html" class="btn btn-solid btn-lg d-inline-flex align-items-center justify-content-center gap-2"> 查看更多 <span class="btn-arrow">
+                <span class="btn-arrow__track">
+                  <i class="fa-light fa-arrow-right-long">
+                  </i>
+                  <i class="fa-light fa-arrow-right-long">
+                  </i>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <div class="btn-float-group">
     <a href="#" class="btn-float">
       <i class="fa-solid fa-book btn-float__icon">
@@ -1340,6 +1901,7 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./assets/js/components/header.js"></script>
   <script src="./assets/js/components/floatButtons.js"></script>
   <script src="./assets/js/news.js"></script>
