@@ -1,1 +1,90 @@
-// search page styles
+.l-search {
+  position: relative;
+  padding: 100px 0 120px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  // 裝飾背景
+  &__bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+    background: url("../../images/search/search-pattern.svg") no-repeat;
+    background-attachment: fixed;
+    background-position: -577px center;
+    background-size: 1154px 1153px;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__inner {
+      padding-right: calc(#{$float-reserve});
+    }
+  }
+
+  &__head {
+    margin-bottom: 60px;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    margin: 0 0 8px;
+  }
+
+  &__heading-sub {
+    padding-bottom: 4px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: $font-secondary;
+  }
+
+  &__count {
+    margin: 0 0 20px;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: $font-primary;
+  }
+
+  &__count-num {
+    color: $font-brand;
+  }
+
+  // 搜尋框
+  .search-input {
+    width: 100%;
+  }
+
+  // 卡片列表
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 20px;
+    }
+  }
+
+  // 分頁
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+}
