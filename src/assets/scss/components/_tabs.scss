@@ -11,7 +11,7 @@
   border: 0;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-out;
 
   &__icon {
     display: inline-flex;
@@ -24,8 +24,8 @@
     border: 1px solid $gray-30;
     border-radius: $border-radius-pill;
     transition:
-      color 0.3s ease,
-      border-color 0.3s ease;
+      color 0.3s ease-out,
+      border-color 0.3s ease-out;
   }
 
   &:hover,

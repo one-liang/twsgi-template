@@ -137,7 +137,7 @@
     height: 52px;
     transform: rotate(-90deg);
     opacity: 0;
-    transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease-out;
     pointer-events: none;
   }
 
@@ -871,7 +871,7 @@
   }
 
   &__icon {
-    font-size: 52px;
+    font-size: 3.25rem;
     line-height: 1;
     color: $font-brand;
   }
@@ -900,7 +900,7 @@
     width: 28px;
     height: 28px;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: $font-brand;
     background-color: transparent;
     border-radius: 999px;
@@ -923,7 +923,7 @@
     padding: 24px 12px;
 
     &__icon {
-      font-size: 48px;
+      font-size: 3rem;
     }
 
     &__name {

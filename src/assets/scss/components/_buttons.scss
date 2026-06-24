@@ -51,9 +51,9 @@ $btn-arrow-shift: calc(#{$btn-arrow-icon-width} + #{$btn-arrow-gap});
     background-color: $primary;
     border: 1px solid $primary;
     transition:
-      color 0.3s ease,
-      background-color 0.3s ease,
-      border-color 0.3s ease;
+      color 0.3s ease-out,
+      background-color 0.3s ease-out,
+      border-color 0.3s ease-out;
   }
 
   &:hover &__icon {
@@ -87,7 +87,7 @@ $btn-arrow-shift: calc(#{$btn-arrow-icon-width} + #{$btn-arrow-gap});
     display: flex;
     flex: none;
     gap: $btn-arrow-gap;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-out;
     transform: translateX(calc(-1 * #{$btn-arrow-shift}));
 
     > i {
@@ -155,8 +155,8 @@ $btn-arrow-shift: calc(#{$btn-arrow-icon-width} + #{$btn-arrow-gap});
   text-align: center;
   text-decoration: none;
   transition:
-    width 0.3s ease,
-    background-color 0.3s ease;
+    width 0.3s ease-out,
+    background-color 0.3s ease-out;
 
   &:hover {
     width: 3.25rem;
