@@ -53,7 +53,9 @@ export const AOS_CDN_CSS =
   "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css";
 export const AOS_CDN_JS = "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js";
 
-export const SWIPER_PAGES = new Set(["index", "awardDetail"]);
+export const SWIPER_PAGES = new Set(["index", "awardDetail", "news", "videos", "newMembers"]);
+
+export const AOS_PAGES = new Set(["index", "newMembers"]);
 
 export async function discoverPages(pagesDir) {
   const dirPath = pagesDir instanceof URL ? fileURLToPath(pagesDir) : pagesDir;
@@ -159,7 +161,7 @@ export function createPageHtml({
 export function createDevHtml({ pageName }) {
   const title = escapeHtml(pageTitle(pageName));
   const includeSwiper = SWIPER_PAGES.has(pageName);
-  const includeAOS = pageName === "index";
+  const includeAOS = AOS_PAGES.has(pageName);
   const swiperCssTag = includeSwiper
     ? `  <link rel="stylesheet" href="${SWIPER_CDN_CSS}">`
     : null;
