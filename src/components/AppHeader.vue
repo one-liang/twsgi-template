@@ -8,15 +8,15 @@ const navItems = [
     href: '#',
     columns: [
       [
-        { text: '宗旨與使命', href: '#' },
+        { text: '宗旨與使命', href: 'mission.html' },
         { text: '國際創價學會', href: '#' },
         {
           text: '各地會館與講堂',
           children: [
-            { text: '文化會館', href: '#' },
-            { text: '講堂', href: '#' },
-            { text: '會員服務中心', href: '#' },
-            { text: '創價美術館', href: '#' },
+            { text: '文化會館', href: 'cultureHall.html' },
+            { text: '講堂', href: 'lectureHall.html' },
+            { text: '會員服務中心', href: 'memberCenter.html' },
+            { text: '創價美術館', href: 'artMuseum.html' },
           ],
         },
       ],
@@ -25,7 +25,7 @@ const navItems = [
         { text: '相關機構', href: '#' },
       ],
       [
-        { text: '佛法教學入門', href: '#' },
+        { text: '佛法教學入門', href: 'teachings.html' },
         { text: '台灣創價學會會則', href: '#' },
       ],
       [
@@ -37,16 +37,16 @@ const navItems = [
             { text: '池田大作', href: '#' },
           ],
         },
-        { text: '獲獎與肯定', href: '#' },
+        { text: '獲獎與肯定', href: 'awards.html' },
       ],
     ],
   },
   {
     title: '最新訊息',
-    href: '#',
+    href: 'news.html',
     columns: [
       [{ text: '創價電子新聞', href: '#' }],
-      [{ text: '線上影音', href: '#' }],
+      [{ text: '線上影音', href: 'videos.html' }],
       [],
       [],
     ],
@@ -66,7 +66,7 @@ const navItems = [
   },
   {
     title: '社會行動',
-    href: '#',
+    href: 'socialAction.html',
     columns: [
       [
         { text: '文化', href: '#' },
@@ -85,7 +85,7 @@ const navItems = [
     href: '#',
     columns: [
       [
-        { text: '座談會御書e講義', href: '#' },
+        { text: '座談會御書e講義', href: 'lecture.html' },
         { text: '創價學會歌', href: '#' },
       ],
       [
@@ -118,7 +118,7 @@ const navItems = [
         },
       ],
       [
-        { text: '創價學會紀念日', href: '#' },
+        { text: '創價學會紀念日', href: 'anniversary.html' },
         { text: '創價e購樂', href: '#' },
       ],
     ],
@@ -250,7 +250,7 @@ const mobileCollapseId = (navIndex, itemIndex) =>
             <div v-for="section in megaColumn" :key="section.title" class="megamenu__section">
               <a class="megamenu__title" :href="section.href" :target="section.target" :rel="section.rel">{{
                 section.title
-              }}</a>
+                }}</a>
               <div v-if="section.columns" class="megamenu__list">
                 <template v-for="(child, itemIndex) in rowMajor(section.columns)" :key="itemIndex">
                   <div v-if="child.children" class="hmenu-group">

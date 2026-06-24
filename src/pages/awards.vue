@@ -13,12 +13,12 @@ import wenxin from '@/assets/images/awards/award-wenxin.jpg';
 import artEducation from '@/assets/images/awards/award-art-education.jpg';
 
 const awardCards = [
-  { image: religiousWelfare, title: '宗教公益獎', link: '#' },
-  { image: nationalContribution, title: '全國性社會團體公益貢獻獎', link: '#' },
-  { image: religiousDeepening, title: '宗教公益深耕獎', link: '#' },
-  { image: socialEducation, title: '社會教育貢獻獎', link: '#' },
-  { image: wenxin, title: '文馨獎', link: '#' },
-  { image: artEducation, title: '藝術教育貢獻獎', link: '#' },
+  { image: religiousWelfare, title: '宗教公益獎', link: 'awardDetail.html' },
+  { image: nationalContribution, title: '全國性社會團體公益貢獻獎', link: 'awardDetail.html' },
+  { image: religiousDeepening, title: '宗教公益深耕獎', link: 'awardDetail.html' },
+  { image: socialEducation, title: '社會教育貢獻獎', link: 'awardDetail.html' },
+  { image: wenxin, title: '文馨獎', link: 'awardDetail.html' },
+  { image: artEducation, title: '藝術教育貢獻獎', link: 'awardDetail.html' },
 ];
 </script>
 

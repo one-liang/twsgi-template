@@ -28,14 +28,14 @@ const socialGroups = [
 
 const footerColumns = [
   [
-    { title: '首頁', href: '#' },
+    { title: '首頁', href: 'index.html' },
     {
       title: '關於創價學會',
       href: '#',
       items: [
-        { text: '宗旨與使命', href: '#' },
+        { text: '宗旨與使命', href: 'mission.html' },
         { text: '日蓮大聖人法理', href: '#' },
-        { text: '佛法教學入門', href: '#' },
+        { text: '佛法教學入門', href: 'teachings.html' },
         {
           text: '三代會長',
           children: [
@@ -47,7 +47,7 @@ const footerColumns = [
         { text: '國際創價學會', href: '#' },
         { text: '相關機構', href: '#' },
         { text: '台灣創價學會會則', href: '#' },
-        { text: '獲獎與肯定', href: '#' },
+        { text: '獲獎與肯定', href: 'awards.html' },
         {
           text: '各地會館與講堂',
           children: [
@@ -62,10 +62,10 @@ const footerColumns = [
   [
     {
       title: '最新訊息',
-      href: '#',
+      href: 'news.html',
       items: [
         { text: '創價電子新聞', href: '#' },
-        { text: '線上影音', href: '#' },
+        { text: '線上影音', href: 'videos.html' },
       ],
     },
     {
@@ -83,7 +83,7 @@ const footerColumns = [
   [
     {
       title: '社會行動',
-      href: '#',
+      href: 'socialAction.html',
       items: [
         { text: '文化', href: '#' },
         { text: '教育', href: '#' },
@@ -99,7 +99,7 @@ const footerColumns = [
       title: '會員專區',
       href: '#',
       items: [
-        { text: '座談會御書e講義', href: '#' },
+        { text: '座談會御書e講義', href: 'lecture.html' },
         {
           text: '教學考試',
           children: [
@@ -114,7 +114,7 @@ const footerColumns = [
             { text: '進階課程', href: '#' },
           ],
         },
-        { text: '創價學會紀念日', href: '#' },
+        { text: '創價學會紀念日', href: 'anniversary.html' },
         { text: '創價學會歌', href: '#' },
         { text: '檔案下載區', href: '#' },
         {
@@ -174,9 +174,10 @@ const accordionCollapseId = (columnIndex, sectionIndex, itemIndex) =>
                       <i class="fa-light fa-minus"></i>
                     </span>
                   </button>
-                  <div class="collapse footer-accordion__panel" :id="accordionCollapseId(columnIndex, sectionIndex, itemIndex)">
-                    <a v-for="(child, childIndex) in item.children" :key="childIndex" class="footer-link footer-link--sub"
-                      :href="child.href">
+                  <div class="collapse footer-accordion__panel"
+                    :id="accordionCollapseId(columnIndex, sectionIndex, itemIndex)">
+                    <a v-for="(child, childIndex) in item.children" :key="childIndex"
+                      class="footer-link footer-link--sub" :href="child.href">
                       <span class="footer-link__text">{{ child.text }}</span>
                       <i class="footer-link__icon fa-light fa-angle-right"></i>
                     </a>

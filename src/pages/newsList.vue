@@ -19,7 +19,7 @@ const newsList = [
     title: '日本創價大學理事長秋谷芳英訪問台灣大學、高雄大學',
     excerpt:
       '日本創價大學理事長秋谷芳英、國際部部長川上喜彥及創價學會國際涉外局第二部部長水嶋肇等一行人，2月24日上午前往台灣大學訪問。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: newsList02,
@@ -27,7 +27,7 @@ const newsList = [
     title: '教師部盛大舉辦「創價·教育 EXPO」研修 秉持人本主義 建構為了教育的社會',
     excerpt:
       '教師部「創價・教育 EXPO」研修會，2月7日於桃園文化會館盛大舉行，來自全台各地及離島澎湖的500多位教師踴躍參與。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: newsList03,
@@ -35,7 +35,7 @@ const newsList = [
     title: '晨曦合唱團成立紀念勤行會 台南古都 迎接嶄新文化團隊啟航',
     excerpt:
       '迎來「1.27台灣師弟原點之日」63週年，1月31日，創價於安南文化會館舉行「晨曦合唱團成立紀念勤行會」，林釗理事長專程蒞臨主持。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: newsList04,
@@ -43,7 +43,7 @@ const newsList = [
     title: '全國區長會 林釗理事長期勉幹部 全力培育青年後繼 建設廣布黃金城',
     excerpt:
       '全國區長會於5月25日假桃園文化會館盛大舉行，林釗理事長向與會幹部宣布三項振奮人心的好消息，期勉全力培育青年後繼。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: newsList05,
@@ -51,7 +51,7 @@ const newsList = [
     title: '5月份大研專場座談會 青年向創價母親表達感謝',
     excerpt:
       '創價於5月18至24日，在全台各地熱絡地舉辦5月份座談會，青年們把握機會向創價母親表達由衷的感謝。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: newsList06,
@@ -59,7 +59,7 @@ const newsList = [
     title: '台灣SGI青年與亞洲5萬名青年大合唱〈歡樂頌〉',
     excerpt:
       '為慶祝創立95週年，堂堂邁向創立100週年，11月23日，九州創價學會舉辦「亞洲和平音樂節」，台灣青年共襄盛舉。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: newsList01,
@@ -67,7 +67,7 @@ const newsList = [
     title: '日本創價大學理事長秋谷芳英訪問台灣大學、高雄大學',
     excerpt:
       '日本創價大學理事長秋谷芳英、國際部部長川上喜彥及創價學會國際涉外局第二部部長水嶋肇等一行人，2月24日上午前往台灣大學訪問。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: newsList02,
@@ -75,7 +75,7 @@ const newsList = [
     title: '教師部盛大舉辦「創價·教育 EXPO」研修 秉持人本主義 建構為了教育的社會',
     excerpt:
       '教師部「創價・教育 EXPO」研修會，2月7日於桃園文化會館盛大舉行，來自全台各地及離島澎湖的500多位教師踴躍參與。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: newsList03,
@@ -83,7 +83,7 @@ const newsList = [
     title: '晨曦合唱團成立紀念勤行會 台南古都 迎接嶄新文化團隊啟航',
     excerpt:
       '迎來「1.27台灣師弟原點之日」63週年，1月31日，創價於安南文化會館舉行「晨曦合唱團成立紀念勤行會」，林釗理事長專程蒞臨主持。',
-    link: '#',
+    link: 'newsDetail.html',
   },
 ];
 </script>

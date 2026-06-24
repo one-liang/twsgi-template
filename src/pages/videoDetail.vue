@@ -10,21 +10,21 @@ import artsArts02 from '@/assets/images/videoDetail/videoDetail-arts-02.jpg';
 import artsArts03 from '@/assets/images/videoDetail/videoDetail-arts-03.jpg';
 
 const videoList = [
-  { image: artsArts01, title: '逆風前行－高一峰紀念展｜2025創價藝文', link: '#' },
-  { image: artsArts02, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: '#' },
-  { image: artsArts03, title: '跨界即興－台灣現代陶之先鋒 李茂宗特展｜2025年創價藝文', link: '#' },
-  { image: artsArts01, title: '逆風前行－高一峰紀念展｜2025創價藝文', link: '#' },
-  { image: artsArts02, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: '#' },
-  { image: artsArts03, title: '跨界即興－台灣現代陶之先鋒 李茂宗特展｜2025年創價藝文', link: '#' },
-  { image: artsArts01, title: '逆風前行－高一峰紀念展｜2025創價藝文', link: '#' },
-  { image: artsArts02, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: '#' },
-  { image: artsArts03, title: '跨界即興－台灣現代陶之先鋒 李茂宗特展｜2025年創價藝文', link: '#' },
+  { image: artsArts01, title: '逆風前行－高一峰紀念展｜2025創價藝文', link: 'videoDetail.html' },
+  { image: artsArts02, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: 'videoDetail.html' },
+  { image: artsArts03, title: '跨界即興－台灣現代陶之先鋒 李茂宗特展｜2025年創價藝文', link: 'videoDetail.html' },
+  { image: artsArts01, title: '逆風前行－高一峰紀念展｜2025創價藝文', link: 'videoDetail.html' },
+  { image: artsArts02, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: 'videoDetail.html' },
+  { image: artsArts03, title: '跨界即興－台灣現代陶之先鋒 李茂宗特展｜2025年創價藝文', link: 'videoDetail.html' },
+  { image: artsArts01, title: '逆風前行－高一峰紀念展｜2025創價藝文', link: 'videoDetail.html' },
+  { image: artsArts02, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: 'videoDetail.html' },
+  { image: artsArts03, title: '跨界即興－台灣現代陶之先鋒 李茂宗特展｜2025年創價藝文', link: 'videoDetail.html' },
 ];
 </script>
 
 <template>
   <AppHeader />
-  <AppBanner title="線上影音" :breadcrumb="[{ label: '線上影音', href: '#' }, { label: '創價藝文' }]" />
+  <AppBanner title="線上影音" :breadcrumb="[{ label: '線上影音', href: 'videos.html' }, { label: '創價藝文' }]" />
 
   <section class="l-video-detail">
     <div class="container">

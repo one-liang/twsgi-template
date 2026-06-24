@@ -40,7 +40,7 @@ const newsSections = [
         title: '日本創價大學理事長秋谷芳英訪問台灣大學、高雄大學',
         excerpt:
           '日本創價大學理事長秋谷芳英、國際部部長川上喜彥及創價學會國際涉外局第二部部長水嶋肇等一行人，2月24日上午，在共同執行長林澤、吳青蓉等陪同下，前往台灣大學訪問。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsFocus02,
@@ -48,7 +48,7 @@ const newsSections = [
         title: '教師部盛大舉辦「創價·教育 EXPO」研修 秉持人本主義 建構為了教育的社會',
         excerpt:
           '教師部「創價・教育 EXPO」研修會，2月7日於桃園文化會館盛大舉行，來自全台各地及離島澎湖的500多位教師踴躍參與，一同學習創價教育理念。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsFocus03,
@@ -56,7 +56,7 @@ const newsSections = [
         title: '晨曦合唱團成立紀念勤行會 台南古都 迎接嶄新文化團隊啟航',
         excerpt:
           '迎來「1.27台灣師弟原點之日」63週年，1月31日，創價於安南文化會館舉行「晨曦合唱團成立紀念勤行會」，林釗理事長專程蒞臨主持。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsFocus04,
@@ -64,7 +64,7 @@ const newsSections = [
         title: '全國區長會 林釗理事長期勉幹部 全力培育青年後繼 建設廣布黃金城',
         excerpt:
           '全國區長會於5月25日假桃園文化會館盛大舉行，林釗理事長首先向與會幹部宣布三項振奮人心的好消息，期勉全力培育青年後繼。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsFocus05,
@@ -72,7 +72,7 @@ const newsSections = [
         title: '5月份大研專場座談會 青年向創價母親表達感謝',
         excerpt:
           '創價於5月18至24日，在全台各地熱絡地舉辦5月份座談會，青年們把握機會向創價母親表達由衷的感謝。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsFocus06,
@@ -80,7 +80,7 @@ const newsSections = [
         title: '台灣SGI青年與亞洲5萬名青年大合唱〈歡樂頌〉',
         excerpt:
           '為慶祝創立95週年，堂堂邁向創立100週年，11月23日，九州創價學會舉辦「亞洲和平音樂節」，台灣青年共襄盛舉。',
-        link: '#',
+        link: 'newsDetail.html',
       },
     ],
   },
@@ -96,7 +96,7 @@ const newsSections = [
         title: '承繼家族信心 超越求學時期逆境 夫妻同心創業 以福運翻轉人生',
         excerpt:
           '我們家族信心的根源來自父親，在這條路上，我與妻子攜手同行，秉持信仰超越求學時期的逆境，最終以福運翻轉人生。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsExperience02,
@@ -104,7 +104,7 @@ const newsSections = [
         title: '透過信仰走出人生谷底 創價教師 拓展花蓮學子國際視野',
         excerpt:
           '我是花蓮人，15歲時加入創價，至今17年。我於人生低谷時透過信仰重新站起，如今投身教育，盼為花蓮學子拓展國際視野。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsExperience03,
@@ -112,7 +112,7 @@ const newsSections = [
         title: '積極投入廣布 超越疫情等考驗 建立事業新品牌 創造佳績',
         excerpt:
           '我從小生長在虔誠信仰的家庭，疫情期間事業面臨嚴峻考驗，我持續積極投入廣布，最終建立事業新品牌，創造亮眼佳績。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsExperience04,
@@ -120,7 +120,7 @@ const newsSections = [
         title: '承繼家族信心 超越求學時期逆境 夫妻同心創業 以福運翻轉人生',
         excerpt:
           '我們家族信心的根源來自父親，在這條路上，我與妻子攜手同行，秉持信仰超越求學時期的逆境，最終以福運翻轉人生。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsExperience05,
@@ -128,7 +128,7 @@ const newsSections = [
         title: '透過信仰走出人生谷底 創價教師 拓展花蓮學子國際視野',
         excerpt:
           '我是花蓮人，15歲時加入創價，至今17年。我於人生低谷時透過信仰重新站起，如今投身教育，盼為花蓮學子拓展國際視野。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsExperience06,
@@ -136,7 +136,7 @@ const newsSections = [
         title: '積極投入廣布 超越疫情等考驗 建立事業新品牌 創造佳績',
         excerpt:
           '我從小生長在虔誠信仰的家庭，疫情期間事業面臨嚴峻考驗，我持續積極投入廣布，最終建立事業新品牌，創造亮眼佳績。',
-        link: '#',
+        link: 'newsDetail.html',
       },
     ],
   },
@@ -152,7 +152,7 @@ const newsSections = [
         title: '慢 才是王道',
         excerpt:
           '我住意，然我覺知「慢」才是王道。民國42年，我剛讀大學，有次只是在台北街頭緩步而行，便深刻體會到從容的力量。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsEducation02,
@@ -160,7 +160,7 @@ const newsSections = [
         title: '當事人、關係人與路人',
         excerpt:
           '通常在日常生活，我們扮演主角當事人；有時則成為關係人；停下腳步時，我們又是看戲的路人。三種身分時時轉換。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsEducation03,
@@ -168,7 +168,7 @@ const newsSections = [
         title: '學校霸凌行為 不能忽視',
         excerpt:
           '校園霸凌是不能忽視的議題。從旁觀者到當事人，每個人都應正視自身的角色，共同守護孩子安心成長的學習環境。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsEducation01,
@@ -176,7 +176,7 @@ const newsSections = [
         title: '慢 才是王道',
         excerpt:
           '我住意，然我覺知「慢」才是王道。民國42年，我剛讀大學，有次只是在台北街頭緩步而行，便深刻體會到從容的力量。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsEducation02,
@@ -184,7 +184,7 @@ const newsSections = [
         title: '當事人、關係人與路人',
         excerpt:
           '通常在日常生活，我們扮演主角當事人；有時則成為關係人；停下腳步時，我們又是看戲的路人。三種身分時時轉換。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsEducation03,
@@ -192,7 +192,7 @@ const newsSections = [
         title: '學校霸凌行為 不能忽視',
         excerpt:
           '校園霸凌是不能忽視的議題。從旁觀者到當事人，每個人都應正視自身的角色，共同守護孩子安心成長的學習環境。',
-        link: '#',
+        link: 'newsDetail.html',
       },
     ],
   },
@@ -208,7 +208,7 @@ const newsSections = [
         title: '一場美好的冒險記 蘇勵的創作教學',
         excerpt:
           '亞洲大學現代美術館舉辦「蘇勵·美學·創作教育－1963大度山ära展」，由美學大師蘇勵領軍，帶來一場美好的冒險記。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsLife02,
@@ -216,7 +216,7 @@ const newsSections = [
         title: '網路購物 不可不知的權益！',
         excerpt:
           '隨著網際網路的普及，網路購物已牢不可破，因此產生的糾紛也日益增多，包含商品瑕疵、退貨爭議等，消費者不可不知。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsLife03,
@@ -224,7 +224,7 @@ const newsSections = [
         title: '台南 木造輝三兄弟',
         excerpt:
           '火車站旁西側大樹綠蔭的鐵青平房，傳入台南境內，還有三派水流泉湧建立的木造老屋，靜靜訴說著城市的歷史記憶。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsLife04,
@@ -232,7 +232,7 @@ const newsSections = [
         title: '一場美好的冒險記 蘇勵的創作教學',
         excerpt:
           '亞洲大學現代美術館舉辦「蘇勵·美學·創作教育－1963大度山ära展」，由美學大師蘇勵領軍，帶來一場美好的冒險記。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsLife05,
@@ -240,7 +240,7 @@ const newsSections = [
         title: '網路購物 不可不知的權益！',
         excerpt:
           '隨著網際網路的普及，網路購物已牢不可破，因此產生的糾紛也日益增多，包含商品瑕疵、退貨爭議等，消費者不可不知。',
-        link: '#',
+        link: 'newsDetail.html',
       },
       {
         image: newsLife06,
@@ -248,7 +248,7 @@ const newsSections = [
         title: '台南 木造輝三兄弟',
         excerpt:
           '火車站旁西側大樹綠蔭的鐵青平房，傳入台南境內，還有三派水流泉湧建立的木造老屋，靜靜訴說著城市的歷史記憶。',
-        link: '#',
+        link: 'newsDetail.html',
       },
     ],
   },

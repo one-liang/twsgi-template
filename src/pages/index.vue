@@ -50,52 +50,52 @@ const newsList = [
     date: '2026.03.20',
     title: '5月份大研專場座談會 青年向創價母親表達感謝',
     excerpt: '創價於5月18至24日，在全台各地熱絡地舉辦5月份座談會。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: news02,
     date: '2026.03.20',
     title: '日本創價大學理事長秋谷芳英訪問台灣大學、高雄大學',
     excerpt: '日本創價大學理事長秋谷芳英、國際部部長川上喜彥及創價學會國際涉外局第二部部長水嶋肇等一行人，2月24日上午，在共同執行長林澤、吳青蓉等陪同下',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: news03,
     date: '2026.03.20',
     title: '台灣SGI青年與亞洲5萬名青年大合唱〈歡樂頌〉',
     excerpt: '為慶祝創立95週年，堂堂邁向創立100週年，11月23日，九州創價學會的「亞洲和平音樂節」（Asia Peace Festa 2025',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: news04,
     date: '2026.03.20',
     title: '全國區長會 林釗理事長期勉幹部 全力培育青年後繼 建設廣布黃金城',
     excerpt: '全國區長會於5月25日假桃園文化會館盛大舉行，林釗理事長首先向與會幹部宣布三項振奮人心的好消息',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: news05,
     date: '2026.03.20',
     title: '5月份大研專場座談會 青年向創價母親表達感謝',
     excerpt: '創價於5月18至24日，在全台各地熱絡地舉辦5月份座談會。',
-    link: '#',
+    link: 'newsDetail.html',
   },
   {
     image: news06,
     date: '2026.03.20',
     title: '林顯宗油畫世界展在創價美術館至善館舉行 藝遊人生 畫作展現蓬勃生命力',
     excerpt: '「藝遊人生──林顯宗油畫世界」展，6月7日下午在創價美術館至善館舉行開幕典禮，由林釗理事長...',
-    link: '#',
+    link: 'newsDetail.html',
   },
 ];
 
 const videoList = [
-  { image: video01, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: '#' },
-  { image: video02, title: 'CIMARRON 音樂冒險｜亞洲和平音樂節精選', link: '#' },
-  { image: video03, title: '逆風前行 高一虹的生命樂章｜創價青年紀實', link: '#' },
-  { image: video01, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: '#' },
-  { image: video02, title: 'CIMARRON 音樂冒險｜亞洲和平音樂節精選', link: '#' },
-  { image: video03, title: '逆風前行 高一虹的生命樂章｜創價青年紀實', link: '#' },
+  { image: video01, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: 'videoDetail.html' },
+  { image: video02, title: 'CIMARRON 音樂冒險｜亞洲和平音樂節精選', link: 'videoDetail.html' },
+  { image: video03, title: '逆風前行 高一虹的生命樂章｜創價青年紀實', link: 'videoDetail.html' },
+  { image: video01, title: '悠然望玉山－林玉山藝術實踐｜2025創價藝文', link: 'videoDetail.html' },
+  { image: video02, title: 'CIMARRON 音樂冒險｜亞洲和平音樂節精選', link: 'videoDetail.html' },
+  { image: video03, title: '逆風前行 高一虹的生命樂章｜創價青年紀實', link: 'videoDetail.html' },
 ];
 
 const actionList = [
@@ -105,7 +105,7 @@ const actionList = [
     title: '社會行動',
     subtitle: '文化．教育．和平',
     desc: '創價學會以尊重生命與人類幸福為理念，推動文化、教育與和平行動，並持續投入社會關懷與災難援助。',
-    link: '#',
+    link: 'socialAction.html',
     reverse: false,
   },
   {
@@ -120,9 +120,9 @@ const actionList = [
 ];
 
 const locationStats = [
-  { icon: locationsHall, name: '會館講堂', count: '49', unit: '間', variant: 'brand', link: '#' },
+  { icon: locationsHall, name: '會館講堂', count: '49', unit: '間', variant: 'brand', link: 'cultureHall.html' },
   { icon: locationsCienen, name: '慈恩堂', count: '1', unit: '座', variant: 'green', link: '#' },
-  { icon: locationsMuseum, name: '創價美術館', count: '12', unit: '間', variant: 'blue', link: '#' },
+  { icon: locationsMuseum, name: '創價美術館', count: '12', unit: '間', variant: 'blue', link: 'artMuseum.html' },
 ];
 
 const relatedLinks = [
@@ -232,7 +232,7 @@ const relatedLinks = [
 
           <!-- 查看更多 -->
           <div class="l-home-news__more">
-            <a href="#" class="btn btn-solid btn-lg d-inline-flex align-items-center justify-content-center gap-2">
+            <a href="newsList.html" class="btn btn-solid btn-lg d-inline-flex align-items-center justify-content-center gap-2">
               查看更多
               <span class="btn-arrow">
                 <span class="btn-arrow__track">
@@ -263,7 +263,7 @@ const relatedLinks = [
             </div>
 
             <!-- 查看更多 -->
-            <a href="#" class="btn btn-text btn-lg d-inline-flex align-items-center gap-2">
+            <a href="videos.html" class="btn btn-text btn-lg d-inline-flex align-items-center gap-2">
               查看更多
               <span class="btn-text__icon">
                 <span class="btn-arrow">
@@ -389,7 +389,7 @@ const relatedLinks = [
             </div>
 
             <!-- 查看更多 -->
-            <a href="#" class="l-home-locations__more btn btn-text btn-lg d-inline-flex align-items-center gap-2">
+            <a href="cultureHall.html" class="l-home-locations__more btn btn-text btn-lg d-inline-flex align-items-center gap-2">
               查看各地據點
               <span class="btn-text__icon">
                 <span class="btn-arrow">
