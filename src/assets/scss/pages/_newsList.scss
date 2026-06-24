@@ -1,0 +1,45 @@
+.l-news-list {
+  padding: 60px 0 100px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  &__title-bar {
+    flex-shrink: 0;
+    width: 6px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: $brown-50;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0 60px;
+
+    &__inner {
+      padding-right: calc(#{$float-reserve});
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__pagination {
+      margin-top: 40px;
+    }
+  }
+}
