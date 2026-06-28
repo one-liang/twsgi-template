@@ -23,23 +23,23 @@
 
 ### 最新消息
 
-- [] 最新消息列表: `pages/news.html`
-- [] 最新消息內頁: `pages/newsDetail.html`
+- [x] 最新消息列表: `pages/news.html`
+- [x] 最新消息內頁: `pages/newsDetail.html`
 
 ### 線上影音
 
-- [] 線上影音列表: `pages/videos.html`
-- [] 線上影音內頁: `pages/videoDetail.html`
+- [x] 線上影音列表: `pages/videos.html`
+- [x] 線上影音內頁: `pages/videoDetail.html`
 
 ### 會員專區
 
-- [] 創價學會紀念日: `pages/anniversary.html`
-- [] 座談會御書e講義: `pages/lecture.html`
-- [] 給新會員: `pages/newMembers.html`
+- [x] 創價學會紀念日: `pages/anniversary.html`
+- [x] 座談會御書e講義: `pages/lecture.html`
+- [x] 給新會員: `pages/newMembers.html`
 
 ### 關鍵字搜尋
 
-- [] 關鍵字搜尋: `pages/search.html`
+- [x] 關鍵字搜尋: `pages/search.html`
 
 ### 其他
 
