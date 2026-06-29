@@ -174,6 +174,9 @@ const relatedLinks = [
             <span class="l-home-banner__count-num">{{ formatCount(bannerIndex) }}</span>
           </button>
         </div>
+
+        <!-- Mobile pagination dots -->
+        <div class="l-home-banner__dots swiper-pagination" data-banner-pagination></div>
       </div>
 
       <!-- 向下捲動指示 -->
@@ -232,7 +235,8 @@ const relatedLinks = [
 
           <!-- 查看更多 -->
           <div class="l-home-news__more">
-            <a href="newsList.html" class="btn btn-solid btn-lg d-inline-flex align-items-center justify-content-center gap-2">
+            <a href="newsList.html"
+              class="btn btn-solid btn-lg d-inline-flex align-items-center justify-content-center gap-2">
               查看更多
               <span class="btn-arrow">
                 <span class="btn-arrow__track">
@@ -389,7 +393,8 @@ const relatedLinks = [
             </div>
 
             <!-- 查看更多 -->
-            <a href="cultureHall.html" class="l-home-locations__more btn btn-text btn-lg d-inline-flex align-items-center gap-2">
+            <a href="cultureHall.html"
+              class="l-home-locations__more btn btn-text btn-lg d-inline-flex align-items-center gap-2">
               查看各地據點
               <span class="btn-text__icon">
                 <span class="btn-arrow">
@@ -482,6 +487,10 @@ const relatedLinks = [
       autoplay: {
         delay: AUTOPLAY_DELAY,
         disableOnInteraction: false,
+      },
+      pagination: {
+        el: root.querySelector('[data-banner-pagination]'),
+        clickable: true,
       },
       on: {
         init(instance) {

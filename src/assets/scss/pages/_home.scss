@@ -159,6 +159,34 @@
     opacity: 1;
   }
 
+  &__dots {
+    display: none;
+
+    &.swiper-pagination {
+      @include media-breakpoint-down(lg) {
+        position: static;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+        padding-right: $float-reserve;
+
+        .swiper-pagination-bullet {
+          width: 8px;
+          height: 8px;
+          margin: 0;
+          background-color: $gray-50;
+          opacity: 1;
+          transition: background-color 0.3s ease-out;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: $brown-50;
+        }
+      }
+    }
+  }
+
   &__scroll {
     position: absolute;
     left: 100%;
