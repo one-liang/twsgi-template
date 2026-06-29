@@ -3,6 +3,14 @@
   overflow: hidden;
   padding-block: 100px;
 
+  @include media-breakpoint-down(lg) {
+    padding-block: 60px;
+
+    .col-lg-10 {
+      padding-right: calc(12px + #{$float-reserve});
+    }
+  }
+
   // 裝飾圖
   &__decoration {
     position: absolute;
@@ -19,23 +27,15 @@
       width: 100%;
       height: auto;
     }
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 
   .container {
     position: relative;
     z-index: 1;
-  }
-
-  @include media-breakpoint-down(lg) {
-    padding-block: 60px;
-
-    .col-lg-10 {
-      padding-right: calc(12px + #{$float-reserve});
-    }
-
-    &__decoration {
-      display: none;
-    }
   }
 }
 
@@ -66,8 +66,19 @@
   border-radius: $border-radius-sm;
   transition: background-color 0.3s ease-out;
 
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 8px 0;
+  }
+
   &--member {
     align-items: flex-start;
+
+    @include media-breakpoint-down(lg) {
+      align-items: flex-start;
+    }
   }
 
   &::after {
@@ -81,6 +92,10 @@
 
   &:not(:last-child)::after {
     bottom: -20px;
+
+    @include media-breakpoint-down(lg) {
+      bottom: -12px;
+    }
   }
 
   &:last-child::after {
@@ -95,6 +110,11 @@
     font-weight: 500;
     line-height: 1.6;
     color: $font-brand;
+
+    @include media-breakpoint-down(lg) {
+      flex: none;
+      width: auto;
+    }
   }
 
   &__address {
@@ -152,6 +172,11 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+
+    @include media-breakpoint-down(lg) {
+      flex: none;
+      width: auto;
+    }
   }
 
   &__tel,
@@ -171,30 +196,5 @@
     font-size: 1rem;
     color: $brown-50;
     text-align: center;
-  }
-
-  @include media-breakpoint-down(lg) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 8px 0;
-
-    &--member {
-      align-items: flex-start;
-    }
-
-    &:not(:last-child)::after {
-      bottom: -12px;
-    }
-
-    &__name {
-      flex: none;
-      width: auto;
-    }
-
-    &__contact {
-      flex: none;
-      width: auto;
-    }
   }
 }

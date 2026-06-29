@@ -110,6 +110,13 @@
       height: 1078px;
       left: -681px;
       top: 88px;
+
+      @include media-breakpoint-down(lg) {
+        width: 560px;
+        height: 560px;
+        left: -360px;
+        top: 40px;
+      }
     }
 
     &--right {
@@ -117,17 +124,8 @@
       height: 990px;
       right: -623px;
       top: -474px;
-    }
 
-    @include media-breakpoint-down(lg) {
-      &--left {
-        width: 560px;
-        height: 560px;
-        left: -360px;
-        top: 40px;
-      }
-
-      &--right {
+      @include media-breakpoint-down(lg) {
         width: 560px;
         height: 560px;
         right: -320px;

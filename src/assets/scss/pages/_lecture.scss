@@ -4,6 +4,11 @@
   padding-top: 100px;
   padding-bottom: 120px;
 
+  @include media-breakpoint-down(lg) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   // 裝飾背景
   &__bg {
     position: absolute;
@@ -15,6 +20,10 @@
     opacity: 0.4;
     pointer-events: none;
     z-index: 0;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 
   .container {
@@ -22,10 +31,21 @@
     z-index: 1;
   }
 
+  &__inner {
+    @include media-breakpoint-down(lg) {
+      padding-right: $float-reserve;
+    }
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 
   // 分頁
@@ -33,26 +53,8 @@
     display: flex;
     justify-content: center;
     margin-top: 60px;
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    &__bg {
-      display: none;
-    }
-
-    &__grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    &__inner {
-      padding-right: $float-reserve;
-    }
-
-    &__pagination {
+    @include media-breakpoint-down(lg) {
       margin-top: 40px;
     }
   }

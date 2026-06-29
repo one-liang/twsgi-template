@@ -7,11 +7,20 @@
   background-color: $gray-10;
   border-radius: $border-radius;
 
+  @include media-breakpoint-down(lg) {
+    padding: 20px;
+    border-radius: $radius-m-mobile;
+  }
+
   &__media {
     position: relative;
     aspect-ratio: 3 / 2;
     overflow: hidden;
     border-radius: $border-radius-sm;
+
+    @include media-breakpoint-down(lg) {
+      border-radius: $radius-s-mobile;
+    }
   }
 
   &__img {
@@ -50,6 +59,10 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 1.375rem;
+    }
   }
 
   &__arrow {
@@ -102,21 +115,8 @@
     .c-award-card__title {
       font-size: 1.25rem;
     }
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding: 20px;
-    border-radius: $radius-m-mobile;
-
-    &__media {
-      border-radius: $radius-s-mobile;
-    }
-
-    &__title {
-      font-size: 1.375rem;
-    }
-
-    &--flat {
+    @include media-breakpoint-down(lg) {
       padding: 20px;
 
       .c-award-card__title {

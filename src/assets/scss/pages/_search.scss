@@ -28,8 +28,8 @@
     }
   }
 
-  @include media-breakpoint-down(lg) {
-    &__inner {
+  &__inner {
+    @include media-breakpoint-down(lg) {
       padding-right: calc(#{$float-reserve});
     }
   }

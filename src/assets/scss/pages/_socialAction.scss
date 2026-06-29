@@ -2,6 +2,10 @@
   position: relative;
   padding: 100px 0 80px;
 
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+
   &__bg {
     position: absolute;
     top: 551px;
@@ -10,6 +14,10 @@
     left: 0;
     z-index: 0;
     background-color: $gray-10;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 
   &__media {
@@ -19,6 +27,12 @@
     z-index: 1;
     width: 708px;
     max-width: 50%;
+
+    @include media-breakpoint-down(lg) {
+      position: static;
+      width: 300px;
+      max-width: 80%;
+    }
   }
 
   &__img {
@@ -27,12 +41,22 @@
     height: 531px;
     object-fit: cover;
     border-radius: 0 $border-radius $border-radius 0;
+
+    @include media-breakpoint-down(lg) {
+      height: 225px;
+      border-radius: 0 $radius-m-mobile $radius-m-mobile 0;
+    }
   }
 
   .container {
     position: relative;
     z-index: 1;
     min-height: 531px;
+
+    @include media-breakpoint-down(lg) {
+      min-height: 0;
+      margin-top: 60px;
+    }
   }
 
   &__intro {
@@ -42,6 +66,12 @@
     margin-left: auto;
     max-width: 600px;
     padding: 48px 40px 120px 0;
+
+    @include media-breakpoint-down(lg) {
+      max-width: none;
+      margin-left: 0;
+      padding: 0 $float-reserve 0 0;
+    }
   }
 
   &__heading {
@@ -76,36 +106,6 @@
       color: $font-secondary;
     }
   }
-
-  @include media-breakpoint-down(lg) {
-    padding: 60px 0;
-
-    &__bg {
-      display: none;
-    }
-
-    &__media {
-      position: static;
-      width: 300px;
-      max-width: 80%;
-    }
-
-    &__img {
-      height: 225px;
-      border-radius: 0 $radius-m-mobile $radius-m-mobile 0;
-    }
-
-    .container {
-      min-height: 0;
-      margin-top: 60px;
-    }
-
-    &__intro {
-      max-width: none;
-      margin-left: 0;
-      padding: 0 $float-reserve 0 0;
-    }
-  }
 }
 
 // 文化
@@ -113,10 +113,19 @@
   padding: 24px 0 80px;
   background-color: $gray-10;
 
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 20px;
+      padding-right: $float-reserve;
+    }
   }
 
   &__heading {
@@ -124,6 +133,10 @@
     flex-direction: column;
     gap: 12px;
     padding-inline: 40px;
+
+    @include media-breakpoint-down(lg) {
+      padding-inline: 0;
+    }
   }
 
   &__eyebrow {
@@ -168,21 +181,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding: 60px 0;
-
-    &__inner {
-      gap: 20px;
-      padding-right: $float-reserve;
-    }
-
-    &__heading {
-      padding-inline: 0;
-    }
-
-    &__grid {
+    @include media-breakpoint-down(lg) {
       grid-template-columns: 1fr;
       gap: 20px;
     }
@@ -195,6 +195,10 @@
   padding: 80px 0;
   overflow: hidden;
   background-color: $white-100;
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
 
   &__bg {
     position: absolute;
@@ -210,6 +214,10 @@
       max-width: none;
       height: auto;
     }
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 
   &__inner {
@@ -218,6 +226,11 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 20px;
+      padding-right: $float-reserve;
+    }
   }
 
   &__heading {
@@ -225,6 +238,10 @@
     flex-direction: column;
     gap: 12px;
     padding-inline: 40px;
+
+    @include media-breakpoint-down(lg) {
+      padding-inline: 0;
+    }
   }
 
   &__eyebrow {
@@ -269,25 +286,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding: 60px 0;
-
-    &__bg {
-      display: none;
-    }
-
-    &__inner {
-      gap: 20px;
-      padding-right: $float-reserve;
-    }
-
-    &__heading {
-      padding-inline: 0;
-    }
-
-    &__grid {
+    @include media-breakpoint-down(lg) {
       grid-template-columns: 1fr;
       gap: 20px;
     }
@@ -299,10 +299,19 @@
   padding: 80px 0;
   background-color: $white-100;
 
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 20px;
+      padding-right: $float-reserve;
+    }
   }
 
   &__heading {
@@ -310,6 +319,10 @@
     flex-direction: column;
     gap: 12px;
     padding-inline: 40px;
+
+    @include media-breakpoint-down(lg) {
+      padding-inline: 0;
+    }
   }
 
   &__eyebrow {
@@ -357,21 +370,8 @@
     background-color: $white-100;
     border-radius: $border-radius;
     overflow: hidden;
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding: 60px 0;
-
-    &__inner {
-      gap: 20px;
-      padding-right: $float-reserve;
-    }
-
-    &__heading {
-      padding-inline: 0;
-    }
-
-    &__panel {
+    @include media-breakpoint-down(lg) {
       grid-template-columns: 1fr;
       padding: 0;
       border-radius: $radius-m-mobile;
@@ -384,10 +384,19 @@
   padding: 80px 0;
   background-color: $brown-5;
 
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 20px;
+      padding-right: $float-reserve;
+    }
   }
 
   &__heading {
@@ -395,6 +404,10 @@
     flex-direction: column;
     gap: 12px;
     padding-inline: 40px;
+
+    @include media-breakpoint-down(lg) {
+      padding-inline: 0;
+    }
   }
 
   &__eyebrow {
@@ -439,21 +452,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding: 60px 0;
-
-    &__inner {
-      gap: 20px;
-      padding-right: $float-reserve;
-    }
-
-    &__heading {
-      padding-inline: 0;
-    }
-
-    &__grid {
+    @include media-breakpoint-down(lg) {
       grid-template-columns: 1fr;
       gap: 20px;
     }

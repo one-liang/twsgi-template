@@ -2,6 +2,14 @@
 .l-mission-intro {
   padding: 100px 0;
 
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+
+    .col-lg-10 {
+      padding-right: calc(12px + #{$float-reserve});
+    }
+  }
+
   &__title {
     display: flex;
     align-items: stretch;
@@ -23,16 +31,8 @@
     line-height: 1.5;
     letter-spacing: 1px;
     color: $font-secondary;
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding: 60px 0;
-
-    .col-lg-10 {
-      padding-right: calc(12px + #{$float-reserve});
-    }
-
-    &__lead {
+    @include media-breakpoint-down(lg) {
       margin-top: 24px;
       font-size: 1.125rem;
       letter-spacing: 0;
@@ -45,20 +45,20 @@
   padding: 100px 0 120px;
   background-color: #fff9f4;
 
-  &__desc {
-    margin: 0 0 40px;
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 1.6;
-    color: $font-secondary;
-  }
-
   @include media-breakpoint-down(lg) {
     padding: 60px 0 80px;
 
     .col-lg-10 {
       padding-right: calc(12px + #{$float-reserve});
     }
+  }
+
+  &__desc {
+    margin: 0 0 40px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $font-secondary;
   }
 }
 
@@ -75,6 +75,10 @@
       height: 100%;
       object-fit: cover;
     }
+
+    @include media-breakpoint-down(lg) {
+      border-radius: $radius-m-mobile;
+    }
   }
 
   &__caption {
@@ -85,12 +89,6 @@
     text-align: center;
     color: $font-secondary;
   }
-
-  @include media-breakpoint-down(lg) {
-    &__media {
-      border-radius: $radius-m-mobile;
-    }
-  }
 }
 
 // 台灣創價學會
@@ -98,6 +96,10 @@
   position: relative;
   padding: 120px 0;
   overflow: hidden;
+
+  @include media-breakpoint-down(lg) {
+    padding: 80px 0;
+  }
 
   // 裝飾圖
   &__bg {
@@ -113,6 +115,11 @@
       width: 1440px;
       height: 520px;
       max-width: none;
+    }
+
+    @include media-breakpoint-down(lg) {
+      left: 0;
+      transform: none;
     }
   }
 
@@ -131,6 +138,12 @@
     padding: 80px 240px 80px 80px;
     background-color: $brown-5;
     border-radius: $border-radius;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      gap: 32px;
+      padding: 60px calc(24px + #{$float-reserve}) 60px 24px;
+    }
   }
 
   &__title {
@@ -161,33 +174,18 @@
       height: 100%;
       object-fit: cover;
     }
-  }
 
-  &__btn {
-    margin-top: 0;
-  }
-
-  @include media-breakpoint-down(lg) {
-    padding: 80px 0;
-
-    &__bg {
-      left: 0;
-      transform: none;
-    }
-
-    &__card {
-      width: 100%;
-      gap: 32px;
-      padding: 60px calc(24px + #{$float-reserve}) 60px 24px;
-    }
-
-    &__media {
+    @include media-breakpoint-down(lg) {
       position: static;
       width: 100%;
       border-radius: $radius-m-mobile;
     }
+  }
 
-    &__btn {
+  &__btn {
+    margin-top: 0;
+
+    @include media-breakpoint-down(lg) {
       --bs-btn-font-size: 1rem;
       --bs-btn-padding-y: 0.5625rem;
     }

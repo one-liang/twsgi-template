@@ -7,6 +7,12 @@
   background-color: $gray-10;
   border-radius: $border-radius;
 
+  @include media-breakpoint-down(lg) {
+    gap: 40px;
+    padding: 20px;
+    border-radius: $radius-m-mobile;
+  }
+
   &__row {
     position: relative;
     display: flex;
@@ -21,21 +27,15 @@
       bottom: -28px;
       height: 1px;
       background-color: $gray-30;
-    }
-  }
 
-  @include media-breakpoint-down(lg) {
-    gap: 40px;
-    padding: 20px;
-    border-radius: $radius-m-mobile;
-
-    &__row {
-      flex-direction: column;
-      gap: 40px;
-
-      &:not(:last-child)::after {
+      @include media-breakpoint-down(lg) {
         bottom: -20px;
       }
+    }
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      gap: 40px;
     }
   }
 }

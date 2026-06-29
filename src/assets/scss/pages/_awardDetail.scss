@@ -3,6 +3,10 @@
   position: relative;
   padding: 100px 0 80px;
 
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+
   &__bg {
     position: absolute;
     top: 551px;
@@ -11,6 +15,10 @@
     left: 0;
     z-index: 0;
     background-color: $gray-10;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 
   &__media {
@@ -20,6 +28,12 @@
     z-index: 1;
     width: 708px;
     max-width: 50%;
+
+    @include media-breakpoint-down(lg) {
+      position: static;
+      width: 300px;
+      max-width: 80%;
+    }
   }
 
   &__img {
@@ -28,12 +42,22 @@
     height: 531px;
     object-fit: cover;
     border-radius: 0 $border-radius $border-radius 0;
+
+    @include media-breakpoint-down(lg) {
+      height: 225px;
+      border-radius: 0 $radius-m-mobile $radius-m-mobile 0;
+    }
   }
 
   .container {
     position: relative;
     z-index: 1;
     min-height: 531px;
+
+    @include media-breakpoint-down(lg) {
+      min-height: 0;
+      margin-top: 60px;
+    }
   }
 
   &__intro {
@@ -43,6 +67,12 @@
     margin-left: auto;
     max-width: 600px;
     padding: 48px 40px 120px 0;
+
+    @include media-breakpoint-down(lg) {
+      max-width: none;
+      margin-left: 0;
+      padding: 0 $float-reserve 0 0;
+    }
   }
 
   &__heading {
@@ -77,36 +107,6 @@
       color: $font-secondary;
     }
   }
-
-  @include media-breakpoint-down(lg) {
-    padding: 60px 0;
-
-    &__bg {
-      display: none;
-    }
-
-    &__media {
-      position: static;
-      width: 300px;
-      max-width: 80%;
-    }
-
-    &__img {
-      height: 225px;
-      border-radius: 0 $radius-m-mobile $radius-m-mobile 0;
-    }
-
-    .container {
-      min-height: 0;
-      margin-top: 60px;
-    }
-
-    &__intro {
-      max-width: none;
-      margin-left: 0;
-      padding: 0 $float-reserve 0 0;
-    }
-  }
 }
 
 // 歷年獲獎照片牆
@@ -114,19 +114,19 @@
   padding: 100px 0;
   background-color: $gray-10;
 
-  &__grid {
-    --bs-gutter-x: 40px;
-    --bs-gutter-y: 40px;
-  }
-
   @include media-breakpoint-down(lg) {
     padding: 60px 0;
 
     .container {
       padding-right: calc(var(--bs-gutter-x) * 0.5 + #{$float-reserve});
     }
+  }
 
-    &__grid {
+  &__grid {
+    --bs-gutter-x: 40px;
+    --bs-gutter-y: 40px;
+
+    @include media-breakpoint-down(lg) {
       --bs-gutter-y: 24px;
     }
   }
@@ -141,6 +141,10 @@
     aspect-ratio: 3 / 2;
     object-fit: cover;
     border-radius: $border-radius;
+
+    @include media-breakpoint-down(lg) {
+      border-radius: $radius-m-mobile;
+    }
   }
 
   &__caption {
@@ -150,26 +154,34 @@
     color: $font-secondary;
     text-align: center;
   }
-
-  @include media-breakpoint-down(lg) {
-    &__img {
-      border-radius: $radius-m-mobile;
-    }
-  }
 }
 
 // 相關獎項輪播
 .l-awardDetail-related {
   padding: 40px 0 120px;
 
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+
   &__swiper {
     padding-inline: 72px;
     overflow: hidden;
+
+    @include media-breakpoint-down(lg) {
+      padding-left: 12px;
+      padding-right: 0;
+      margin-right: $float-reserve;
+    }
   }
 
   .swiper-slide {
     width: 400px;
     height: auto;
+
+    @include media-breakpoint-down(lg) {
+      width: 280px;
+    }
   }
 
   &__nav {
@@ -178,22 +190,8 @@
     justify-content: center;
     gap: 24px;
     margin-top: 40px;
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding: 60px 0;
-
-    &__swiper {
-      padding-left: 12px;
-      padding-right: 0;
-      margin-right: $float-reserve;
-    }
-
-    .swiper-slide {
-      width: 280px;
-    }
-
-    &__nav {
+    @include media-breakpoint-down(lg) {
       margin-top: 20px;
     }
   }

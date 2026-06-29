@@ -1,9 +1,17 @@
 .l-news-list {
   padding: 60px 0 100px;
 
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0 60px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
+
+    @include media-breakpoint-down(lg) {
+      padding-right: calc(#{$float-reserve});
+    }
   }
 
   &__title {
@@ -11,6 +19,10 @@
     align-items: stretch;
     gap: 16px;
     margin-bottom: 40px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+    }
   }
 
   &__title-bar {
@@ -25,20 +37,8 @@
     display: flex;
     justify-content: center;
     margin-top: 60px;
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding: 40px 0 60px;
-
-    &__inner {
-      padding-right: calc(#{$float-reserve});
-    }
-
-    &__title {
-      margin-bottom: 24px;
-    }
-
-    &__pagination {
+    @include media-breakpoint-down(lg) {
       margin-top: 40px;
     }
   }

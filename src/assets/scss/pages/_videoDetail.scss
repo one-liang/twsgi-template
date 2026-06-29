@@ -1,9 +1,17 @@
 .l-video-detail {
   padding: 60px 0 120px;
 
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0 60px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
+
+    @include media-breakpoint-down(lg) {
+      padding-right: calc(#{$float-reserve});
+    }
   }
 
   &__title {
@@ -11,6 +19,10 @@
     align-items: stretch;
     gap: 16px;
     margin-bottom: 40px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+    }
   }
 
   &__title-bar {
@@ -24,30 +36,18 @@
   &__grid {
     --bs-gutter-x: 40px;
     --bs-gutter-y: 60px;
+
+    @include media-breakpoint-down(lg) {
+      --bs-gutter-y: 30px;
+    }
   }
 
   &__pagination {
     display: flex;
     justify-content: center;
     margin-top: 60px;
-  }
 
-  @include media-breakpoint-down(lg) {
-    padding: 40px 0 60px;
-
-    &__inner {
-      padding-right: calc(#{$float-reserve});
-    }
-
-    &__title {
-      margin-bottom: 24px;
-    }
-
-    &__grid {
-      --bs-gutter-y: 30px;
-    }
-
-    &__pagination {
+    @include media-breakpoint-down(lg) {
       margin-top: 40px;
     }
   }
