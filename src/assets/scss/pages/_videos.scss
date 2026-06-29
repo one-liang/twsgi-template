@@ -57,6 +57,8 @@
     align-items: stretch;
     gap: 16px;
     margin-bottom: 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   &__title-bar {
@@ -71,6 +73,7 @@
     display: flex;
     align-items: center;
     gap: 24px;
+    flex-shrink: 0; // 保護箭頭按鈕不被標題擠壓／推出
 
     @include media-breakpoint-down(lg) {
       gap: 8px;

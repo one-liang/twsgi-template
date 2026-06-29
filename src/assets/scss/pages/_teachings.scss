@@ -173,6 +173,7 @@
   transition: background-color 0.3s ease-out;
 
   &__text {
+    min-width: 0;
     overflow: hidden;
     font-size: 1.125rem;
     font-weight: 500;
