@@ -38,6 +38,10 @@
         delay: AUTOPLAY_DELAY,
         disableOnInteraction: false,
       },
+      pagination: {
+        el: root.querySelector('[data-banner-pagination]'),
+        clickable: true,
+      },
       on: {
         init(instance) {
           setActiveCount(instance.realIndex);
